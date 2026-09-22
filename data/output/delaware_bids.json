@@ -1,0 +1,1335 @@
+[
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:14.042148Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9322",
+      "source_opportunity_id": "DTCC2711-LAWN",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Collegewide Lawncare Services",
+      "agency_name": "DTCC",
+      "solicitation_number": "DTCC2711-LAWN",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/18/2026",
+      "due_at": "10/22/2026 at 1:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9322",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "RFP - Materiel and Nonprofessional Services",
+        "url": "https://bidcondocs.delaware.gov/DTCC/DTCC2711-LAWN_0rfp.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Appendix B",
+        "url": "https://bidcondocs.delaware.gov/DTCC/DTCC2711-LAWN_appB.xlsx",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "8f80a682f713686c3f6e3434ae98a99a3d65b9e34ccb96cc83818acd0f36f325"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:21.502525Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9336",
+      "source_opportunity_id": "OMB-MJ0217000003-BP5A",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Customs House Renovation & Addition",
+      "agency_name": "OMB",
+      "solicitation_number": "OMB-MJ0217000003-BP5A",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/16/2026",
+      "due_at": "10/20/2026 at 1:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9336",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "RFP - Public Works",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MJ0217000003-BP5A-rfp.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Drawings",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MJ0217000003-BP5A-Exemption.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Specifications",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MJ0217000003-BP5A-specs.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Wages",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MJ0217000003-BP5A-wages.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "dbe4520af67bd307721eb5ac6245145c6e29f7529ebbe263b7efd6cbb0c468e9"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:24.123271Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9333",
+      "source_opportunity_id": "OMB-MC5508000005A",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Transportation Management Center Cooling Tower Replacement",
+      "agency_name": "OMB",
+      "solicitation_number": "OMB-MC5508000005A",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/16/2026",
+      "due_at": "10/13/2026 at 1:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9333",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "RFP - Public Works",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC5508000005A-RFP.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Specifications",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC5508000005A-SPECS.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Drawings",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC5508000005A-dwgs.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Wages",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC5508000005A-WAGES.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "6b69e04975cd790c10ae848a462f4bc5ff8264ac5a28a78e42af426528fc5f72"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:26.281317Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9330",
+      "source_opportunity_id": "OMB-MC3806000026",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Hazel D. Plant Ats & Generator Replacement",
+      "agency_name": "OMB",
+      "solicitation_number": "OMB-MC3806000026",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/15/2026",
+      "due_at": "10/29/2026 at 1:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9330",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "RFP - Public Works",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC3806000026-RFP.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Specifications",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC3806000026-SPECS.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Wages",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC3806000026-WAGES.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Drawings",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC3806000026-Exemption From Plan Publication.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "cf37632f5f508a07e447fdf93199793e0ed054b44a62eee51de19ee4eb68b9f4"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:28.509115Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9319",
+      "source_opportunity_id": "STA26-PSCSTR",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Public Service Commission Structure Review and Consulting",
+      "agency_name": "STA",
+      "solicitation_number": "STA26-PSCSTR",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/15/2026",
+      "due_at": "10/16/2026 at 1:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9319",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "RFP - Professional Services",
+        "url": "https://bidcondocs.delaware.gov/STA/STA26-PSCSTR_rfp.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "3ae4b45f71b727768997aa474e65ef0eed36b4f474a9e0f91014bdbb0b5cd12e"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:30.691267Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9331",
+      "source_opportunity_id": "T202280202",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "WOODLAND FERRY IMPROVEMENTS, FY22",
+      "agency_name": "State of Delaware",
+      "solicitation_number": "T202280202",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/14/2026",
+      "due_at": "10/13/2026 at 2:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9331",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "RFP - Public Works",
+        "url": "https://gssdocs.deldot.delaware.gov/bids/T202280202 Proposal.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Plans",
+        "url": "https://gssdocs.deldot.delaware.gov/bids/T202280202 Construction Plans.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Breakout sheets",
+        "url": "https://gssdocs.deldot.delaware.gov/bids/T202280202 BOS.xlsx",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Appendix A",
+        "url": "https://gssdocs.deldot.delaware.gov/bids/T202280202 Appendix-A.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "f684bc917df800457a5969aa9a648379ef06c4e3da7f37d1896727b465524f7b"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:32.997253Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9313",
+      "source_opportunity_id": "STA26102-DCCI",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Delaware Commercial Corridor Initiative",
+      "agency_name": "STA",
+      "solicitation_number": "STA26102-DCCI",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/11/2026",
+      "due_at": "10/2/2026 at 4:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9313",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "RFP - Professional Services",
+        "url": "https://bidcondocs.delaware.gov/STA/STA26102-DCCI_rfp.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "c68bba2303f8a511508a66bc846cd9dfb877fe153713e121caf12044ad7105da"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:35.408271Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9326",
+      "source_opportunity_id": "OMB-MC1002001186",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Carvel State Office Building 12th Floor Lights & Sprinkler",
+      "agency_name": "OMB",
+      "solicitation_number": "OMB-MC1002001186",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/10/2026",
+      "due_at": "10/28/2026 at 1:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9326",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "RFP - Public Works",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC1002001186-rfp.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Specifications",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC1002001186-specs.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Drawings",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC1002001186-dwgs.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Wages",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC1002001186-wages.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "d1bc6ff7ae050b0b83ae8b1d47a84544da0ca28e1abf11b63c3cca24c65f0bb9"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:37.609283Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9328",
+      "source_opportunity_id": "T202120003",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "OLD BRANDYWINE VILLAGE STREETSCAPE IMPROVEMENTS PHASE II",
+      "agency_name": "State of Delaware",
+      "solicitation_number": "T202120003",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/10/2026",
+      "due_at": "10/13/2026 at 2:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9328",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "RFP - Public Works",
+        "url": "https://gssdocs.deldot.delaware.gov/bids/T202120003 Proposal.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Plans",
+        "url": "https://gssdocs.deldot.delaware.gov/bids/T202120003 Construction Plans.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Diesel Fuel Price Form",
+        "url": "https://gssdocs.deldot.delaware.gov/bids/T202120003 Diesel Fuel Cost Price Adjustment Form.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "a2c5b8ca1fff2c6b05c1886d1d0b726afe982c41a44bf1c7c1c8e00ceab57139"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:39.624845Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9323",
+      "source_opportunity_id": "OMB-MC5511000089",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Sussex County DMV Inspection Lanes Heating",
+      "agency_name": "OMB",
+      "solicitation_number": "OMB-MC5511000089",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/10/2026",
+      "due_at": "10/8/2026 at 1:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9323",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "RFP - Public Works",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC5511000089-RFP.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Specifications",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC5511000089-SPECS.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Wage Rates",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC5511000089-WAGES.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Drawings",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC5511000089-Dwgs.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "62df04b53764fd7accc654984e423c92fc45a979f3b5e2b2c50ebc261feba786"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:41.746273Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9324",
+      "source_opportunity_id": "T201769009",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "DOUBLE BRIDGES ROAD PATHWAY, MUDDY NECK TO NEPTUNE DRIVE",
+      "agency_name": "State of Delaware",
+      "solicitation_number": "T201769009",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/9/2026",
+      "due_at": "10/6/2026 at 2:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9324",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "RFP - Public Works",
+        "url": "https://gssdocs.deldot.delaware.gov/bids/T201769009 Proposal.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Plans",
+        "url": "https://gssdocs.deldot.delaware.gov/bids/T201769009 Construction Plans.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "f71ba62f83f093ead2b800e2fb6e0d33040b34341e2cf2cd49a2faac1855bd01"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:44.043132Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9315",
+      "source_opportunity_id": "NAT26001-FOODWASTE",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Curbside Food Waste Collection Pilot",
+      "agency_name": "NAT",
+      "solicitation_number": "NAT26001-FOODWASTE",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/8/2026",
+      "due_at": "10/20/2026 at 1:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9315",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "RFP - Professional Services",
+        "url": "https://bidcondocs.delaware.gov/NAT/NAT26001-FOODWASTE_rfp.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "6e69405532958e34286dd9133141b47839b1d7fe4e9e229cb0ef2e4c871ac245"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:46.194920Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9288",
+      "source_opportunity_id": "NAT26001_TRAPPERMIT",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Wildlife Area Trapping Permits",
+      "agency_name": "State of Delaware",
+      "solicitation_number": "NAT26001_TRAPPERMIT",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/8/2026",
+      "due_at": "10/8/2026 at 10:00 AM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9288",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "Invitation to Bid",
+        "url": "https://bidcondocs.delaware.gov/NAT/NAT26001_TRAPPERMIT_itb.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Exhibit 1",
+        "url": "https://bidcondocs.delaware.gov/NAT/NAT26001_TRAPPERMIT_exhibit1.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "a1c3f110ce89de0d606a5e725d695d7a3edcc394efce64a1b525503f9cc61bda"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:48.291011Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9299",
+      "source_opportunity_id": "DTCC2610-VISION",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "DTCC Vision Insurance",
+      "agency_name": "DTCC",
+      "solicitation_number": "DTCC2610-VISION",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/4/2026",
+      "due_at": "10/21/2026 at 1:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9299",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "RFP - Professional Services",
+        "url": "https://bidcondocs.delaware.gov/DTCC/DTCC2610-VISION_rfp.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "6997324390c88dd9617cc041894872eab0a4bcace246033e49c95b1630bbff1a"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:50.289154Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9321",
+      "source_opportunity_id": "OMB-MC1002001141",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Delaware State Police Troop 5 HVAC Replacement",
+      "agency_name": "OMB",
+      "solicitation_number": "OMB-MC1002001141",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/4/2026",
+      "due_at": "10/8/2026 at 1:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9321",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "RFP - Public Works",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC1002001141-rfp.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Specifications",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC1002001141-specs.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Wages",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC1002001141-wages.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Drawings",
+        "url": "https://bidcondocs.delaware.gov/OMB/OMB-MC1002001141-Exemption.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "8554d1157ea1c201bbf7b29ca3df5ad9caabde40fdc6a8bce61c9ddea58fad0a"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:53.081278Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9308",
+      "source_opportunity_id": "DOT2618-RE_CONPIPE",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Reinforced Concrete Pipe",
+      "agency_name": "DOT",
+      "solicitation_number": "DOT2618-RE_CONPIPE",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/4/2026",
+      "due_at": "10/6/2026 at 2:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9308",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "Invitation to Bid",
+        "url": "https://bidcondocs.delaware.gov/DOT/DOT2618-RE_CONPIPE_itb.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Appendix 1",
+        "url": "https://bidcondocs.delaware.gov/DOT/DOT2618-RE_CONPIPE_bpf.xlsx",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "b370ac3b962f62f89cbe0d3df4b43af02926ae74ec485cd7502a619fa718990d"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:55.506192Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9309",
+      "source_opportunity_id": "DOT2619-EMER_SS&IR",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Emergency Sidewalk Snow and Ice Removal",
+      "agency_name": "DOT",
+      "solicitation_number": "DOT2619-EMER_SS&IR",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/4/2026",
+      "due_at": "10/6/2026 at 2:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9309",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "Invitation to Bid",
+        "url": "https://bidcondocs.delaware.gov/DOT/DOT2619-EMER_SSIR_itb.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "c87449dafdc5cb931ef6e9b96386ed0aca35024648298c733f086d812a5a91f0"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:57.798147Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9300",
+      "source_opportunity_id": "GSS27748-ELECTRICIAN",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Electrical Contractor",
+      "agency_name": "GSS",
+      "solicitation_number": "GSS27748-ELECTRICIAN",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/4/2026",
+      "due_at": "10/1/2026 at 3:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9300",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "RFP - Materiel and Nonprofessional Services",
+        "url": "https://bidcondocs.delaware.gov/GSS/GSS27748-ELECTRICIAN_rfp.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Appendix B",
+        "url": "https://bidcondocs.delaware.gov/GSS/GSS27748-ELECTRICIAN_appB.xlsx",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Appendix C",
+        "url": "https://bidcondocs.delaware.gov/GSS/GSS27748-ELECTRICIAN_appC.xlsx",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Appendix D",
+        "url": "https://bidcondocs.delaware.gov/GSS/GSS27748-ELECTRICIAN_appD.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Appendix E",
+        "url": "https://bidcondocs.delaware.gov/GSS/GSS27748-ELECTRICIAN_appE.xlsx",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "676d2f575bc77ecae27e3c84c86c73d893a75bff14f298022b18ee937de82080"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:45:59.814120Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9307",
+      "source_opportunity_id": "CYF2606-MENTORSHIP",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Educational Mentorship Services for Foster Children",
+      "agency_name": "CYF",
+      "solicitation_number": "CYF2606-MENTORSHIP",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/3/2026",
+      "due_at": "10/15/2026 at 2:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9307",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "RFP - Professional Services",
+        "url": "https://bidcondocs.delaware.gov/CYF/CYF2606-MENTORSHIP_rfp.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Assurance and Certifications",
+        "url": "https://bidcondocs.delaware.gov/CYF/CYF2606-MENTORSHIP_aac.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Bidder Fact Sheet",
+        "url": "https://bidcondocs.delaware.gov/CYF/CYF2606-MENTORSHIP_bfs.docx",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Budget Form",
+        "url": "https://bidcondocs.delaware.gov/CYF/CYF2606-MENTORSHIP_basd.xlsx",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "1383ee343051db63483c45cd7cc8566d036d8bff9ffe7754443755b000df1100"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:46:02.028040Z",
+    "source": {
+      "name": "Delaware myMarketplace (Jaggaer/SciQuest)",
+      "base_url": "https://mmp.delaware.gov/Bids/",
+      "opportunity_url": "https://mmp.delaware.gov/Bids/Details/9306",
+      "source_opportunity_id": "COL027005-EISRENOV",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Eisenberg Elementary School Renovations",
+      "agency_name": "COL",
+      "solicitation_number": "COL027005-EISRENOV",
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "9/3/2026",
+      "due_at": "10/2/2026 at 4:00 PM Local Time",
+      "source_timezone": "America/New_York",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://mmp.delaware.gov/Bids/Details/9306",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "RFP - Public Works",
+        "url": "https://bidcondocs.delaware.gov/COL/COL027005-EISRENOV_itb.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Specifications",
+        "url": "https://bidcondocs.delaware.gov/COL/COL027005-EISRENOV_specs.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Prevailing Wage",
+        "url": "https://bidcondocs.delaware.gov/COL/COL027005-EISRENOV_pw.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      },
+      {
+        "title": "Plan Exemption",
+        "url": "https://bidcondocs.delaware.gov/COL/COL027005-EISRENOV_epp.pdf",
+        "document_type": "solicitation",
+        "mime_type": null,
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "e0a35509bd5dec1c3233f7ac8a2d43ea30effbd8a3183de7044e7013bfe77a75"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-094440",
+      "parser_version": "delaware-jaggaer-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URLs captured as link_only",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  }
+]

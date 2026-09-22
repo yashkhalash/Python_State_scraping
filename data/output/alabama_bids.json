@@ -1,0 +1,860 @@
+[
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T08:03:35.155535Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Three-3-Jeep-Cherokee-Laredos-or-Equivalent-for-Madison-County-Tax-Assessor/0000437674?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000437674",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Three (3) Jeep Cherokee Laredos or Equivalent for Madison County Tax Assessor",
+      "agency_name": "Madison County Tax Assessor",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/18/2026",
+      "due_at": "10/02/2026 11:00 AM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Three-3-Jeep-Cherokee-Laredos-or-Equivalent-for-Madison-County-Tax-Assessor/0000437674?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "7538a8cbd1dd9500b1a5b200c3e867305e76b03aca79ce16b56d45965bd192e7"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-080323",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T08:03:37.658171Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Temporary-Personnel-Services/0000437332?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000437332",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Temporary Personnel Services",
+      "agency_name": "State of Alabama",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/16/2026",
+      "due_at": "10/08/2026 02:00 PM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Temporary-Personnel-Services/0000437332?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "0eface84fbf4c138ab340522a0215f644edcd0e0ce5969c85d06073cccbe0043"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-080323",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T08:03:40.244878Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Space-Shuttle-Hardscape-Repairs/0000436774?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000436774",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Space Shuttle Hardscape Repairs",
+      "agency_name": "State of Alabama",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/11/2026",
+      "due_at": "10/06/2026 02:00 PM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Space-Shuttle-Hardscape-Repairs/0000436774?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "b82963efb7de72e3d7d97eb43fc816eed69ff419eda9b6265d79d867db0d40b5"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-080323",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T08:03:42.581220Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Safe-Streets-for-All-SS4A-Safety-Action-Plan-and-Demonstration-Activities/0000436246?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000436246",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Safe Streets for All (SS4A) Safety Action Plan and Demonstration Activities",
+      "agency_name": "All",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/08/2026",
+      "due_at": "10/01/2026 01:00 PM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Safe-Streets-for-All-SS4A-Safety-Action-Plan-and-Demonstration-Activities/0000436246?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "88e8e30250903ecfcf819d06c841a871844ecedcb8f323192a17fb9a1371d242"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-080323",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T08:03:45.280082Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Air-Conditioning-Retrofit-for-Existing-Buses-for-Jefferson-County-Schools/0000435994?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000435994",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Air Conditioning Retrofit for Existing Buses for Jefferson County Schools",
+      "agency_name": "Existing Buses for Jefferson County Schools",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/04/2026",
+      "due_at": "09/22/2026 10:30 AM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Air-Conditioning-Retrofit-for-Existing-Buses-for-Jefferson-County-Schools/0000435994?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "3e371d404b7a0a04d0c20466eca2313238e0e93680ab6eb4979de3b03f4fc518"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-080323",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T08:03:47.648235Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/27-25-2026-Intercom-Service-Repair/0000435987?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000435987",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "27-25-2026 Intercom Service & Repair",
+      "agency_name": "State of Alabama",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/04/2026",
+      "due_at": "09/29/2026 10:15 AM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/27-25-2026-Intercom-Service-Repair/0000435987?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "5b7486606e1dac761d1c6e8183709f1034c24b4a32acf0d068d68a2ca0d4249c"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-080323",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T08:03:49.990291Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/26-25-2026-Fire-Alarm-Services/0000435975?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000435975",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "26-25-2026 Fire Alarm Services",
+      "agency_name": "State of Alabama",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/04/2026",
+      "due_at": "09/29/2026 10:00 AM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/26-25-2026-Fire-Alarm-Services/0000435975?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "164f48f517d7b81a7917d96ebc69a418e2901bfeca603fceb472c6cc5971fa02"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-080323",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T08:03:52.727031Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/026-011-FAY-BRANCH-OUTFALL-SANITARY-SEWER-IMPROVEMENTS/0000435888?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000435888",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "026-011 FAY BRANCH OUTFALL SANITARY SEWER IMPROVEMENTS",
+      "agency_name": "State of Alabama",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/03/2026",
+      "due_at": "10/15/2026 10:00 AM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/026-011-FAY-BRANCH-OUTFALL-SANITARY-SEWER-IMPROVEMENTS/0000435888?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "e8a26855e25b0de483d58e266f08e0c8b14cb8219aafc41c53e4c0d6c8f272d6"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-080323",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T08:03:55.225138Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/City-of-Huntsville-Transit-Station-Renovation/0000435726?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000435726",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "City of Huntsville Transit Station Renovation",
+      "agency_name": "State of Alabama",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/02/2026",
+      "due_at": "09/22/2026 02:00 PM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/City-of-Huntsville-Transit-Station-Renovation/0000435726?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "e02ec57fb983d246df950da0d4eb0e89a811cbf7a66d53279f83e997e6815c0c"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-080323",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T08:03:57.548916Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/026-010-AUTAUGA-CREEK-CWF-2025-IMPROVEMENTS/0000435627?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000435627",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "026-010 AUTAUGA CREEK CWF 2025 IMPROVEMENTS",
+      "agency_name": "State of Alabama",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/01/2026",
+      "due_at": "10/08/2026 02:00 PM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/026-010-AUTAUGA-CREEK-CWF-2025-IMPROVEMENTS/0000435627?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "b2c443fa00f8179efc08b47a908e4d64c0d2eaf6824c9be1b4730fca0a5c05b4"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-080323",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T08:04:00.339286Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/01-26-2027-RFP-Wide-Area-Network/0000435515?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000435515",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "01-26-2027 - RFP Wide Area Network",
+      "agency_name": "State of Alabama",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/01/2026",
+      "due_at": "10/01/2026 10:00 AM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/01-26-2027-RFP-Wide-Area-Network/0000435515?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "20f0a9db8812860901fd7839b6d94c30f3c04549dc7cb9c2b839cab0d3f2bade"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-080323",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:22:45.598866Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Three-3-Jeep-Cherokee-Laredos-or-Equivalent-for-Madison-County-Tax-Assessor/0000437674?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000437674",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Three (3) Jeep Cherokee Laredos or Equivalent for Madison County Tax Assessor",
+      "agency_name": "Madison County Tax Assessor",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/18/2026",
+      "due_at": "10/02/2026 11:00 AM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Three-3-Jeep-Cherokee-Laredos-or-Equivalent-for-Madison-County-Tax-Assessor/0000437674?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "7273c7b46a51c9e367f599edd5a1aa7345788dc50e55e433358d13ef98702185"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-092227",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:22:48.080596Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Temporary-Personnel-Services/0000437332?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000437332",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Temporary Personnel Services",
+      "agency_name": "State of Alabama",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/16/2026",
+      "due_at": "10/08/2026 02:00 PM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Temporary-Personnel-Services/0000437332?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "008f81e8c7b8ff8c4749aa1209da2fdbb00400c93ffba80703a3b38382d47d9d"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-092227",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:22:50.968652Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Space-Shuttle-Hardscape-Repairs/0000436774?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000436774",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Space Shuttle Hardscape Repairs",
+      "agency_name": "State of Alabama",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/11/2026",
+      "due_at": "10/06/2026 02:00 PM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Space-Shuttle-Hardscape-Repairs/0000436774?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "6391d63e7d607c654a64b3637b112e1bde5dca0cab61fca57456218d130c25ef"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-092227",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:22:54.345305Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Safe-Streets-for-All-SS4A-Safety-Action-Plan-and-Demonstration-Activities/0000436246?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000436246",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Safe Streets for All (SS4A) Safety Action Plan and Demonstration Activities",
+      "agency_name": "All",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/08/2026",
+      "due_at": "10/01/2026 01:00 PM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Safe-Streets-for-All-SS4A-Safety-Action-Plan-and-Demonstration-Activities/0000436246?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "d86fe18693c829ed78f539808c9c0d614fbf3f22459c71e91b9eb347e714bed3"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-092227",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:22:57.039247Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Air-Conditioning-Retrofit-for-Existing-Buses-for-Jefferson-County-Schools/0000435994?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000435994",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "Air Conditioning Retrofit for Existing Buses for Jefferson County Schools",
+      "agency_name": "Existing Buses for Jefferson County Schools",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/04/2026",
+      "due_at": "09/22/2026 10:30 AM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/Air-Conditioning-Retrofit-for-Existing-Buses-for-Jefferson-County-Schools/0000435994?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "a9eac48bcdc8c1246d4d2d67dfb840c6d01c8500bd54c9b4c84f2cf887a24c9e"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-092227",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:22:59.671850Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/27-25-2026-Intercom-Service-Repair/0000435987?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000435987",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "27-25-2026 Intercom Service & Repair",
+      "agency_name": "State of Alabama",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/04/2026",
+      "due_at": "09/29/2026 10:15 AM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/27-25-2026-Intercom-Service-Repair/0000435987?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "7b25287fafd4a44df833b9247309949af6323038c9f5ee87cc4493721c5bb33a"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-092227",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:23:02.379187Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/26-25-2026-Fire-Alarm-Services/0000435975?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000435975",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "26-25-2026 Fire Alarm Services",
+      "agency_name": "State of Alabama",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/04/2026",
+      "due_at": "09/29/2026 10:00 AM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/26-25-2026-Fire-Alarm-Services/0000435975?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "1ec2ce9d7f9c631ff11553bf75942cc9fb061ecf1b8092c858378973aecaf7a6"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-092227",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:23:04.786852Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/026-011-FAY-BRANCH-OUTFALL-SANITARY-SEWER-IMPROVEMENTS/0000435888?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000435888",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "026-011 FAY BRANCH OUTFALL SANITARY SEWER IMPROVEMENTS",
+      "agency_name": "State of Alabama",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/03/2026",
+      "due_at": "10/15/2026 10:00 AM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/026-011-FAY-BRANCH-OUTFALL-SANITARY-SEWER-IMPROVEMENTS/0000435888?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "ef70b2e4e9c3738deaefb2079a1af7ed6690a9044500453a6d98f38f53c81ebc"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-092227",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:23:07.117162Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/City-of-Huntsville-Transit-Station-Renovation/0000435726?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000435726",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "City of Huntsville Transit Station Renovation",
+      "agency_name": "State of Alabama",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/02/2026",
+      "due_at": "09/22/2026 02:00 PM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/City-of-Huntsville-Transit-Station-Renovation/0000435726?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "e616a065dd197603f37eb758910f061a6c90fb1068170ddef793f02220554479"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-092227",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:23:10.045201Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/026-010-AUTAUGA-CREEK-CWF-2025-IMPROVEMENTS/0000435627?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000435627",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "026-010 AUTAUGA CREEK CWF 2025 IMPROVEMENTS",
+      "agency_name": "State of Alabama",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/01/2026",
+      "due_at": "10/08/2026 02:00 PM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/026-010-AUTAUGA-CREEK-CWF-2025-IMPROVEMENTS/0000435627?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "2241011da606e630a3f5465582a435bd76b79431bb6b08f57c4e8f452f090eb5"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-092227",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T09:23:12.518254Z",
+    "source": {
+      "name": "Alabama Purchasing Group (BidNet Direct)",
+      "base_url": "https://www.bidnetdirect.com/alabama",
+      "opportunity_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/01-26-2027-RFP-Wide-Area-Network/0000435515?purchasingGroupId=388530651&origin=1",
+      "source_opportunity_id": "0000435515",
+      "access_level": "public"
+    },
+    "opportunity": {
+      "title": "01-26-2027 - RFP Wide Area Network",
+      "agency_name": "State of Alabama",
+      "solicitation_number": null,
+      "status": "Open",
+      "notice_type": "Solicitation",
+      "published_at": "09/01/2026",
+      "due_at": "10/01/2026 10:00 AM CDT",
+      "source_timezone": "America/Chicago",
+      "description": null,
+      "categories": [],
+      "submission_url": "https://www.bidnetdirect.com/alabama/solicitations/open-bids/01-26-2027-RFP-Wide-Area-Network/0000435515?purchasingGroupId=388530651&origin=1",
+      "submission_method": "external_portal"
+    },
+    "documents": [],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "a2862b6850adf0fa5784610fadf71efbe50fea248d7d45ad09251396e8fac6f8"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-092227",
+      "parser_version": "alabama-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  }
+]

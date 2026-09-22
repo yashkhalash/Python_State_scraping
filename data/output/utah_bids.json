@@ -1,0 +1,155 @@
+[
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T08:56:11.449703Z",
+    "source": {
+      "name": "Utah Public Procurement Place (Jaggaer/SciQuest)",
+      "base_url": "https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfUtah",
+      "opportunity_url": "https://app01.jaggaer.com/apps/Router/ViewSourcingEvent?AuthToken=1%3AAES2%23CG479Cc23%2Bt00%2FzOyZO6VNCPyk0Hu%2F%2FUMt%2FdNUwsXYvGExltC1YM%2FK0YI9r753p%2F31PNK0sGnQvygy5r1zsa6%2F33aH%2BRYA7N3ElJTViTqTPmzO%2Bmdnc9AzvsFH%2B7gS2Td8egC6JUM3An0uhM0TCUMenPpbLG%2BQ0yOQ%3D%3D&tmstmp=1789980967836",
+      "source_opportunity_id": "BP22-15",
+      "access_level": "registration_required"
+    },
+    "opportunity": {
+      "title": "Physicians for Utah Labor Commission",
+      "agency_name": "Utah Public Procurement Place (Jaggaer/SciQuest)",
+      "solicitation_number": "BP22-15",
+      "status": "Open",
+      "notice_type": "CRTSY",
+      "published_at": "9/21/2021, 3:00 PM MDT",
+      "due_at": "9/30/2031, 12:00 AM MDT",
+      "source_timezone": "America/Denver",
+      "description": "Utah Labor Commission has need of physicians to serve on medical panels.",
+      "categories": [],
+      "submission_url": "https://app01.jaggaer.com/apps/Router/ViewSourcingEvent?AuthToken=1%3AAES2%23CG479Cc23%2Bt00%2FzOyZO6VNCPyk0Hu%2F%2FUMt%2FdNUwsXYvGExltC1YM%2FK0YI9r753p%2F31PNK0sGnQvygy5r1zsa6%2F33aH%2BRYA7N3ElJTViTqTPmzO%2Bmdnc9AzvsFH%2B7gS2Td8egC6JUM3An0uhM0TCUMenPpbLG%2BQ0yOQ%3D%3D&tmstmp=1789980967836",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "Physicians for Utah Labor Commission (View as PDF)",
+        "url": "https://solutions-selectsite-documents.s3.amazonaws.com/Sourcingevent/1032996-event.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQDZome1uYdcPSV33IFJzfnx822gTN1uW7JNoZyQL5JpAgIhAPwTPqT%2BIC429PsHfr%2FrmviHT9YCf39vZELGK6V5pnWWKsIFCIf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMjgwMjYyNzQ0NjI4IgxkIA%2BkJGbuKzyXCBgqlgWQNZXyJfkcxQmKfoza6ofiiPA4WZLLcs%2FCJyqMQYRMoxuTLssbdvMXc9x1r1vF05VMgwnrfcXa55mAIM5o1xFDiwIGIdBuLBFVH3P2QT84T0n2xWqIhwkZc%2B4U2WGTbopNajzjhfQWN7TsXkxyfD5QFIA4Ns0ccV0M0%2FPTDXJzkVSMHP1pHmr%2FcXh98VCuSpMUI0wyB9%2F0w13O0GfV6RQ6Qam5glTf9uxeyzbvEc6Qp5d1enh0nfaIku6nm%2Bgw7GslQFMX6vkyT%2Fhux3cx7yLWLj010nQUTTbLA8pvz87CiRo%2BIHViD%2Fqzq0fpF2wNTrwOLCwlkS4pfn4tzpNGNMPC6V8Sieo4T0h9pttE4hmQATXLYXuyee4dpy5mGgpn8cXNcA7NtRXD5Q3tTUDZH0wUrZUUxxMUyFRH9yKHlmor%2FHNnouiVJ9Dx9Q%2FNvOpl2qAy60zSeTVO26avzcD5lZY6yxCgCCjIMVlHLWP2AH%2FQwu48iOWRDSOzwu5mivnpkSyk%2ByKJiJmSexUiQB3ZAwN3XEtfVsPJdbIkWjUUZSq2zGKofRyeUFyZGH8FB7csNbO%2BbEVPaD%2FxhRFy02lJREyHcQSGLGt1eOa%2BY%2F3G0bbylBVwtZHujAYWnlkkBjfD4%2BnIDPrAPPPEzu8pLLvEZAsG8ETP8rDhwI65bcH81O6tJtqdgRBWm8ihDBGK%2BgqE5tQFipn84%2FYLezaxSEYQ53V1mRtjnv9JmHfThabrvdYTLMcdv6g5yzMuffahH5IBeKJXiQNhV6Vtxi40HnzIDSnKsDT7BY8eUYSIJYlMrysScNdH6xnzyrJWv%2FrBrIOTAKSTtI1jkEHDye300UO19a%2BGIMDq2BSrdyZm8FKTUBJYXu5oEMhjVzC9ksPVBjqwAYcxVuk0DlKAGpy4BpbN3Q20NKuSWQG7n64MNeOUHTtpAp7IyO8sO5Nh%2FMClwePdcXjzoaRFHNyE2GRgdt2nnzonCkRlz6Pcuqwwd4TEqvb11cT%2BkqDwOkyTAnZgVNtAhlEc0r6rN%2FXMc%2B3lGreIw2P2mT2PZnt4nlb0TLNwL2p1ftfFE76WJZamZEGkqWf11HLxe3nVrPknPO8sRfSOwOsEkgZCBQKW8MH9%2FSlWxiRG&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260921T085607Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAUCQHWDI2PN5UPOWL%2F20260921%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=b9c6038f0278194243c9a7e2ea4900f073cc1481633a5d824f5ad72f3f034372",
+        "document_type": "solicitation",
+        "mime_type": "application/pdf",
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "9a009c1fe542b2f51d3cc24e983e9dcb01778d13192e774171fb5556e8b84a2a"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-085558",
+      "parser_version": "ut-jaggaer-sourcingpublicsite-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URL captured as link_only",
+        "Utah Public Procurement Place (Jaggaer/SciQuest) detail page requires a Jaggaer supplier login; description/full detail beyond the listing row is unavailable",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T08:56:11.481217Z",
+    "source": {
+      "name": "Utah Public Procurement Place (Jaggaer/SciQuest)",
+      "base_url": "https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfUtah",
+      "opportunity_url": "https://app01.jaggaer.com/apps/Router/ViewSourcingEvent?AuthToken=1%3AAES2%23COtZCo2lb1CCJzGVk6S5lC7hF%2BOmmRhJT7SKJwQZgAu9fbK0R4vTIy5vMIloTOHZwlT24CsYhwhG22k7b8qEJyieBWxZDe0ikOVYb%2Bg0v6GFfhwBstgnkZmtko1OXLOxF%2FmxA200pJAIhfjNnp3%2FG3icOQCo6tql5g%3D%3D&tmstmp=1789980967837",
+      "source_opportunity_id": "LPD164 Cancellation Posting",
+      "access_level": "registration_required"
+    },
+    "opportunity": {
+      "title": "HIV Prevention, Treatment and Care Services",
+      "agency_name": "Utah Public Procurement Place (Jaggaer/SciQuest)",
+      "solicitation_number": "LPD164 Cancellation Posting",
+      "status": "Open",
+      "notice_type": "Posting",
+      "published_at": "1/14/2022, 3:40 PM MST",
+      "due_at": "1/14/2027, 3:40 PM MST",
+      "source_timezone": "America/Denver",
+      "description": "Department of Health and Human Services Procure the services and establish contracts with HIV Preventions, Treatment and Care Program providers of HIV-related prescription drugs and services.",
+      "categories": [],
+      "submission_url": "https://app01.jaggaer.com/apps/Router/ViewSourcingEvent?AuthToken=1%3AAES2%23COtZCo2lb1CCJzGVk6S5lC7hF%2BOmmRhJT7SKJwQZgAu9fbK0R4vTIy5vMIloTOHZwlT24CsYhwhG22k7b8qEJyieBWxZDe0ikOVYb%2Bg0v6GFfhwBstgnkZmtko1OXLOxF%2FmxA200pJAIhfjNnp3%2FG3icOQCo6tql5g%3D%3D&tmstmp=1789980967837",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "HIV Prevention, Treatment and Care Services (View as PDF)",
+        "url": "https://solutions-selectsite-documents.s3.amazonaws.com/Sourcingevent/1052811-event.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQDZome1uYdcPSV33IFJzfnx822gTN1uW7JNoZyQL5JpAgIhAPwTPqT%2BIC429PsHfr%2FrmviHT9YCf39vZELGK6V5pnWWKsIFCIf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMjgwMjYyNzQ0NjI4IgxkIA%2BkJGbuKzyXCBgqlgWQNZXyJfkcxQmKfoza6ofiiPA4WZLLcs%2FCJyqMQYRMoxuTLssbdvMXc9x1r1vF05VMgwnrfcXa55mAIM5o1xFDiwIGIdBuLBFVH3P2QT84T0n2xWqIhwkZc%2B4U2WGTbopNajzjhfQWN7TsXkxyfD5QFIA4Ns0ccV0M0%2FPTDXJzkVSMHP1pHmr%2FcXh98VCuSpMUI0wyB9%2F0w13O0GfV6RQ6Qam5glTf9uxeyzbvEc6Qp5d1enh0nfaIku6nm%2Bgw7GslQFMX6vkyT%2Fhux3cx7yLWLj010nQUTTbLA8pvz87CiRo%2BIHViD%2Fqzq0fpF2wNTrwOLCwlkS4pfn4tzpNGNMPC6V8Sieo4T0h9pttE4hmQATXLYXuyee4dpy5mGgpn8cXNcA7NtRXD5Q3tTUDZH0wUrZUUxxMUyFRH9yKHlmor%2FHNnouiVJ9Dx9Q%2FNvOpl2qAy60zSeTVO26avzcD5lZY6yxCgCCjIMVlHLWP2AH%2FQwu48iOWRDSOzwu5mivnpkSyk%2ByKJiJmSexUiQB3ZAwN3XEtfVsPJdbIkWjUUZSq2zGKofRyeUFyZGH8FB7csNbO%2BbEVPaD%2FxhRFy02lJREyHcQSGLGt1eOa%2BY%2F3G0bbylBVwtZHujAYWnlkkBjfD4%2BnIDPrAPPPEzu8pLLvEZAsG8ETP8rDhwI65bcH81O6tJtqdgRBWm8ihDBGK%2BgqE5tQFipn84%2FYLezaxSEYQ53V1mRtjnv9JmHfThabrvdYTLMcdv6g5yzMuffahH5IBeKJXiQNhV6Vtxi40HnzIDSnKsDT7BY8eUYSIJYlMrysScNdH6xnzyrJWv%2FrBrIOTAKSTtI1jkEHDye300UO19a%2BGIMDq2BSrdyZm8FKTUBJYXu5oEMhjVzC9ksPVBjqwAYcxVuk0DlKAGpy4BpbN3Q20NKuSWQG7n64MNeOUHTtpAp7IyO8sO5Nh%2FMClwePdcXjzoaRFHNyE2GRgdt2nnzonCkRlz6Pcuqwwd4TEqvb11cT%2BkqDwOkyTAnZgVNtAhlEc0r6rN%2FXMc%2B3lGreIw2P2mT2PZnt4nlb0TLNwL2p1ftfFE76WJZamZEGkqWf11HLxe3nVrPknPO8sRfSOwOsEkgZCBQKW8MH9%2FSlWxiRG&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260921T085607Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAUCQHWDI2PN5UPOWL%2F20260921%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=7fef9e292aa490fca36ffe59ba3116bc31b01910103d879b0eb85f7bffb40f88",
+        "document_type": "solicitation",
+        "mime_type": "application/pdf",
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "9a009c1fe542b2f51d3cc24e983e9dcb01778d13192e774171fb5556e8b84a2a"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-085558",
+      "parser_version": "ut-jaggaer-sourcingpublicsite-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URL captured as link_only",
+        "Utah Public Procurement Place (Jaggaer/SciQuest) detail page requires a Jaggaer supplier login; description/full detail beyond the listing row is unavailable",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "observed_at": "2026-09-21T08:56:11.496777Z",
+    "source": {
+      "name": "Utah Public Procurement Place (Jaggaer/SciQuest)",
+      "base_url": "https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfUtah",
+      "opportunity_url": "https://app01.jaggaer.com/apps/Router/ViewSourcingEvent?AuthToken=1%3AAES2%23CBCihOJAuW5qKx7SI%2FCy79cQUBKkia2Up%2B8skP0lAZtTKp0EQEfXH3mfH6cZTz%2FG1T2UQLwdmIxLA41tZJWCCqmngVVgYdXUn%2BxQF6ivX%2F7WcQD12bbBazBjmsubMGL4K4jc%2BXFTlZvSRBFfutGTO58LB%2Fsarc4n4g%3D%3D&tmstmp=1789980967838",
+      "source_opportunity_id": "LPD127 Cancellation Posting",
+      "access_level": "registration_required"
+    },
+    "opportunity": {
+      "title": "TB Control and Refugee Health",
+      "agency_name": "Utah Public Procurement Place (Jaggaer/SciQuest)",
+      "solicitation_number": "LPD127 Cancellation Posting",
+      "status": "Open",
+      "notice_type": "Posting",
+      "published_at": "1/14/2022, 2:30 PM MST",
+      "due_at": "1/14/2027, 2:30 PM MST",
+      "source_timezone": "America/Denver",
+      "description": "Professional Services for TB Control and Refugee Health Consultants and Refugee Health Screening",
+      "categories": [],
+      "submission_url": "https://app01.jaggaer.com/apps/Router/ViewSourcingEvent?AuthToken=1%3AAES2%23CBCihOJAuW5qKx7SI%2FCy79cQUBKkia2Up%2B8skP0lAZtTKp0EQEfXH3mfH6cZTz%2FG1T2UQLwdmIxLA41tZJWCCqmngVVgYdXUn%2BxQF6ivX%2F7WcQD12bbBazBjmsubMGL4K4jc%2BXFTlZvSRBFfutGTO58LB%2Fsarc4n4g%3D%3D&tmstmp=1789980967838",
+      "submission_method": "external_portal"
+    },
+    "documents": [
+      {
+        "title": "TB Control and Refugee Health (View as PDF)",
+        "url": "https://solutions-selectsite-documents.s3.amazonaws.com/Sourcingevent/1052869-event.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQDZome1uYdcPSV33IFJzfnx822gTN1uW7JNoZyQL5JpAgIhAPwTPqT%2BIC429PsHfr%2FrmviHT9YCf39vZELGK6V5pnWWKsIFCIf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMjgwMjYyNzQ0NjI4IgxkIA%2BkJGbuKzyXCBgqlgWQNZXyJfkcxQmKfoza6ofiiPA4WZLLcs%2FCJyqMQYRMoxuTLssbdvMXc9x1r1vF05VMgwnrfcXa55mAIM5o1xFDiwIGIdBuLBFVH3P2QT84T0n2xWqIhwkZc%2B4U2WGTbopNajzjhfQWN7TsXkxyfD5QFIA4Ns0ccV0M0%2FPTDXJzkVSMHP1pHmr%2FcXh98VCuSpMUI0wyB9%2F0w13O0GfV6RQ6Qam5glTf9uxeyzbvEc6Qp5d1enh0nfaIku6nm%2Bgw7GslQFMX6vkyT%2Fhux3cx7yLWLj010nQUTTbLA8pvz87CiRo%2BIHViD%2Fqzq0fpF2wNTrwOLCwlkS4pfn4tzpNGNMPC6V8Sieo4T0h9pttE4hmQATXLYXuyee4dpy5mGgpn8cXNcA7NtRXD5Q3tTUDZH0wUrZUUxxMUyFRH9yKHlmor%2FHNnouiVJ9Dx9Q%2FNvOpl2qAy60zSeTVO26avzcD5lZY6yxCgCCjIMVlHLWP2AH%2FQwu48iOWRDSOzwu5mivnpkSyk%2ByKJiJmSexUiQB3ZAwN3XEtfVsPJdbIkWjUUZSq2zGKofRyeUFyZGH8FB7csNbO%2BbEVPaD%2FxhRFy02lJREyHcQSGLGt1eOa%2BY%2F3G0bbylBVwtZHujAYWnlkkBjfD4%2BnIDPrAPPPEzu8pLLvEZAsG8ETP8rDhwI65bcH81O6tJtqdgRBWm8ihDBGK%2BgqE5tQFipn84%2FYLezaxSEYQ53V1mRtjnv9JmHfThabrvdYTLMcdv6g5yzMuffahH5IBeKJXiQNhV6Vtxi40HnzIDSnKsDT7BY8eUYSIJYlMrysScNdH6xnzyrJWv%2FrBrIOTAKSTtI1jkEHDye300UO19a%2BGIMDq2BSrdyZm8FKTUBJYXu5oEMhjVzC9ksPVBjqwAYcxVuk0DlKAGpy4BpbN3Q20NKuSWQG7n64MNeOUHTtpAp7IyO8sO5Nh%2FMClwePdcXjzoaRFHNyE2GRgdt2nnzonCkRlz6Pcuqwwd4TEqvb11cT%2BkqDwOkyTAnZgVNtAhlEc0r6rN%2FXMc%2B3lGreIw2P2mT2PZnt4nlb0TLNwL2p1ftfFE76WJZamZEGkqWf11HLxe3nVrPknPO8sRfSOwOsEkgZCBQKW8MH9%2FSlWxiRG&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260921T085607Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAUCQHWDI2PN5UPOWL%2F20260921%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=7cbe0a79ed6a11c0ce8cb6a5dcce03778cf8dcc405c90bfa8d14fd149176e17d",
+        "document_type": "solicitation",
+        "mime_type": "application/pdf",
+        "download_status": "link_only",
+        "storage_uri": null,
+        "sha256": null
+      }
+    ],
+    "raw_capture": {
+      "content_type": "text/html",
+      "storage_uri": null,
+      "sha256": "9a009c1fe542b2f51d3cc24e983e9dcb01778d13192e774171fb5556e8b84a2a"
+    },
+    "crawl": {
+      "run_id": "team-run-2026-09-21-085558",
+      "parser_version": "ut-jaggaer-sourcingpublicsite-v1.1.0",
+      "record_status": "partial",
+      "errors": [
+        "document download/hashing not yet implemented; URL captured as link_only",
+        "Utah Public Procurement Place (Jaggaer/SciQuest) detail page requires a Jaggaer supplier login; description/full detail beyond the listing row is unavailable",
+        "raw_capture.storage_uri not set; no approved object-storage location configured"
+      ]
+    }
+  }
+]
