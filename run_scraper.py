@@ -4,6 +4,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from playwright.async_api import async_playwright
 from src.stealth import create_stealth_context
+from src.crawler import get_crawler
 from src.scrapers.georgia import GeorgiaScraper
 from src.scrapers.alabama import AlabamaScraper
 from src.scrapers.jaggaer import MontanaJaggaerScraper, UtahJaggaerScraper, IowaJaggaerScraper, DelawareJaggaerScraper
@@ -21,18 +22,23 @@ async def run_scraper_pipeline(state: str, output_path: Path, max_pages: int = 1
     print(f"Starting scraper for state: {state_upper}")
     run_id = f"team-run-{datetime.now(timezone.utc).strftime('%Y-%m-%d-%H%M%S')}"
 
+    storage = StorageManager()
+
+    if state_upper == "GA":
+        # Georgia has been migrated to Crawl4AI (see src/crawler.py).
+        async with get_crawler(headless=headless) as crawler:
+            scraper = GeorgiaScraper()
+            bids = await scraper.scrape_all_bids(crawler, max_pages=max_pages)
+        storage.upsert_bids(output_path, bids)
+        print(f"Successfully scraped and saved {len(bids)} bids to {output_path}")
+        return len(bids)
+
+    # Remaining states are still on the legacy Playwright path pending
+    # migration to Crawl4AI.
     async with async_playwright() as p:
         context = await create_stealth_context(p, headless=headless)
-        storage = StorageManager()
 
-        if state_upper == "GA":
-            scraper = GeorgiaScraper()
-            bids = await scraper.scrape_all_bids(context, max_pages=max_pages)
-            await context.close()
-            storage.upsert_bids(output_path, bids)
-            print(f"Successfully scraped and saved {len(bids)} bids to {output_path}")
-            return len(bids)
-        elif state_upper == "AL":
+        if state_upper == "AL":
             scraper = AlabamaScraper()
             records = await scraper.scrape_all_bids(context, max_pages=max_pages, run_id=run_id)
             await context.close()
