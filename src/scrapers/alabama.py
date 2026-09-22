@@ -1,9 +1,14 @@
 import hashlib
+import json
 import re
 import urllib.parse
 from datetime import datetime, timezone
 from typing import List, Optional
-from playwright.async_api import BrowserContext
+
+from bs4 import BeautifulSoup
+from crawl4ai import AsyncWebCrawler
+
+from src.crawler import fetch_page, random_delay
 from src.storage import (
     CrawlInfo,
     DeliveryDocument,
@@ -12,9 +17,26 @@ from src.storage import (
     DeliverySource,
     RawCapture,
 )
-from src.stealth import random_delay
 
 PARSER_VERSION = "alabama-v1.1.0"
+
+# JsonCssExtractionStrategy schema for the document/attachment links on a
+# BidNet Direct detail page - a static, structurally stable pattern (any
+# <a> whose href looks like a PDF/attachment/download link). The label/value
+# fields above (Publication Date, Closing Date, Location, Issuing Agency)
+# are NOT expressed as a schema because BidNet's layout puts them in
+# free-flowing text blocks, not a fixed table - the old code found them by
+# regex-matching the page body text, so that logic is preserved as-is over
+# the fetched HTML (still fully deterministic, no LLM involved).
+DOCUMENT_LINKS_SCHEMA = {
+    "name": "alabama_detail_documents",
+    "baseSelector": "a[href*='.pdf'], a[href*='attachment'], a[href*='download']",
+    "fields": [
+        {"name": "href", "type": "attribute", "attribute": "href"},
+        {"name": "text", "type": "text"},
+    ],
+}
+
 
 class AlabamaScraper:
     BASE_URL = "https://www.bidnetdirect.com/alabama"
@@ -25,72 +47,75 @@ class AlabamaScraper:
             return match.group(1)
         return f"AL-{hash(url) & 0xffffffff}"
 
-    async def scrape_all_bids(self, context: BrowserContext, max_pages: Optional[int] = 1, run_id: str = "adhoc-run") -> List[DeliveryRecord]:
-        page = await context.new_page()
-        try:
-            await page.goto(self.BASE_URL, wait_until="domcontentloaded", timeout=30000)
-            await page.wait_for_timeout(3000)
-            await random_delay(0.5, 1.5)
+    async def scrape_all_bids(
+        self, crawler: AsyncWebCrawler, max_pages: Optional[int] = 1, run_id: str = "adhoc-run"
+    ) -> List[DeliveryRecord]:
+        session_id = "alabama-listing-session"
+        results: List[DeliveryRecord] = []
+        current_page = 1
 
-            results: List[DeliveryRecord] = []
-            current_page = 1
+        result = await fetch_page(crawler, self.BASE_URL, session_id=session_id)
+        await random_delay(0.5, 1.5)
 
-            while True:
-                links = await page.locator("a").all()
-                bids_to_scrape = []
-                seen_urls = set()
+        while True:
+            html = result.html or ""
+            soup = BeautifulSoup(html, "lxml") if html else None
 
-                for link in links:
-                    href = await link.get_attribute("href")
+            bids_to_scrape = []
+            seen_urls = set()
+            if soup:
+                for link in soup.find_all("a", href=True):
+                    href = link.get("href")
                     if href and re.search(r'/\d{5,}', href):
-                        full_url = urllib.parse.urljoin("https://www.bidnetdirect.com", href)
+                        full_url = urllib.parse.urljoin(self.BASE_URL, href)
                         if full_url not in seen_urls:
                             seen_urls.add(full_url)
-                            summary_title = (await link.inner_text()).strip()
+                            summary_title = link.get_text(strip=True)
                             bids_to_scrape.append((full_url, summary_title))
 
-                if not bids_to_scrape:
-                    break
+            if not bids_to_scrape:
+                break
 
-                for url, summary_title in bids_to_scrape:
-                    detail_bid = await self._scrape_detail_page(context, url, summary_title, run_id)
-                    if detail_bid:
-                        results.append(detail_bid)
+            for url, summary_title in bids_to_scrape:
+                detail_bid = await self._scrape_detail_page(crawler, url, summary_title, run_id)
+                if detail_bid:
+                    results.append(detail_bid)
 
-                if max_pages and current_page >= max_pages:
-                    break
+            if max_pages and current_page >= max_pages:
+                break
 
-                next_btn = page.locator("a:has-text('Next'), button:has-text('Next'), a:has-text('>')").first
-                if await next_btn.is_visible() and await next_btn.is_enabled():
-                    current_page += 1
-                    await next_btn.click()
-                    await page.wait_for_load_state("domcontentloaded")
-                    await page.wait_for_timeout(3000)
-                    await random_delay(0.5, 1.5)
-                else:
-                    break
+            next_js = (
+                "const cands = Array.from(document.querySelectorAll('a, button'));"
+                "const btn = cands.find(el => /next|>/i.test((el.textContent || '').trim()));"
+                "if (btn && !btn.disabled) { btn.click(); }"
+            )
+            await random_delay(0.5, 1.5)
+            next_result = await fetch_page(
+                crawler, self.BASE_URL, js_code=next_js, session_id=session_id, js_only=True
+            )
+            if not next_result or not next_result.html or next_result.html == html:
+                break
+            current_page += 1
+            result = next_result
 
-            return results
-        finally:
-            await page.close()
+        return results
 
-    async def _scrape_detail_page(self, context: BrowserContext, url: str, summary_title: str = "", run_id: str = "adhoc-run") -> Optional[DeliveryRecord]:
-        detail_page = await context.new_page()
-        errors: List[str] = []
+    async def _scrape_detail_page(
+        self, crawler: AsyncWebCrawler, url: str, summary_title: str = "", run_id: str = "adhoc-run"
+    ) -> Optional[DeliveryRecord]:
         try:
-            await detail_page.goto(url, wait_until="domcontentloaded", timeout=30000)
-            await detail_page.wait_for_timeout(1000)
+            result = await fetch_page(crawler, url, schema=DOCUMENT_LINKS_SCHEMA)
             await random_delay(0.5, 1.0)
 
             event_id = self._extract_event_id(url)
             now_str = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
-            raw_html = await detail_page.content()
+            raw_html = result.html or ""
             raw_sha256 = hashlib.sha256(raw_html.encode("utf-8")).hexdigest()
 
-            body_text = await detail_page.locator("body").inner_text()
+            soup = BeautifulSoup(raw_html, "lxml") if raw_html else BeautifulSoup("", "lxml")
+            body_text = soup.get_text("\n", strip=True)
 
-            # Clean body text extraction
             pub_match = re.search(r'Publication\s*Date[:\s]*\n+\s*([^\n]+)', body_text, re.IGNORECASE) or re.search(r'Publication\s*Date[:\s]*([^\n<]+)', body_text, re.IGNORECASE)
             close_match = re.search(r'Closing\s*Date[:\s]*\n+\s*([^\n]+)', body_text, re.IGNORECASE) or re.search(r'Closing\s*Date[:\s]*([^\n<]+)', body_text, re.IGNORECASE)
             loc_match = re.search(r'Location[:\s]*\n+\s*([^\n]+)', body_text, re.IGNORECASE) or re.search(r'Location[:\s]*([^\n<]+)', body_text, re.IGNORECASE)
@@ -101,9 +126,9 @@ class AlabamaScraper:
             location = loc_match.group(1).strip() if loc_match else "Alabama"
 
             title = summary_title
-            title_elem = detail_page.locator("h1, h2").first
-            if await title_elem.count() > 0:
-                txt = (await title_elem.inner_text()).strip()
+            title_elem = soup.find(["h1", "h2"])
+            if title_elem:
+                txt = title_elem.get_text(strip=True)
                 if txt and "Bid Information" not in txt and "skip" not in txt.lower():
                     title = txt
             if not title:
@@ -112,7 +137,7 @@ class AlabamaScraper:
             agency = None
             if agency_match and "locked" not in agency_match.group(1).lower() and "registered" not in agency_match.group(1).lower():
                 agency = agency_match.group(1).strip()
-            
+
             if not agency and location and location.lower() != "alabama":
                 agency = location
             if not agency and "for " in title.lower():
@@ -123,17 +148,17 @@ class AlabamaScraper:
                 agency = "State of Alabama"
 
             documents: List[DeliveryDocument] = []
-            doc_links = await detail_page.locator("a[href*='.pdf'], a[href*='attachment'], a[href*='download']").all()
+            errors: List[str] = []
             seen_doc_urls = set()
-            for doc_link in doc_links:
-                href = await doc_link.get_attribute("href")
+            for row in _parse_extracted(result.extracted_content) or []:
+                href = row.get("href")
                 if not href:
                     continue
                 doc_url = urllib.parse.urljoin(url, href)
                 if doc_url in seen_doc_urls:
                     continue
                 seen_doc_urls.add(doc_url)
-                doc_title = (await doc_link.inner_text()).strip() or None
+                doc_title = (row.get("text") or "").strip() or None
                 documents.append(DeliveryDocument(
                     title=doc_title,
                     url=doc_url,
@@ -187,5 +212,17 @@ class AlabamaScraper:
         except Exception as e:
             print(f"Error scraping detail page {url}: {e}")
             return None
-        finally:
-            await detail_page.close()
+
+
+def _parse_extracted(extracted_content: Optional[str]):
+    """JsonCssExtractionStrategy returns a JSON string: a list with one dict
+    per match of the baseSelector (here, one dict per matched <a> tag)."""
+    if not extracted_content:
+        return None
+    try:
+        data = json.loads(extracted_content)
+    except (ValueError, TypeError):
+        return None
+    if isinstance(data, list):
+        return data
+    return None

@@ -33,19 +33,21 @@ async def run_scraper_pipeline(state: str, output_path: Path, max_pages: int = 1
         print(f"Successfully scraped and saved {len(bids)} bids to {output_path}")
         return len(bids)
 
+    if state_upper == "AL":
+        # Alabama has been migrated to Crawl4AI (see src/crawler.py).
+        async with get_crawler(headless=headless) as crawler:
+            scraper = AlabamaScraper()
+            records = await scraper.scrape_all_bids(crawler, max_pages=max_pages, run_id=run_id)
+        storage.append_delivery_records(output_path, records)
+        print(f"Successfully scraped and appended {len(records)} spec-compliant records to {output_path}")
+        return len(records)
+
     # Remaining states are still on the legacy Playwright path pending
     # migration to Crawl4AI.
     async with async_playwright() as p:
         context = await create_stealth_context(p, headless=headless)
 
-        if state_upper == "AL":
-            scraper = AlabamaScraper()
-            records = await scraper.scrape_all_bids(context, max_pages=max_pages, run_id=run_id)
-            await context.close()
-            storage.append_delivery_records(output_path, records)
-            print(f"Successfully scraped and appended {len(records)} spec-compliant records to {output_path}")
-            return len(records)
-        elif state_upper == "MT":
+        if state_upper == "MT":
             scraper = MontanaJaggaerScraper()
             records = await scraper.scrape_all_bids(context, max_pages=max_pages, run_id=run_id)
             await context.close()
