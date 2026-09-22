@@ -1,10 +1,74 @@
+import json
 import re
 import urllib.parse
 from datetime import datetime
 from typing import List, Optional
-from playwright.async_api import BrowserContext
+
+from bs4 import BeautifulSoup
+from crawl4ai import AsyncWebCrawler
+
+from src.crawler import fetch_page, random_delay
 from src.storage import BidEvent, BidContact, CommodityCode, Attachment
-from src.stealth import random_delay
+
+# JsonCssExtractionStrategy schema for the Ivalua public RFx grid rows.
+# The grid is a stable HTML table (id/class contains "grid"), one <tr> per
+# row, with cell 0 always the edit/manage icon column (not data) - same
+# assumption the previous Playwright-locator loop made. We pull the raw
+# per-cell text plus the row's first <a href> in one schema pass; the
+# heuristic column-guessing in `_parse_grid_row` (which cell is the code,
+# title, agency, status, dates) is preserved unchanged since Ivalua's public
+# grids don't have stable per-column headers across state deployments.
+GRID_ROWS_SCHEMA = {
+    "name": "ivalua_grid_rows",
+    "baseSelector": "table[id*='grid'] tbody tr, table.iv-grid-view tbody tr",
+    "fields": [
+        {"name": "row_html", "type": "html"},
+        {"name": "link", "selector": "a[href]", "type": "attribute", "attribute": "href"},
+    ],
+}
+
+# JsonCssExtractionStrategy schema for the static parts of a detail page:
+# the commodity-code table and attachment-style links. The label/value rows
+# above (Title, Agency, Status, dates, contact) are NOT expressed as a
+# schema because - exactly as in the original Playwright version - they are
+# located dynamically by regex-matching each table row's label text, which a
+# static CSS schema cannot express; that logic is preserved as deterministic
+# BeautifulSoup/regex parsing over the fetched HTML.
+DETAIL_SCHEMA = {
+    "name": "ivalua_detail_tables",
+    "baseSelector": "body",
+    "fields": [
+        {
+            "name": "commodity_rows",
+            "selector": "table tr",
+            "type": "list",
+            "fields": [
+                {"name": "code", "selector": "td:nth-of-type(1)", "type": "text"},
+                {"name": "description", "selector": "td:nth-of-type(2)", "type": "text"},
+            ],
+        },
+        {
+            "name": "attachment_links",
+            "selector": "a[href*='download'], a[href*='file'], a[href*='.pdf'], a[href*='.doc'], a[href*='attachment']",
+            "type": "list",
+            "fields": [
+                {"name": "href", "type": "attribute", "attribute": "href"},
+                {"name": "text", "type": "text"},
+            ],
+        },
+    ],
+}
+
+
+def _parse_extracted(extracted_content: Optional[str]):
+    if not extracted_content:
+        return None
+    try:
+        data = json.loads(extracted_content)
+    except (ValueError, TypeError):
+        return None
+    return data
+
 
 class IvaluaScraper:
     BROWSE_PATH = "/page.aspx/en/rfp/request_browse_public"
@@ -21,56 +85,58 @@ class IvaluaScraper:
             return match.group(1)
         return f"{self.state_code}-{hash(url) & 0xffffffff}"
 
-    async def scrape_all_bids(self, context: BrowserContext, max_pages: Optional[int] = 1) -> List[BidEvent]:
-        page = await context.new_page()
-        try:
-            await page.goto(self.BROWSE_URL, wait_until="domcontentloaded", timeout=30000)
-            await page.wait_for_timeout(3000)
+    async def scrape_all_bids(self, crawler: AsyncWebCrawler, max_pages: Optional[int] = 1) -> List[BidEvent]:
+        session_id = f"ivalua-{self.state_code}-session"
+        results: List[BidEvent] = []
+        current_page = 1
+
+        result = await fetch_page(crawler, self.BROWSE_URL, schema=GRID_ROWS_SCHEMA, session_id=session_id)
+        await random_delay(0.5, 1.5)
+
+        while True:
+            rows = _parse_extracted(result.extracted_content) or []
+            row_data = []
+            for row in rows:
+                href = row.get("link")
+                row_html = row.get("row_html") or ""
+                if not href:
+                    continue
+                soup = BeautifulSoup(row_html, "lxml")
+                cell_texts = [c.get_text(strip=True) for c in soup.find_all("td")]
+                full_url = urllib.parse.urljoin(self.base_url + "/", href)
+                row_data.append((full_url, cell_texts))
+
+            if not row_data:
+                break
+
+            for url, cell_texts in row_data:
+                bid = await self._scrape_detail_page(crawler, url, cell_texts)
+                if bid:
+                    results.append(bid)
+
+            if max_pages and current_page >= max_pages:
+                break
+
+            next_js = (
+                "const cands = Array.from(document.querySelectorAll(\"[aria-label*='Next page'], a, button\"));"
+                "const btn = cands.find(el => /next/i.test((el.getAttribute('aria-label') || el.textContent || '')));"
+                "if (btn && !btn.disabled) { btn.click(); }"
+            )
             await random_delay(0.5, 1.5)
+            next_result = await fetch_page(
+                crawler,
+                self.BROWSE_URL,
+                schema=GRID_ROWS_SCHEMA,
+                js_code=next_js,
+                session_id=session_id,
+                js_only=True,
+            )
+            if not next_result or next_result.extracted_content == result.extracted_content:
+                break
+            current_page += 1
+            result = next_result
 
-            results: List[BidEvent] = []
-            current_page = 1
-
-            while True:
-                rows = await page.locator("table[id*='grid'] tbody tr, table.iv-grid-view tbody tr").all()
-                row_data = []
-                for row in rows:
-                    cells = await row.locator("td").all()
-                    cell_texts = [(await c.inner_text()).strip() for c in cells]
-                    link = row.locator("a[href]").first
-                    href = None
-                    if await link.count() > 0:
-                        href = await link.get_attribute("href")
-                    if href:
-                        full_url = urllib.parse.urljoin(self.base_url + "/", href)
-                        row_data.append((full_url, cell_texts))
-
-                if not row_data:
-                    break
-
-                for url, cell_texts in row_data:
-                    bid = await self._scrape_detail_page(context, url, cell_texts)
-                    if bid:
-                        results.append(bid)
-
-                if max_pages and current_page >= max_pages:
-                    break
-
-                next_btn = page.locator(
-                    "[aria-label*='Next page'], a:has-text('Next'), button:has-text('Next')"
-                ).first
-                if await next_btn.count() > 0 and await next_btn.is_visible() and await next_btn.is_enabled():
-                    current_page += 1
-                    await next_btn.click()
-                    await page.wait_for_load_state("domcontentloaded")
-                    await page.wait_for_timeout(3000)
-                    await random_delay(0.5, 1.5)
-                else:
-                    break
-
-            return results
-        finally:
-            await page.close()
+        return results
 
     def _parse_grid_row(self, cell_texts: List[str]) -> dict:
         code = None
@@ -127,71 +193,69 @@ class IvaluaScraper:
             "close_date": close_date,
         }
 
-    async def _scrape_detail_page(self, context: BrowserContext, url: str, cell_texts: Optional[List[str]] = None) -> Optional[BidEvent]:
+    async def _scrape_detail_page(
+        self, crawler: AsyncWebCrawler, url: str, cell_texts: Optional[List[str]] = None
+    ) -> Optional[BidEvent]:
         cell_texts = cell_texts or []
         grid_fields = self._parse_grid_row(cell_texts)
-        detail_page = await context.new_page()
         try:
-            await detail_page.goto(url, wait_until="domcontentloaded", timeout=30000)
-            await detail_page.wait_for_timeout(1500)
+            result = await fetch_page(crawler, url, schema=DETAIL_SCHEMA)
             await random_delay(0.5, 1.0)
 
             event_id = self._extract_event_id(url)
             now_str = datetime.now().isoformat()
 
-            if "/bas/browser_check" in detail_page.url or "captcha" in (await detail_page.content()).lower():
+            html = result.html or ""
+            if "/bas/browser_check" in (result.redirected_url or result.url or url) or "captcha" in html.lower():
                 return self._build_bid_from_grid(url, event_id, grid_fields, now_str)
 
-            async def get_label_value(label_regex: str) -> Optional[str]:
-                try:
-                    rows = await detail_page.locator("tr").all()
-                    for row in rows:
-                        row_text = await row.inner_text()
-                        if re.search(label_regex, row_text, re.IGNORECASE):
-                            cells = await row.locator("td, th").all()
-                            if len(cells) >= 2:
-                                val = (await cells[1].inner_text()).strip()
-                                if val:
-                                    return val
-                            elif len(cells) == 1:
-                                parts = row_text.split(":", 1)
-                                if len(parts) > 1 and parts[1].strip():
-                                    return parts[1].strip()
-                except Exception:
-                    pass
+            soup = BeautifulSoup(html, "lxml") if html else BeautifulSoup("", "lxml")
+            body_text = soup.get_text("\n", strip=True)
+
+            def get_label_value(label_regex: str) -> Optional[str]:
+                for row in soup.find_all("tr"):
+                    row_text = row.get_text(" ", strip=True)
+                    if re.search(label_regex, row_text, re.IGNORECASE):
+                        cells = row.find_all(["td", "th"])
+                        if len(cells) >= 2:
+                            val = cells[1].get_text(strip=True)
+                            if val:
+                                return val
+                        elif len(cells) == 1:
+                            parts = row_text.split(":", 1)
+                            if len(parts) > 1 and parts[1].strip():
+                                return parts[1].strip()
                 return None
 
-            body_text = await detail_page.locator("body").inner_text()
-
-            title = await get_label_value(r'Title|Label|Object|Description') or grid_fields.get("title")
+            title = get_label_value(r'Title|Label|Object|Description') or grid_fields.get("title")
             if not title:
-                heading = detail_page.locator("h1, h2, h3").first
-                if await heading.count() > 0:
-                    txt = (await heading.inner_text()).strip()
+                heading = soup.find(["h1", "h2", "h3"])
+                if heading:
+                    txt = heading.get_text(strip=True)
                     if txt:
                         title = txt
             if not title:
                 title = f"{self.portal_name} Solicitation"
 
             agency = (
-                await get_label_value(r'Agency|Buyer|Department|Issuing\s*Entity|Organization')
+                get_label_value(r'Agency|Buyer|Department|Issuing\s*Entity|Organization')
                 or grid_fields.get("agency")
                 or f"State of {self.state_code}"
             )
-            solicitation_type = await get_label_value(r'Type|Process\s*Type|Rfx\s*Type') or "RFP"
-            status = await get_label_value(r'Status') or grid_fields.get("status") or "Open"
+            solicitation_type = get_label_value(r'Type|Process\s*Type|Rfx\s*Type') or "RFP"
+            status = get_label_value(r'Status') or grid_fields.get("status") or "Open"
             post_date = (
-                await get_label_value(r'Publication\s*(?:begin\s*)?[Dd]ate|Post\s*Date|Begin\s*Date|Start\s*Date')
+                get_label_value(r'Publication\s*(?:begin\s*)?[Dd]ate|Post\s*Date|Begin\s*Date|Start\s*Date')
                 or grid_fields.get("post_date")
                 or now_str[:10]
             )
             close_date = (
-                await get_label_value(r'Publication\s*end\s*[Dd]ate|Close\s*Date|End\s*Date|Due\s*Date|Submission\s*[Dd]ate')
+                get_label_value(r'Publication\s*end\s*[Dd]ate|Close\s*Date|End\s*Date|Due\s*Date|Submission\s*[Dd]ate')
                 or grid_fields.get("close_date")
                 or now_str
             )
 
-            contact_name = await get_label_value(r'Contact\s*Name|Buyer\s*Name|Contact')
+            contact_name = get_label_value(r'Contact\s*Name|Buyer\s*Name|Contact')
             if not contact_name:
                 name_match = re.search(r'Contact(?:\s*Name)?\s*[:\-]\s*([^\n<]+)', body_text, re.IGNORECASE)
                 if name_match:
@@ -209,37 +273,30 @@ class IvaluaScraper:
             if contact_name or contact_email or contact_phone:
                 contact = BidContact(name=contact_name, email=contact_email, phone=contact_phone)
 
+            extracted = _parse_extracted(result.extracted_content)
+            extracted = extracted[0] if isinstance(extracted, list) and extracted else extracted
+
             commodity_codes: List[CommodityCode] = []
-            try:
-                comm_rows = await detail_page.locator("table tr").all()
-                for row in comm_rows:
-                    cells = await row.locator("td").all()
-                    if len(cells) >= 2:
-                        c_code = (await cells[0].inner_text()).strip()
-                        c_desc = (await cells[1].inner_text()).strip()
-                        if re.match(r'^\d{3,8}$', c_code) and c_desc:
-                            commodity_codes.append(CommodityCode(code=c_code, description=c_desc))
-            except Exception:
-                pass
+            if extracted:
+                for row in extracted.get("commodity_rows", []) or []:
+                    c_code = (row.get("code") or "").strip()
+                    c_desc = (row.get("description") or "").strip()
+                    if c_code and c_desc and re.match(r'^\d{3,8}$', c_code):
+                        commodity_codes.append(CommodityCode(code=c_code, description=c_desc))
 
             attachments: List[Attachment] = []
-            try:
-                att_links = await detail_page.locator(
-                    "a[href*='download'], a[href*='file'], a[href*='.pdf'], a[href*='.doc'], a[href*='attachment']"
-                ).all()
-                for a_link in att_links:
-                    href = await a_link.get_attribute("href")
-                    link_text = (await a_link.inner_text()).strip()
+            if extracted:
+                for row in extracted.get("attachment_links", []) or []:
+                    href = row.get("href")
                     if not href:
                         continue
+                    link_text = (row.get("text") or "").strip()
                     file_name = link_text or href.split("/")[-1] or "attachment"
                     full_download_url = urllib.parse.urljoin(self.base_url + "/", href)
                     file_type = file_name.split(".")[-1] if "." in file_name else None
                     attachments.append(
                         Attachment(file_name=file_name, download_url=full_download_url, file_type=file_type)
                     )
-            except Exception:
-                pass
 
             return BidEvent(
                 event_id=str(grid_fields.get("code") or event_id),
@@ -263,8 +320,6 @@ class IvaluaScraper:
             if grid_fields.get("title"):
                 return self._build_bid_from_grid(url, self._extract_event_id(url), grid_fields, datetime.now().isoformat())
             return None
-        finally:
-            await detail_page.close()
 
     def _build_bid_from_grid(self, url: str, event_id: str, grid_fields: dict, now_str: str) -> Optional[BidEvent]:
         if not grid_fields.get("title"):

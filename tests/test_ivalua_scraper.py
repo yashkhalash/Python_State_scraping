@@ -1,5 +1,4 @@
 import pytest
-from playwright.async_api import async_playwright
 from src.scrapers.ivalua import (
     IvaluaScraper,
     ArizonaIvaluaScraper,
@@ -8,6 +7,7 @@ from src.scrapers.ivalua import (
     VermontIvaluaScraper,
 )
 from src.storage import BidEvent
+from tests.conftest import local_html_server
 
 
 def test_ivalua_scraper_initialization():
@@ -110,24 +110,17 @@ BROWSER_CHECK_HTML = """
 
 
 @pytest.mark.asyncio
-async def test_scrape_all_bids_with_mock_page():
+async def test_scrape_all_bids_with_mock_page(crawler):
     scraper = ArizonaIvaluaScraper()
 
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        context = await browser.new_context()
+    with local_html_server(
+        {lambda p: "process_manage_extranet" in p: DETAIL_HTML},
+        default=GRID_HTML,
+    ) as base_url:
+        scraper.base_url = base_url
+        scraper.BROWSE_URL = base_url + IvaluaScraper.BROWSE_PATH
 
-        async def handle_route(route):
-            url = route.request.url
-            if "process_manage_extranet" in url:
-                await route.fulfill(status=200, body=DETAIL_HTML, content_type="text/html")
-            else:
-                await route.fulfill(status=200, body=GRID_HTML, content_type="text/html")
-
-        await context.route("**/*", handle_route)
-
-        bids = await scraper.scrape_all_bids(context, max_pages=1)
-        await browser.close()
+        bids = await scraper.scrape_all_bids(crawler, max_pages=1)
 
         assert len(bids) == 1
         bid = bids[0]
@@ -148,23 +141,17 @@ async def test_scrape_all_bids_with_mock_page():
 
 
 @pytest.mark.asyncio
-async def test_scrape_falls_back_to_grid_data_when_detail_page_is_captcha_gated():
+async def test_scrape_falls_back_to_grid_data_when_detail_page_is_captcha_gated(crawler):
     scraper = OhioIvaluaScraper()
 
-    async def handle_route(route):
-        url = route.request.url
-        if "process_manage_extranet" in url:
-            await route.fulfill(status=200, body=BROWSER_CHECK_HTML, content_type="text/html")
-        else:
-            await route.fulfill(status=200, body=GRID_HTML, content_type="text/html")
+    with local_html_server(
+        {lambda p: "process_manage_extranet" in p: BROWSER_CHECK_HTML},
+        default=GRID_HTML,
+    ) as base_url:
+        scraper.base_url = base_url
+        scraper.BROWSE_URL = base_url + IvaluaScraper.BROWSE_PATH
 
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        context = await browser.new_context()
-        await context.route("**/*", handle_route)
-
-        bids = await scraper.scrape_all_bids(context, max_pages=1)
-        await browser.close()
+        bids = await scraper.scrape_all_bids(crawler, max_pages=1)
 
         assert len(bids) == 1
         bid = bids[0]
@@ -178,20 +165,15 @@ async def test_scrape_falls_back_to_grid_data_when_detail_page_is_captcha_gated(
 
 
 @pytest.mark.asyncio
-async def test_scrape_all_bids_defensive_parsing_no_grid_rows():
+async def test_scrape_all_bids_defensive_parsing_no_grid_rows(crawler):
     scraper = MarylandIvaluaScraper()
 
     empty_html = "<html><body><p>No results</p></body></html>"
 
-    async def handle_route(route):
-        await route.fulfill(status=200, body=empty_html, content_type="text/html")
+    with local_html_server({}, default=empty_html) as base_url:
+        scraper.base_url = base_url
+        scraper.BROWSE_URL = base_url + IvaluaScraper.BROWSE_PATH
 
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        context = await browser.new_context()
-        await context.route("**/*", handle_route)
-
-        bids = await scraper.scrape_all_bids(context, max_pages=1)
-        await browser.close()
+        bids = await scraper.scrape_all_bids(crawler, max_pages=1)
 
         assert bids == []
