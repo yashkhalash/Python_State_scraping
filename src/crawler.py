@@ -87,6 +87,13 @@ def build_run_config(
         extraction_strategy=extraction_strategy,
         css_selector=css_selector,
         wait_for=wait_for,
+        # A dedicated, shorter budget for `wait_for` conditions (used to wait
+        # for AJAX-populated content on sites like GA's DataTables-driven
+        # listing/detail pages). Kept separate from page_timeout so a
+        # wait_for condition that never resolves (e.g. against static test
+        # fixtures with no matching elements) doesn't consume the full page
+        # load budget - it degrades gracefully to whatever HTML was captured.
+        wait_for_timeout=10000,
         js_code=js_code,
         js_only=js_only,
         session_id=session_id,

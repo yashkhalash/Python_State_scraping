@@ -71,11 +71,20 @@ class GeorgiaScraper:
             "|| Array.from(document.querySelectorAll('button')).find(b => /search/i.test(b.textContent)); "
             "if (btn) { btn.click(); }"
         )
+        # The results table is populated client-side via an AJAX call kicked
+        # off by the Search click (DataTables), so the click alone isn't
+        # enough - we must wait for actual result rows to land in the DOM
+        # before capturing HTML, otherwise we only see the empty template
+        # link in the page's static markup.
+        events_loaded_js = (
+            "() => document.querySelectorAll(\"a[href*='eventDetails']\").length > 1"
+        )
         result = await fetch_page(
             crawler,
             self.BASE_URL,
             js_code=search_js,
             session_id=session_id,
+            wait_for=f"js:{events_loaded_js}",
         )
 
         while True:
@@ -130,16 +139,30 @@ class GeorgiaScraper:
 
     async def _scrape_detail_page(self, crawler: AsyncWebCrawler, url: str) -> Optional[BidEvent]:
         try:
-            result = await fetch_page(crawler, url, schema=DETAIL_TABLES_SCHEMA)
+            # The detail page's "Event Details" panel is also populated
+            # client-side, so wait for its data-header cells to actually
+            # render before capturing HTML (same AJAX-timing issue as the
+            # listing page).
+            result = await fetch_page(
+                crawler,
+                url,
+                schema=DETAIL_TABLES_SCHEMA,
+                wait_for="js:() => document.querySelectorAll('[data-header]').length > 0",
+            )
             await random_delay(0.3, 0.8)
 
             html = result.html or ""
             content_text = html
 
-            # Parse event ID from URL or page text
+            # Parse event ID from URL (GPR's real query param is
+            # `eSourceNumber`, e.g. "PE-69215-NONST-2027-000000014", which
+            # matches the "Event ID:" value shown on the page) or page text.
             parsed_url = urllib.parse.urlparse(url)
             query_params = urllib.parse.parse_qs(parsed_url.query)
-            event_id = query_params.get("eventId", [None])[0]
+            event_id = (
+                query_params.get("eSourceNumber", [None])[0]
+                or query_params.get("eventId", [None])[0]
+            )
 
             if not event_id:
                 eid_match = re.search(r'Event\s*ID[:\s]*([A-Za-z0-9_-]+)', content_text, re.IGNORECASE)
@@ -150,6 +173,19 @@ class GeorgiaScraper:
             soup = BeautifulSoup(html, "lxml") if html else BeautifulSoup("", "lxml")
 
             def get_label_value(label_regex: str) -> Optional[str]:
+                # GPR's "Event Details" panel is a responsive div-based table
+                # (div.td[data-header="Label:"]), not real <table><tr> markup,
+                # so check that structure first - it's the reliable source for
+                # Event ID/Type/Status/etc.
+                for cell in soup.select("[data-header]"):
+                    header = (cell.get("data-header") or "").strip()
+                    if header and re.search(label_regex, header, re.IGNORECASE):
+                        val = cell.get_text(strip=True)
+                        if val:
+                            return val
+                # Fall back to real <tr> rows for pages/portals that do use
+                # plain HTML tables (e.g. commodity/attachment tables, or
+                # other event types with a different layout).
                 for row in soup.find_all("tr"):
                     row_text = row.get_text(" ", strip=True)
                     if re.search(label_regex, row_text, re.IGNORECASE):
@@ -164,21 +200,61 @@ class GeorgiaScraper:
                                 return parts[1].strip()
                 return None
 
-            title = get_label_value(r'Title|Event\s*Name')
+            # The event title is rendered as the second `a.details-title`
+            # link in the page header (the first is a back-arrow icon link
+            # with no text).
+            title = None
+            for a in soup.select("a.details-title"):
+                txt = a.get_text(strip=True)
+                if txt:
+                    title = txt
+                    break
             if not title:
-                for h in soup.find_all(["h1", "h2", "h3"]):
+                title = get_label_value(r'Title|Event\s*Name')
+            if not title:
+                for h in soup.find_all(["h1", "h2", "h3", "h4"]):
                     txt = h.get_text(strip=True)
-                    if txt and "Event Details" not in txt:
+                    if txt and "Event Details" not in txt and "Announcements" not in txt:
                         title = txt
                         break
             if not title:
                 title = "Georgia Procurement Event"
 
-            agency = get_label_value(r'Agency|Department|Issuing\s*Entity') or "State of Georgia"
+            agency = get_label_value(r'Agency\s*Name|Department|Issuing\s*Entity')
+            if not agency:
+                # The agency name isn't a labeled field - it's rendered as
+                # its own heading ("<agency code>&nbsp;<AGENCY NAME>") right
+                # after the Event Details table, e.g. "69215 LOWNDES COUNTY
+                # SCHOOLS SYSTEM".
+                for h in soup.find_all(["h3", "h4"]):
+                    txt = h.get_text(" ", strip=True)
+                    m = re.match(r'^\d+\s+(.+)$', txt)
+                    if m and "Buyer Contact" not in txt:
+                        agency = m.group(1).strip()
+                        break
+            agency = agency or "State of Georgia"
             solicitation_type = get_label_value(r'Solicitation\s*Type|Event\s*Type|Type') or "Solicitation"
             status = get_label_value(r'Status') or "Open"
-            post_date = get_label_value(r'Post\s*Date|Issue\s*Date|Start\s*Date') or now_str[:10]
-            close_date = get_label_value(r'Close\s*Date|End\s*Date|Due\s*Date') or now_str
+
+            # Start/End dates are shown as plain text ("Start Date: ...",
+            # "End Date: ...") next to the title, not in the data-header
+            # table, so pull them with a direct regex over the page text.
+            # Use normalized visible text (not raw HTML) for these regexes -
+            # the date values can be split across lines/whitespace in the
+            # markup, which get_text(" ") collapses to single spaces.
+            page_text = soup.get_text(" ", strip=True)
+
+            post_date = get_label_value(r'Post\s*Date|Issue\s*Date')
+            if not post_date:
+                m = re.search(r'Start\s*Date:\s*(.+?)(?:\s+Ends?\s*In|\s+End\s*Date|$)', page_text, re.IGNORECASE)
+                post_date = m.group(1).strip() if m else None
+            post_date = post_date or now_str[:10]
+
+            close_date = get_label_value(r'Close\s*Date|Due\s*Date')
+            if not close_date:
+                m = re.search(r'End\s*Date:\s*(.+?)(?:\s+Ends?\s*In|$)', page_text, re.IGNORECASE)
+                close_date = m.group(1).strip() if m else None
+            close_date = close_date or now_str
 
             contact_name = get_label_value(r'Contact\s*Name|Contact')
             if contact_name and "Contact:" in contact_name:
