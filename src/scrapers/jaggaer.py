@@ -1,9 +1,14 @@
 import hashlib
+import json
 import re
 import urllib.parse
 from datetime import datetime, timezone
 from typing import List, Optional
-from playwright.async_api import BrowserContext, Page
+
+from bs4 import BeautifulSoup
+from crawl4ai import AsyncWebCrawler
+
+from src.crawler import fetch_page, random_delay
 from src.storage import (
     BidEvent,
     BidContact,
@@ -16,7 +21,6 @@ from src.storage import (
     DeliverySource,
     RawCapture,
 )
-from src.stealth import random_delay
 
 EMAIL_RE = re.compile(r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}')
 PHONE_RE = re.compile(r'\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}')
@@ -27,24 +31,37 @@ class JaggaerLoginRequiredError(Exception):
     pass
 
 
-async def get_row_label_value(page: Page, label_regex: str) -> Optional[str]:
+def _soup_from_html(html: Optional[str]) -> BeautifulSoup:
+    return BeautifulSoup(html or "", "lxml")
+
+
+def _parse_extracted(extracted_content: Optional[str]):
+    if not extracted_content:
+        return None
+    try:
+        return json.loads(extracted_content)
+    except (ValueError, TypeError):
+        return None
+
+
+def get_row_label_value(soup: BeautifulSoup, label_regex: str) -> Optional[str]:
     """
     Extracts a field value from Bootstrap-style label/value rows, i.e.
     <div class="row"><div class="col-*"><label>Label</label></div>
     <div class="col-*">Value</div></div>, as used by Iowa's bidopportunities.iowa.gov
-    detail page.
+    detail page. Same matching logic as the previous Playwright-locator version,
+    now applied to a BeautifulSoup tree built from the Crawl4AI-fetched HTML.
     """
     try:
-        rows = await page.locator("div.row").all()
-        for row in rows:
-            label_el = row.locator("label").first
-            if await label_el.count() == 0:
+        for row in soup.select("div.row"):
+            label_el = row.find("label")
+            if label_el is None:
                 continue
-            label_text = (await label_el.inner_text()).strip()
+            label_text = label_el.get_text(strip=True)
             if re.search(label_regex, label_text, re.IGNORECASE):
-                value_el = row.locator("div[class*='col-']").last
-                if await value_el.count() > 0:
-                    val = (await value_el.inner_text()).strip()
+                value_divs = row.select("div[class*='col-']")
+                if value_divs:
+                    val = value_divs[-1].get_text(strip=True)
                     if val:
                         return val
     except Exception:
@@ -52,21 +69,20 @@ async def get_row_label_value(page: Page, label_regex: str) -> Optional[str]:
     return None
 
 
-async def get_label_value(page: Page, label_regex: str) -> Optional[str]:
+def get_label_value(soup: BeautifulSoup, label_regex: str) -> Optional[str]:
     try:
-        rows = await page.locator("tr").all()
-        for row in rows:
-            row_text = await row.inner_text()
+        for row in soup.find_all("tr"):
+            row_text = row.get_text(" ", strip=True)
             if re.search(label_regex, row_text, re.IGNORECASE):
-                cells = await row.locator("td, th").all()
+                cells = row.find_all(["td", "th"])
                 if len(cells) >= 2:
                     for i in range(len(cells) - 1):
-                        label_text = (await cells[i].inner_text()).strip()
+                        label_text = cells[i].get_text(strip=True)
                         if re.search(label_regex, label_text, re.IGNORECASE):
-                            val = (await cells[i + 1].inner_text()).strip()
+                            val = cells[i + 1].get_text(strip=True)
                             if val:
                                 return val
-                    val = (await cells[1].inner_text()).strip()
+                    val = cells[1].get_text(strip=True)
                     if val:
                         return val
                 elif len(cells) == 1:
@@ -98,8 +114,15 @@ class JaggaerScraper:
     def _make_event_id(self, seed: str) -> str:
         return f"{self.state_code}-{hash(seed) & 0xffffffff}"
 
-    async def scrape_all_bids(self, context: BrowserContext, max_pages: Optional[int] = 1) -> List[BidEvent]:
+    async def scrape_all_bids(self, crawler: AsyncWebCrawler, max_pages: Optional[int] = 1) -> List[BidEvent]:
         raise NotImplementedError("Subclasses/instances must configure a list strategy")
+
+
+IOWA_BID_LINKS_SCHEMA = {
+    "name": "iowa_bid_links",
+    "baseSelector": "a[href*='BidInfo?bidId=']",
+    "fields": [{"name": "href", "type": "attribute", "attribute": "href"}],
+}
 
 
 class IowaJaggaerScraper(JaggaerScraper):
@@ -119,74 +142,73 @@ class IowaJaggaerScraper(JaggaerScraper):
             portal_name="Iowa Bid Opportunities (Jaggaer/SciQuest)",
         )
 
-    async def scrape_all_bids(self, context: BrowserContext, max_pages: Optional[int] = 1, run_id: str = "adhoc-run") -> List[DeliveryRecord]:
-        page = await context.new_page()
-        try:
-            await page.goto(self.base_url, wait_until="domcontentloaded", timeout=30000)
-            await page.wait_for_timeout(3000)
+    async def scrape_all_bids(
+        self, crawler: AsyncWebCrawler, max_pages: Optional[int] = 1, run_id: str = "adhoc-run"
+    ) -> List[DeliveryRecord]:
+        session_id = "iowa-jaggaer-session"
+        results: List[DeliveryRecord] = []
+        current_page = 1
+
+        result = await fetch_page(crawler, self.base_url, schema=IOWA_BID_LINKS_SCHEMA, session_id=session_id)
+        await random_delay(0.5, 1.5)
+
+        while True:
+            rows = _parse_extracted(result.extracted_content) or []
+            bid_urls = []
+            seen = set()
+            for row in rows:
+                href = row.get("href")
+                if href:
+                    full_url = urllib.parse.urljoin(self.base_url, href)
+                    if full_url not in seen:
+                        seen.add(full_url)
+                        bid_urls.append(full_url)
+
+            for url in bid_urls:
+                record = await self._scrape_detail_page(crawler, url, run_id)
+                if record:
+                    results.append(record)
+
+            if max_pages and current_page >= max_pages:
+                break
+
+            next_js = (
+                "const btn = document.querySelector('a.paginate_button.next');"
+                "if (btn && !btn.classList.contains('disabled')) { btn.click(); }"
+            )
             await random_delay(0.5, 1.5)
+            next_result = await fetch_page(
+                crawler, self.base_url, schema=IOWA_BID_LINKS_SCHEMA, js_code=next_js,
+                session_id=session_id, js_only=True,
+            )
+            if not next_result or next_result.extracted_content == result.extracted_content:
+                break
+            current_page += 1
+            result = next_result
 
-            results: List[DeliveryRecord] = []
-            current_page = 1
+        return results
 
-            while True:
-                links = await page.locator("a[href*='BidInfo?bidId=']").all()
-                bid_urls = []
-                seen = set()
-                for link in links:
-                    href = await link.get_attribute("href")
-                    if href:
-                        full_url = urllib.parse.urljoin(self.base_url, href)
-                        if full_url not in seen:
-                            seen.add(full_url)
-                            bid_urls.append(full_url)
-
-                for url in bid_urls:
-                    record = await self._scrape_detail_page(context, url, run_id)
-                    if record:
-                        results.append(record)
-
-                if max_pages and current_page >= max_pages:
-                    break
-
-                next_btn = page.locator("a.paginate_button.next").first
-                if await next_btn.count() > 0:
-                    classes = await next_btn.get_attribute("class") or ""
-                    if "disabled" in classes:
-                        break
-                    current_page += 1
-                    await next_btn.click()
-                    await page.wait_for_timeout(1500)
-                    await random_delay(0.5, 1.5)
-                else:
-                    break
-
-            return results
-        finally:
-            await page.close()
-
-    async def _scrape_detail_page(self, context: BrowserContext, url: str, run_id: str = "adhoc-run") -> Optional[DeliveryRecord]:
-        detail_page = await context.new_page()
+    async def _scrape_detail_page(self, crawler: AsyncWebCrawler, url: str, run_id: str = "adhoc-run") -> Optional[DeliveryRecord]:
         errors: List[str] = []
         try:
-            await detail_page.goto(url, wait_until="domcontentloaded", timeout=30000)
-            await detail_page.wait_for_timeout(1000)
+            result = await fetch_page(crawler, url)
             await random_delay(0.5, 1.0)
 
             parsed = urllib.parse.urlparse(url)
             bid_id = urllib.parse.parse_qs(parsed.query).get("bidId", [None])[0]
             now_str = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
-            raw_html = await detail_page.content()
+            raw_html = result.html or ""
             raw_sha256 = hashlib.sha256(raw_html.encode("utf-8")).hexdigest()
+            soup = _soup_from_html(raw_html)
 
-            bid_number = await get_row_label_value(detail_page, r'Bid\s*Number')
-            title = await get_row_label_value(detail_page, r'^Solicitation$') or bid_number or "Iowa Procurement Event"
-            solicitation_type = await get_row_label_value(detail_page, r'Solicitation\s*Type') or "Solicitation"
-            agency = await get_row_label_value(detail_page, r'^Name$') or await get_row_label_value(detail_page, r'Agency') or "State of Iowa"
+            bid_number = get_row_label_value(soup, r'Bid\s*Number')
+            title = get_row_label_value(soup, r'^Solicitation$') or bid_number or "Iowa Procurement Event"
+            solicitation_type = get_row_label_value(soup, r'Solicitation\s*Type') or "Solicitation"
+            agency = get_row_label_value(soup, r'^Name$') or get_row_label_value(soup, r'Agency') or "State of Iowa"
 
-            valid_from = await get_row_label_value(detail_page, r'^From$')
-            valid_until = await get_row_label_value(detail_page, r'^Until$')
+            valid_from = get_row_label_value(soup, r'^From$')
+            valid_until = get_row_label_value(soup, r'^Until$')
             post_date = valid_from
             close_date = valid_until
             if not post_date:
@@ -197,10 +219,9 @@ class IowaJaggaerScraper(JaggaerScraper):
             documents: List[DeliveryDocument] = []
             try:
                 seen_docs = set()
-                doc_links = await detail_page.locator("a[href*='GetBidOpportunityDocument']").all()
-                for a_link in doc_links:
-                    href = await a_link.get_attribute("href")
-                    text = (await a_link.inner_text()).strip()
+                for a_link in soup.select("a[href*='GetBidOpportunityDocument']"):
+                    href = a_link.get("href")
+                    text = a_link.get_text(strip=True)
                     if href and href not in seen_docs:
                         seen_docs.add(href)
                         full_download_url = urllib.parse.urljoin(url, href)
@@ -262,8 +283,13 @@ class IowaJaggaerScraper(JaggaerScraper):
         except Exception as e:
             print(f"Error scraping Iowa detail page {url}: {e}")
             return None
-        finally:
-            await detail_page.close()
+
+
+DELAWARE_ROW_LINKS_SCHEMA = {
+    "name": "delaware_row_links",
+    "baseSelector": "a[onclick*='getBidDetail']",
+    "fields": [{"name": "onclick", "type": "attribute", "attribute": "onclick"}],
+}
 
 
 class DelawareJaggaerScraper(JaggaerScraper):
@@ -285,69 +311,67 @@ class DelawareJaggaerScraper(JaggaerScraper):
             portal_name="Delaware myMarketplace (Jaggaer/SciQuest)",
         )
 
-    async def scrape_all_bids(self, context: BrowserContext, max_pages: Optional[int] = 1, run_id: str = "adhoc-run") -> List[DeliveryRecord]:
-        page = await context.new_page()
-        try:
-            await page.goto(self.base_url, wait_until="domcontentloaded", timeout=30000)
-            await page.wait_for_timeout(3000)
+    async def scrape_all_bids(
+        self, crawler: AsyncWebCrawler, max_pages: Optional[int] = 1, run_id: str = "adhoc-run"
+    ) -> List[DeliveryRecord]:
+        session_id = "delaware-jaggaer-session"
+        results: List[DeliveryRecord] = []
+        current_page = 1
+
+        result = await fetch_page(crawler, self.base_url, schema=DELAWARE_ROW_LINKS_SCHEMA, session_id=session_id)
+        await random_delay(0.5, 1.5)
+
+        while True:
+            rows = _parse_extracted(result.extracted_content) or []
+            bid_ids = []
+            for row in rows:
+                onclick = row.get("onclick") or ""
+                match = self.ROW_ID_RE.search(onclick)
+                if match and match.group(1) not in bid_ids:
+                    bid_ids.append(match.group(1))
+
+            for bid_id in bid_ids:
+                detail_url = urllib.parse.urljoin(self.base_url, f"Details/{bid_id}")
+                record = await self._scrape_detail_page(crawler, detail_url, bid_id, run_id)
+                if record:
+                    results.append(record)
+
+            if max_pages and current_page >= max_pages:
+                break
+
+            next_js = (
+                "const btn = document.querySelector('#next_jqg1');"
+                "if (btn && !btn.classList.contains('disabled')) { btn.click(); }"
+            )
             await random_delay(0.5, 1.5)
+            next_result = await fetch_page(
+                crawler, self.base_url, schema=DELAWARE_ROW_LINKS_SCHEMA, js_code=next_js,
+                session_id=session_id, js_only=True,
+            )
+            if not next_result or next_result.extracted_content == result.extracted_content:
+                break
+            current_page += 1
+            result = next_result
 
-            results: List[DeliveryRecord] = []
-            current_page = 1
+        return results
 
-            while True:
-                row_links = await page.locator("a[onclick*='getBidDetail']").all()
-                bid_ids = []
-                for link in row_links:
-                    onclick = await link.get_attribute("onclick") or ""
-                    match = self.ROW_ID_RE.search(onclick)
-                    if match and match.group(1) not in bid_ids:
-                        bid_ids.append(match.group(1))
-
-                for bid_id in bid_ids:
-                    detail_url = urllib.parse.urljoin(self.base_url, f"Details/{bid_id}")
-                    record = await self._scrape_detail_page(context, detail_url, bid_id, run_id)
-                    if record:
-                        results.append(record)
-
-                if max_pages and current_page >= max_pages:
-                    break
-
-                next_btn = page.locator("#next_jqg1").first
-                if await next_btn.count() > 0:
-                    classes = await next_btn.get_attribute("class") or ""
-                    if "disabled" in classes:
-                        break
-                    current_page += 1
-                    await next_btn.click()
-                    await page.wait_for_timeout(1500)
-                    await random_delay(0.5, 1.5)
-                else:
-                    break
-
-            return results
-        finally:
-            await page.close()
-
-    async def _scrape_detail_page(self, context: BrowserContext, url: str, bid_id: str, run_id: str = "adhoc-run") -> Optional[DeliveryRecord]:
-        detail_page = await context.new_page()
+    async def _scrape_detail_page(self, crawler: AsyncWebCrawler, url: str, bid_id: str, run_id: str = "adhoc-run") -> Optional[DeliveryRecord]:
         errors: List[str] = []
         try:
-            await detail_page.goto(url, wait_until="domcontentloaded", timeout=30000)
-            await detail_page.wait_for_timeout(1000)
+            result = await fetch_page(crawler, url)
             await random_delay(0.5, 1.0)
 
             now_str = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
-            body_text = await detail_page.locator("body").inner_text()
-
-            raw_html = await detail_page.content()
+            raw_html = result.html or ""
             raw_sha256 = hashlib.sha256(raw_html.encode("utf-8")).hexdigest()
+            soup = _soup_from_html(raw_html)
+            body_text = soup.get_text("\n", strip=True)
 
             title = None
             contract_number = None
-            heading = detail_page.locator("h1, h2, h3").first
-            if await heading.count() > 0:
-                title = (await heading.inner_text()).strip() or None
+            heading = soup.find(["h1", "h2", "h3"])
+            if heading is not None:
+                title = heading.get_text(strip=True) or None
 
             title_match = re.search(r'Bid Status Details for\s*\n+\s*([^\n]+)\s*\n+\s*([^\n]+)', body_text, re.IGNORECASE)
             if title_match:
@@ -370,10 +394,9 @@ class DelawareJaggaerScraper(JaggaerScraper):
 
             documents: List[DeliveryDocument] = []
             try:
-                doc_links = await detail_page.locator("a[href*='.pdf'], a[href*='.doc'], a[href*='.xls']").all()
-                for a_link in doc_links:
-                    href = await a_link.get_attribute("href")
-                    text = (await a_link.inner_text()).strip()
+                for a_link in soup.select("a[href*='.pdf'], a[href*='.doc'], a[href*='.xls']"):
+                    href = a_link.get("href")
+                    text = a_link.get_text(strip=True)
                     if href:
                         file_name = text or href.split("/")[-1]
                         mime_type = "application/pdf" if file_name.lower().endswith(".pdf") else None
@@ -405,7 +428,7 @@ class DelawareJaggaerScraper(JaggaerScraper):
                     access_level="public",
                 ),
                 opportunity=DeliveryOpportunity(
-                    title=title,
+                    title=title,    
                     agency_name=agency,
                     solicitation_number=contract_number,
                     status="Open",
@@ -434,8 +457,6 @@ class DelawareJaggaerScraper(JaggaerScraper):
         except Exception as e:
             print(f"Error scraping Delaware detail page {url}: {e}")
             return None
-        finally:
-            await detail_page.close()
 
 
 class PennsylvaniaJaggaerScraper(JaggaerScraper):
@@ -454,75 +475,67 @@ class PennsylvaniaJaggaerScraper(JaggaerScraper):
             portal_name="Pennsylvania eMarketplace (Jaggaer/SciQuest)",
         )
 
-    async def scrape_all_bids(self, context: BrowserContext, max_pages: Optional[int] = 1) -> List[BidEvent]:
-        page = await context.new_page()
-        try:
-            await page.goto(self.base_url, wait_until="domcontentloaded", timeout=30000)
-            await page.wait_for_timeout(2000)
+    async def scrape_all_bids(self, crawler: AsyncWebCrawler, max_pages: Optional[int] = 1) -> List[BidEvent]:
+        session_id = "pennsylvania-jaggaer-session"
+        results: List[BidEvent] = []
+        current_page = 1
+
+        search_js = (
+            "const sel = document.querySelector(\"select[id*='ddlAgency']\");"
+            "if (sel) { sel.value = '46'; sel.dispatchEvent(new Event('change', { bubbles: true })); }"
+            "const btn = document.querySelector(\"input[id*='btnSearch']\");"
+            "if (btn) { btn.click(); }"
+        )
+        result = await fetch_page(crawler, self.base_url, js_code=search_js, session_id=session_id)
+        await random_delay(0.5, 1.5)
+
+        while True:
+            html = result.html or ""
+            soup = _soup_from_html(html)
+            bid_urls = []
+            seen = set()
+            for link in soup.select("a[href*='Solicitations.aspx?SID=']"):
+                href = link.get("href")
+                if href:
+                    full_url = urllib.parse.urljoin(result.url or self.base_url, href)
+                    if full_url not in seen:
+                        seen.add(full_url)
+                        bid_urls.append(full_url)
+
+            for url in bid_urls:
+                bid = await self._scrape_detail_page(crawler, url)
+                if bid:
+                    results.append(bid)
+
+            if max_pages and current_page >= max_pages:
+                break
+
+            next_js = (
+                "const cands = Array.from(document.querySelectorAll('a'));"
+                "const btn = cands.find(el => /next|>/i.test((el.textContent || '').trim()) && /Page\\$/.test(el.getAttribute('href') || ''));"
+                "if (btn) { btn.click(); }"
+            )
             await random_delay(0.5, 1.5)
+            next_result = await fetch_page(
+                crawler, self.base_url, js_code=next_js, session_id=session_id, js_only=True
+            )
+            if not next_result or not next_result.html or next_result.html == html:
+                break
+            current_page += 1
+            result = next_result
 
-            agency_dropdown = page.locator("select[id*='ddlAgency']").first
-            if await agency_dropdown.count() > 0:
-                try:
-                    await agency_dropdown.select_option("46")
-                except Exception:
-                    pass
+        return results
 
-            search_btn = page.locator("input[id*='btnSearch']").first
-            if await search_btn.count() > 0:
-                await search_btn.click()
-                await page.wait_for_load_state("domcontentloaded")
-                await page.wait_for_timeout(3000)
-                await random_delay(0.5, 1.5)
-
-            results: List[BidEvent] = []
-            current_page = 1
-
-            while True:
-                links = await page.locator("a[href*='Solicitations.aspx?SID=']").all()
-                bid_urls = []
-                seen = set()
-                for link in links:
-                    href = await link.get_attribute("href")
-                    if href:
-                        full_url = urllib.parse.urljoin(page.url, href)
-                        if full_url not in seen:
-                            seen.add(full_url)
-                            bid_urls.append(full_url)
-
-                for url in bid_urls:
-                    bid = await self._scrape_detail_page(context, url)
-                    if bid:
-                        results.append(bid)
-
-                if max_pages and current_page >= max_pages:
-                    break
-
-                next_btn = page.locator("a:has-text('Next'), a[href*=\"Page$\"]:has-text('>')").first
-                if await next_btn.count() > 0 and await next_btn.is_visible():
-                    current_page += 1
-                    await next_btn.click()
-                    await page.wait_for_load_state("domcontentloaded")
-                    await page.wait_for_timeout(2000)
-                    await random_delay(0.5, 1.5)
-                else:
-                    break
-
-            return results
-        finally:
-            await page.close()
-
-    async def _scrape_detail_page(self, context: BrowserContext, url: str) -> Optional[BidEvent]:
-        detail_page = await context.new_page()
+    async def _scrape_detail_page(self, crawler: AsyncWebCrawler, url: str) -> Optional[BidEvent]:
         try:
-            await detail_page.goto(url, wait_until="domcontentloaded", timeout=30000)
-            await detail_page.wait_for_timeout(1000)
+            result = await fetch_page(crawler, url)
             await random_delay(0.5, 1.0)
 
             parsed = urllib.parse.urlparse(url)
             sid = urllib.parse.parse_qs(parsed.query).get("SID", [None])[0]
             now_str = self._now()
-            body_text = await detail_page.locator("body").inner_text()
+            soup = _soup_from_html(result.html)
+            body_text = soup.get_text("\n", strip=True)
 
             title_match = re.search(r'Solicitation/Project Title:\s*([^\n\t]+)', body_text, re.IGNORECASE)
             title = title_match.group(1).strip() if title_match else "Pennsylvania Procurement Event"
@@ -565,10 +578,9 @@ class PennsylvaniaJaggaerScraper(JaggaerScraper):
 
             attachments: List[Attachment] = []
             try:
-                att_links = await detail_page.locator("a[href*='FileDownload.aspx']").all()
-                for a_link in att_links:
-                    href = await a_link.get_attribute("href")
-                    text = (await a_link.inner_text()).strip()
+                for a_link in soup.select("a[href*='FileDownload.aspx']"):
+                    href = a_link.get("href")
+                    text = a_link.get_text(strip=True)
                     if href:
                         full_download_url = urllib.parse.urljoin(url, href)
                         file_name = text or full_download_url.split("/")[-1]
@@ -599,8 +611,6 @@ class PennsylvaniaJaggaerScraper(JaggaerScraper):
         except Exception as e:
             print(f"Error scraping Pennsylvania detail page {url}: {e}")
             return None
-        finally:
-            await detail_page.close()
 
 
 class SourcingPublicSiteJaggaerScraper(JaggaerScraper):
@@ -628,38 +638,37 @@ class SourcingPublicSiteJaggaerScraper(JaggaerScraper):
         super().__init__(state_code=state_code, base_url=base_url, portal_name=portal_name)
         self.customer_org = customer_org
 
-    async def scrape_all_bids(self, context: BrowserContext, max_pages: Optional[int] = 1, run_id: str = "adhoc-run") -> List[DeliveryRecord]:
-        page = await context.new_page()
+    async def scrape_all_bids(
+        self, crawler: AsyncWebCrawler, max_pages: Optional[int] = 1, run_id: str = "adhoc-run"
+    ) -> List[DeliveryRecord]:
+        resize_js = (
+            "try { if (typeof submitSizeChange === 'function') { submitSizeChange('100','ActiveForm','','',''); } } "
+            "catch (e) {}"
+        )
+        result = await fetch_page(
+            crawler,
+            self.base_url,
+            js_code=resize_js,
+        )
+
+        raw_html = result.html or ""
+        raw_sha256 = hashlib.sha256(raw_html.encode("utf-8")).hexdigest()
+
+        results: List[DeliveryRecord] = []
+        soup = _soup_from_html(raw_html)
+        rows = soup.select("table[aria-label='Search Results'] tbody tr")
+
+        for row_soup in rows:
+            record = await self._parse_row(str(row_soup), run_id, raw_sha256)
+            if record:
+                results.append(record)
+
+        return results
+
+    async def _parse_row(self, row_html: str, run_id: str, raw_sha256: str) -> Optional[DeliveryRecord]:
         try:
-            await page.goto(self.base_url, wait_until="domcontentloaded", timeout=30000)
-            await page.wait_for_timeout(4000)
-            await random_delay(0.5, 1.5)
-
-            try:
-                await page.evaluate("submitSizeChange('100','ActiveForm','','','');")
-                await page.wait_for_timeout(3000)
-                await random_delay(0.5, 1.0)
-            except Exception:
-                pass
-
-            raw_html = await page.content()
-            raw_sha256 = hashlib.sha256(raw_html.encode("utf-8")).hexdigest()
-
-            results: List[DeliveryRecord] = []
-            rows = await page.locator("table[aria-label='Search Results'] tbody tr").all()
-
-            for row in rows:
-                record = await self._parse_row(row, run_id, raw_sha256)
-                if record:
-                    results.append(record)
-
-            return results
-        finally:
-            await page.close()
-
-    async def _parse_row(self, row, run_id: str, raw_sha256: str) -> Optional[DeliveryRecord]:
-        try:
-            row_text = await row.inner_text()
+            row_soup = BeautifulSoup(row_html, "lxml")
+            row_text = row_soup.get_text("\n", strip=True)
             if not row_text.strip():
                 return None
 
@@ -670,15 +679,15 @@ class SourcingPublicSiteJaggaerScraper(JaggaerScraper):
             status = status_match.group(1).title() if status_match else "Open"
 
             title = None
-            title_link = row.locator("a.btn-link-header, a[href*='ViewSourcingEvent']").first
-            if await title_link.count() > 0:
-                title = (await title_link.inner_text()).strip()
+            title_link = row_soup.select_one("a.btn-link-header, a[href*='ViewSourcingEvent']")
+            if title_link is not None:
+                title = title_link.get_text(strip=True)
             if not title:
                 title = "Procurement Event"
 
             detail_url = None
-            if await title_link.count() > 0:
-                detail_url = await title_link.get_attribute("href")
+            if title_link is not None:
+                detail_url = title_link.get("href")
 
             description_match = re.search(
                 r'^\s*(?:Open|Closed|Awarded|Upcoming|Cancelled)\b[^\n]*\n' + re.escape(title) + r'\n([^\n]+)',
@@ -716,9 +725,9 @@ class SourcingPublicSiteJaggaerScraper(JaggaerScraper):
                     contact_name = contact_line or None
 
             documents: List[DeliveryDocument] = []
-            pdf_link = row.locator("a[id*='BUTTON_PDF_VIEW']").first
-            if await pdf_link.count() > 0:
-                pdf_href = await pdf_link.get_attribute("href")
+            pdf_link = row_soup.select_one("a[id*='BUTTON_PDF_VIEW']")
+            if pdf_link is not None:
+                pdf_href = pdf_link.get("href")
                 if pdf_href:
                     documents.append(DeliveryDocument(
                         title=f"{title} (View as PDF)",
@@ -794,7 +803,7 @@ class LoginWalledJaggaerScraper(JaggaerScraper):
         super().__init__(state_code=state_code, base_url=base_url, portal_name=portal_name)
         self.reason = reason
 
-    async def scrape_all_bids(self, context: BrowserContext, max_pages: Optional[int] = 1) -> List[BidEvent]:
+    async def scrape_all_bids(self, crawler: AsyncWebCrawler, max_pages: Optional[int] = 1) -> List[BidEvent]:
         raise JaggaerLoginRequiredError(
             f"{self.portal_name} ({self.state_code}) requires a Jaggaer supplier login to "
             f"view its public event list at {self.base_url}: {self.reason}"

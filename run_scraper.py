@@ -2,8 +2,6 @@ import argparse
 import asyncio
 from datetime import datetime, timezone
 from pathlib import Path
-from playwright.async_api import async_playwright
-from src.stealth import create_stealth_context
 from src.crawler import get_crawler
 from src.scrapers.georgia import GeorgiaScraper
 from src.scrapers.alabama import AlabamaScraper
@@ -42,39 +40,20 @@ async def run_scraper_pipeline(state: str, output_path: Path, max_pages: int = 1
         print(f"Successfully scraped and appended {len(records)} spec-compliant records to {output_path}")
         return len(records)
 
-    # Remaining states are still on the legacy Playwright path pending
-    # migration to Crawl4AI.
-    async with async_playwright() as p:
-        context = await create_stealth_context(p, headless=headless)
-
-        if state_upper == "MT":
-            scraper = MontanaJaggaerScraper()
-            records = await scraper.scrape_all_bids(context, max_pages=max_pages, run_id=run_id)
-            await context.close()
-            storage.append_delivery_records(output_path, records)
-            print(f"Successfully scraped and appended {len(records)} spec-compliant records to {output_path}")
-            return len(records)
-        elif state_upper == "UT":
-            scraper = UtahJaggaerScraper()
-            records = await scraper.scrape_all_bids(context, max_pages=max_pages, run_id=run_id)
-            await context.close()
-            storage.append_delivery_records(output_path, records)
-            print(f"Successfully scraped and appended {len(records)} spec-compliant records to {output_path}")
-            return len(records)
-        elif state_upper == "IA":
-            scraper = IowaJaggaerScraper()
-            records = await scraper.scrape_all_bids(context, max_pages=max_pages, run_id=run_id)
-            await context.close()
-            storage.append_delivery_records(output_path, records)
-            print(f"Successfully scraped and appended {len(records)} spec-compliant records to {output_path}")
-            return len(records)
-        elif state_upper == "DE":
-            scraper = DelawareJaggaerScraper()
-            records = await scraper.scrape_all_bids(context, max_pages=max_pages, run_id=run_id)
-            await context.close()
-            storage.append_delivery_records(output_path, records)
-            print(f"Successfully scraped and appended {len(records)} spec-compliant records to {output_path}")
-            return len(records)
+    # Remaining Jaggaer states have also been migrated to Crawl4AI.
+    if state_upper in ("MT", "UT", "IA", "DE"):
+        scraper_cls = {
+            "MT": MontanaJaggaerScraper,
+            "UT": UtahJaggaerScraper,
+            "IA": IowaJaggaerScraper,
+            "DE": DelawareJaggaerScraper,
+        }[state_upper]
+        async with get_crawler(headless=headless) as crawler:
+            scraper = scraper_cls()
+            records = await scraper.scrape_all_bids(crawler, max_pages=max_pages, run_id=run_id)
+        storage.append_delivery_records(output_path, records)
+        print(f"Successfully scraped and appended {len(records)} spec-compliant records to {output_path}")
+        return len(records)
 
 def main():
     parser = argparse.ArgumentParser(description="State Procurement Data Scraper")
