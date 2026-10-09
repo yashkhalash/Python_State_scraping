@@ -1,7 +1,18 @@
 import json
 import pytest
 from pathlib import Path
-from src.storage import StorageManager, BidEvent, BidContact, CommodityCode, Attachment
+from src.storage import (
+    StorageManager,
+    BidEvent,
+    BidContact,
+    CommodityCode,
+    Attachment,
+    CrawlInfo,
+    DeliveryOpportunity,
+    DeliveryRecord,
+    DeliverySource,
+    RawCapture,
+)
 
 def test_bid_contact_model():
     contact = BidContact(name="Jane Doe", email="jane@ga.gov", phone="404-555-0100")
@@ -128,3 +139,43 @@ def test_upsert_bids(tmp_path):
     assert bids_by_id["ES-1"]["scraped_at"] == "2026-08-01T10:00:00-05:00"
     assert bids_by_id["ES-1"]["updated_at"] == "2026-08-04T10:00:00-05:00"
     assert bids_by_id["ES-2"]["scraped_at"] == "2026-08-04T10:00:00-05:00"
+
+
+def _make_delivery_record(opportunity_url="https://portal.example/bid/1", title="Road Salt Supply"):
+    return DeliveryRecord(
+        observed_at="2026-08-01T12:00:00Z",
+        source=DeliverySource(
+            name="Example Portal",
+            base_url="https://portal.example",
+            opportunity_url=opportunity_url,
+            source_opportunity_id="EPD-1",
+            access_level="public",
+        ),
+        opportunity=DeliveryOpportunity(title=title),
+        documents=[],
+        raw_capture=RawCapture(content_type="text/html", sha256="abc123"),
+        crawl=CrawlInfo(run_id="test-run", parser_version="test-v1"),
+    )
+
+
+def test_append_delivery_records_jsonl_writes_one_object_per_line(tmp_path):
+    output_file = tmp_path / "bids.jsonl"
+    storage = StorageManager()
+    storage.append_delivery_records_jsonl(output_file, [_make_delivery_record()])
+
+    lines = output_file.read_text(encoding="utf-8").splitlines()
+    assert len(lines) == 1
+    parsed = json.loads(lines[0])
+    assert parsed["opportunity"]["title"] == "Road Salt Supply"
+
+
+def test_append_delivery_records_jsonl_appends_without_touching_prior_lines(tmp_path):
+    output_file = tmp_path / "bids.jsonl"
+    storage = StorageManager()
+    storage.append_delivery_records_jsonl(output_file, [_make_delivery_record(title="First")])
+    storage.append_delivery_records_jsonl(output_file, [_make_delivery_record(title="Second")])
+
+    lines = output_file.read_text(encoding="utf-8").splitlines()
+    assert len(lines) == 2
+    assert json.loads(lines[0])["opportunity"]["title"] == "First"
+    assert json.loads(lines[1])["opportunity"]["title"] == "Second"

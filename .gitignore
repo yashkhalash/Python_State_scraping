@@ -13,3 +13,11 @@ __pycache__/
 
 # Tooling scratch
 .playwright-mcp/
+.claude/
+.code-review-graph/
+
+# Secrets - never commit real API keys/DB credentials
+.env
+
+# Local object storage (downloaded documents/raw captures - not source)
+data/object_store/

@@ -121,7 +121,13 @@ class StorageManager:
     def append_delivery_records(self, filepath: Union[str, Path], records: List[DeliveryRecord]) -> None:
         """Append spec-compliant records to a .json array file. Prior records are
         preserved (read, then re-written with the new ones appended), per the spec's
-        'do not delete or replace previously delivered records' rule."""
+        'do not delete or replace previously delivered records' rule.
+
+        NOTE: scraper-team-minimum-spec.md's "Required output" section calls for
+        newline-delimited JSON (.jsonl), not a JSON array - see
+        append_delivery_records_jsonl for that format. This method is kept for
+        any existing consumer of the array format; new callers should prefer
+        the .jsonl method below."""
         filepath = Path(filepath)
         existing: list = []
 
@@ -143,3 +149,17 @@ class StorageManager:
             json.dump(existing, f, indent=2, ensure_ascii=False)
 
         tmp_file.replace(filepath)
+
+    def append_delivery_records_jsonl(self, filepath: Union[str, Path], records: List[DeliveryRecord]) -> None:
+        """Append records in the exact format scraper-team-minimum-spec.md
+        requires: newline-delimited JSON (.jsonl), UTF-8, one JSON object per
+        opportunity per crawl. Never overwrites or rewrites prior lines - each
+        call only opens the file in append mode and adds new lines, so earlier
+        delivered records are always preserved untouched."""
+        filepath = Path(filepath)
+        os.makedirs(filepath.parent, exist_ok=True)
+
+        with open(filepath, "a", encoding="utf-8") as f:
+            for record in records:
+                f.write(json.dumps(record.model_dump(), ensure_ascii=False))
+                f.write("\n")

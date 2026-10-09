@@ -13,9 +13,16 @@ dependencies = [
     # once per environment to install the browser binaries this project
     # needs. That install step is NOT automated by this project/CI.
     "crawl4ai>=0.9,<0.10",
+    # Optional Gemini-based data-formatting layer (src/normalizer.py). Reads
+    # GEMINI_API_KEY from the environment; normalization is skipped (falls
+    # back to deterministic field values) if the key is unset.
+    "google-genai>=1.0.0",
     "pydantic>=2.5.0",
     "pytest>=8.0.0",
     "pytest-asyncio>=0.23.0",
+    "python-dateutil>=2.8.0",
+    "psycopg2-binary>=2.9",
+    "python-dotenv>=1.2.3",
 ]
 
 [build-system]

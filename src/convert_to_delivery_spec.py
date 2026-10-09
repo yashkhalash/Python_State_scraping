@@ -37,6 +37,17 @@ import sys
 from pathlib import Path
 from datetime import datetime, timezone
 
+from src.object_storage import download_document
+from src.storage import (
+    BidEvent,
+    CrawlInfo,
+    DeliveryDocument,
+    DeliveryOpportunity,
+    DeliveryRecord,
+    DeliverySource,
+    RawCapture,
+)
+
 INPUT_DIR = Path(__file__).resolve().parent.parent / "data" / "output"
 OUTPUT_DIR = INPUT_DIR / "spec_compliant"
 
@@ -49,6 +60,85 @@ TIMEZONE_BY_STATE = {
     "AL": "America/Chicago",
     "GA": "America/New_York",
 }
+
+
+def bidevent_to_delivery_record(
+    bid: BidEvent, *, run_id: str, parser_version: str, download_attachments: bool = True
+) -> DeliveryRecord:
+    """Convert a live BidEvent (GA's still-legacy scraper output model) into
+    a spec-compliant DeliveryRecord, so GA can flow through the same
+    append_delivery_records_jsonl/Postgres-persistence path as every other
+    scraper. Mirrors convert_record()'s field mapping below (which converts
+    already-written *.json files offline); this converts an in-memory
+    BidEvent directly, for a live scrape run.
+
+    GA's scraper doesn't capture a raw page hash/storage URI, so
+    raw_capture stays null-ish with an explanatory crawl.errors entry, per
+    the spec's "missing values are null; do not fabricate to hide
+    failures" rule. Attachments ARE downloaded here (unlike the pure
+    field-remapping in convert_record, which only relabels an already
+    link_only-cached JSON file with no way to re-fetch the original bytes).
+    """
+    errors = ["raw_capture not saved by GeorgiaScraper; sha256/storage_uri unavailable"]
+
+    documents = []
+    for att in bid.attachments:
+        if download_attachments:
+            dl = download_document(att.download_url)
+        else:
+            dl = {"download_status": "link_only"}
+        if dl.get("download_status") == "downloaded":
+            documents.append(DeliveryDocument(
+                title=att.file_name,
+                url=att.download_url,
+                document_type="other",
+                mime_type=dl.get("mime_type"),
+                download_status="downloaded",
+                storage_uri=dl["storage_uri"],
+                sha256=dl["sha256"],
+            ))
+        else:
+            documents.append(DeliveryDocument(
+                title=att.file_name,
+                url=att.download_url,
+                document_type="other",
+                download_status="failed" if download_attachments else "link_only",
+            ))
+            if download_attachments:
+                errors.append(f"document download failed: {att.download_url}")
+
+    return DeliveryRecord(
+        observed_at=bid.scraped_at,
+        source=DeliverySource(
+            name=bid.portal_name,
+            base_url=SOURCE_BASE_URLS.get(bid.state, ""),
+            opportunity_url=bid.detail_url,
+            source_opportunity_id=bid.event_id,
+            access_level="public",
+        ),
+        opportunity=DeliveryOpportunity(
+            title=bid.title,
+            agency_name=bid.agency,
+            solicitation_number=None,
+            status=bid.status,
+            notice_type=bid.solicitation_type,
+            published_at=bid.post_date,
+            due_at=bid.close_date,
+            source_timezone=TIMEZONE_BY_STATE.get(bid.state),
+            description=None,
+            categories=[c.description for c in bid.commodity_codes],
+            submission_url=bid.detail_url,
+            submission_method="external_portal",
+        ),
+        documents=documents,
+        raw_capture=RawCapture(content_type="text/html", storage_uri=None, sha256=None),
+        crawl=CrawlInfo(
+            run_id=run_id,
+            parser_version=parser_version,
+            record_status="ok" if len(errors) == 1 else "partial",
+            errors=errors,
+        ),
+    )
 
 
 def to_documents(attachments):

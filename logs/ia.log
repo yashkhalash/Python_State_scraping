@@ -1,0 +1,7 @@
+[INIT].... → Crawl4AI 0.9.4 
+[FETCH]... ↓ https://bidopportunities.iowa.gov/                                                                   | ✓ | ⏱: 3.16s 
+[SCRAPE].. ◆ https://bidopportunities.iowa.gov/                                                                   | ✓ | ⏱: 0.06s 
+[EXTRACT]. ■ https://bidopportunities.iowa.gov/                                                                   | ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://bidopportunities.iowa.gov/                                                                   | ✓ | ⏱: 3.25s 
+Starting scraper for state: IA
+Successfully scraped and appended 0 spec-compliant records to data/output/ia_2026-09-28.jsonl

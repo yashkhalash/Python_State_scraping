@@ -1,13 +1,40 @@
+import hashlib
+
 import pytest
+import src.scrapers.jaggaer as jaggaer_module
 from src.scrapers.jaggaer import (
     IowaJaggaerScraper,
     DelawareJaggaerScraper,
     UtahJaggaerScraper,
     JaggaerLoginRequiredError,
-    LoginWalledJaggaerScraper,
+    LoginWalledJaggaerScraper,      
 )
 from src.storage import DeliveryRecord
 from tests.conftest import local_html_server
+
+
+@pytest.fixture(autouse=True)
+def _mock_object_storage(monkeypatch):
+    """No test in this file should hit the network or write real files for
+    document downloads/raw-capture storage - src/object_storage.py itself is
+    exercised directly in tests/test_object_storage.py."""
+
+    def fake_save_text(content, *, prefix, extension=".html"):
+        sha256 = hashlib.sha256(content.encode("utf-8")).hexdigest()
+        return f"file:///fake/{prefix}/{sha256}{extension}", sha256
+
+    def fake_download_document(url, **kwargs):
+        sha256 = hashlib.sha256(url.encode("utf-8")).hexdigest()
+        return {
+            "download_status": "downloaded",
+            "storage_uri": f"file:///fake/documents/{sha256}.pdf",
+            "sha256": sha256,
+            "byte_size": 123,
+            "mime_type": "application/pdf",
+        }
+
+    monkeypatch.setattr(jaggaer_module, "save_text", fake_save_text)
+    monkeypatch.setattr(jaggaer_module, "download_document", fake_download_document)
 
 
 IOWA_LIST_HTML = """
@@ -44,8 +71,8 @@ async def test_iowa_scrape_all_bids(crawler):
         assert rec.source.source_opportunity_id == "EPD-24-001"
         assert rec.opportunity.title == "Road Salt Supply"
         assert rec.opportunity.agency_name == "Iowa DOT"
-        assert rec.opportunity.published_at == "08/01/2026"
-        assert rec.opportunity.due_at == "09/01/2026"
+        assert rec.opportunity.published_at == "2026-08-01"
+        assert rec.opportunity.due_at == "2026-09-01"
         assert len(rec.documents) == 1
         assert rec.documents[0].title == "Spec.pdf"
 

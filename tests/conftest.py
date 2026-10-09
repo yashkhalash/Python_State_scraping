@@ -19,6 +19,19 @@ import pytest_asyncio
 from src.crawler import get_crawler
 
 
+@pytest.fixture(autouse=True)
+def _isolate_env_from_dotenv(monkeypatch):
+    """run_scraper.py/purge_expired.py call load_dotenv() at import time so
+    real runs pick up .env automatically. That must not leak into tests:
+    without this, a real GEMINI_API_KEY/DATABASE_URL in .env would make
+    tests silently call the real Gemini API and write to a real Postgres
+    database as a side effect of merely importing run_scraper. Every test
+    starts with both unset; a test that wants them set does so explicitly
+    via monkeypatch.setenv."""
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.delenv("DATABASE_URL", raising=False)
+
+
 class _RoutedHandler(BaseHTTPRequestHandler):
     routes = {}  # class-level, set per server instance via subclassing
 

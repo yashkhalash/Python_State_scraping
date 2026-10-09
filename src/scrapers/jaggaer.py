@@ -1,3 +1,4 @@
+import asyncio
 import hashlib
 import json
 import re
@@ -9,6 +10,8 @@ from bs4 import BeautifulSoup
 from crawl4ai import AsyncWebCrawler
 
 from src.crawler import fetch_page, random_delay
+from src.normalizer import clean_text, parse_date_with_fallback
+from src.object_storage import download_document, save_text
 from src.storage import (
     BidEvent,
     BidContact,
@@ -219,6 +222,7 @@ class IowaJaggaerScraper(JaggaerScraper):
             documents: List[DeliveryDocument] = []
             try:
                 seen_docs = set()
+                doc_links = []
                 for a_link in soup.select("a[href*='GetBidOpportunityDocument']"):
                     href = a_link.get("href")
                     text = a_link.get_text(strip=True)
@@ -226,23 +230,55 @@ class IowaJaggaerScraper(JaggaerScraper):
                         seen_docs.add(href)
                         full_download_url = urllib.parse.urljoin(url, href)
                         file_name = text or full_download_url.split("/")[-1]
+                        doc_links.append((full_download_url, file_name))
+                for full_download_url, file_name in doc_links:
+                    dl = await asyncio.to_thread(download_document, full_download_url)
+                    if dl["download_status"] == "downloaded":
+                        documents.append(DeliveryDocument(
+                            title=file_name,
+                            url=full_download_url,
+                            document_type="solicitation",
+                            mime_type=dl.get("mime_type") or ("application/pdf" if file_name.lower().endswith(".pdf") else None),
+                            download_status="downloaded",
+                            storage_uri=dl["storage_uri"],
+                            sha256=dl["sha256"],
+                        ))
+                    else:
                         documents.append(DeliveryDocument(
                             title=file_name,
                             url=full_download_url,
                             document_type="solicitation",
                             mime_type="application/pdf" if file_name.lower().endswith(".pdf") else None,
-                            download_status="link_only",
-                            storage_uri=None,
-                            sha256=None,
+                            download_status="failed",
                         ))
+                        errors.append(f"document download failed: {full_download_url}")
             except Exception:
                 pass
-            if documents:
-                errors.append("document download/hashing not yet implemented; URLs captured as link_only")
 
-            errors.append("raw_capture.storage_uri not set; no approved object-storage location configured")
+            raw_storage_uri, _ = await asyncio.to_thread(save_text, raw_html, prefix="raw_captures")
 
             event_id = bid_number or bid_id or self._make_event_id(url)
+
+            # Dates are formatted deterministically (dateutil) first; the
+            # Gemini fallback in parse_date_with_fallback only fires for a
+            # raw string dateutil can't parse on its own.
+            published_at = parse_date_with_fallback(post_date)
+            due_at = parse_date_with_fallback(close_date)
+
+            opportunity = DeliveryOpportunity(
+                title=clean_text(title),
+                agency_name=clean_text(agency),
+                solicitation_number=bid_number,
+                status="Open",
+                notice_type=clean_text(solicitation_type),
+                published_at=published_at or post_date,
+                due_at=due_at or close_date,
+                source_timezone="America/Chicago",
+                description=None,
+                categories=[],
+                submission_url=url,
+                submission_method="external_portal",
+            )
 
             return DeliveryRecord(
                 observed_at=now_str,
@@ -253,24 +289,11 @@ class IowaJaggaerScraper(JaggaerScraper):
                     source_opportunity_id=str(event_id),
                     access_level="public",
                 ),
-                opportunity=DeliveryOpportunity(
-                    title=title,
-                    agency_name=agency,
-                    solicitation_number=bid_number,
-                    status="Open",
-                    notice_type=solicitation_type,
-                    published_at=post_date,
-                    due_at=close_date,
-                    source_timezone="America/Chicago",
-                    description=None,
-                    categories=[],
-                    submission_url=url,
-                    submission_method="external_portal",
-                ),
+                opportunity=opportunity,
                 documents=documents,
                 raw_capture=RawCapture(
                     content_type="text/html",
-                    storage_uri=None,
+                    storage_uri=raw_storage_uri,
                     sha256=raw_sha256,
                 ),
                 crawl=CrawlInfo(
@@ -394,27 +417,39 @@ class DelawareJaggaerScraper(JaggaerScraper):
 
             documents: List[DeliveryDocument] = []
             try:
+                doc_links = []
                 for a_link in soup.select("a[href*='.pdf'], a[href*='.doc'], a[href*='.xls']"):
                     href = a_link.get("href")
                     text = a_link.get_text(strip=True)
                     if href:
                         file_name = text or href.split("/")[-1]
-                        mime_type = "application/pdf" if file_name.lower().endswith(".pdf") else None
+                        doc_links.append((urllib.parse.urljoin(url, href), file_name))
+                for doc_url, file_name in doc_links:
+                    dl = await asyncio.to_thread(download_document, doc_url)
+                    mime_type = dl.get("mime_type") or ("application/pdf" if file_name.lower().endswith(".pdf") else None)
+                    if dl["download_status"] == "downloaded":
                         documents.append(DeliveryDocument(
                             title=file_name,
-                            url=urllib.parse.urljoin(url, href),
+                            url=doc_url,
                             document_type="solicitation",
                             mime_type=mime_type,
-                            download_status="link_only",
-                            storage_uri=None,
-                            sha256=None,
+                            download_status="downloaded",
+                            storage_uri=dl["storage_uri"],
+                            sha256=dl["sha256"],
                         ))
+                    else:
+                        documents.append(DeliveryDocument(
+                            title=file_name,
+                            url=doc_url,
+                            document_type="solicitation",
+                            mime_type=mime_type,
+                            download_status="failed",
+                        ))
+                        errors.append(f"document download failed: {doc_url}")
             except Exception:
                 pass
-            if documents:
-                errors.append("document download/hashing not yet implemented; URLs captured as link_only")
 
-            errors.append("raw_capture.storage_uri not set; no approved object-storage location configured")
+            raw_storage_uri, _ = await asyncio.to_thread(save_text, raw_html, prefix="raw_captures")
 
             event_id = contract_number or bid_id
 
@@ -444,7 +479,7 @@ class DelawareJaggaerScraper(JaggaerScraper):
                 documents=documents,
                 raw_capture=RawCapture(
                     content_type="text/html",
-                    storage_uri=None,
+                    storage_uri=raw_storage_uri,
                     sha256=raw_sha256,
                 ),
                 crawl=CrawlInfo(
@@ -652,20 +687,22 @@ class SourcingPublicSiteJaggaerScraper(JaggaerScraper):
         )
 
         raw_html = result.html or ""
-        raw_sha256 = hashlib.sha256(raw_html.encode("utf-8")).hexdigest()
+        raw_storage_uri, raw_sha256 = await asyncio.to_thread(save_text, raw_html, prefix="raw_captures")
 
         results: List[DeliveryRecord] = []
         soup = _soup_from_html(raw_html)
         rows = soup.select("table[aria-label='Search Results'] tbody tr")
 
         for row_soup in rows:
-            record = await self._parse_row(str(row_soup), run_id, raw_sha256)
+            record = await self._parse_row(str(row_soup), run_id, raw_sha256, raw_storage_uri)
             if record:
                 results.append(record)
 
         return results
 
-    async def _parse_row(self, row_html: str, run_id: str, raw_sha256: str) -> Optional[DeliveryRecord]:
+    async def _parse_row(
+        self, row_html: str, run_id: str, raw_sha256: str, raw_storage_uri: Optional[str] = None
+    ) -> Optional[DeliveryRecord]:
         try:
             row_soup = BeautifulSoup(row_html, "lxml")
             row_text = row_soup.get_text("\n", strip=True)
@@ -729,17 +766,26 @@ class SourcingPublicSiteJaggaerScraper(JaggaerScraper):
             if pdf_link is not None:
                 pdf_href = pdf_link.get("href")
                 if pdf_href:
-                    documents.append(DeliveryDocument(
-                        title=f"{title} (View as PDF)",
-                        url=pdf_href,
-                        document_type="solicitation",
-                        mime_type="application/pdf",
-                        download_status="link_only",
-                        storage_uri=None,
-                        sha256=None,
-                    ))
-            if documents:
-                errors.append("document download/hashing not yet implemented; URL captured as link_only")
+                    dl = await asyncio.to_thread(download_document, pdf_href)
+                    if dl["download_status"] == "downloaded":
+                        documents.append(DeliveryDocument(
+                            title=f"{title} (View as PDF)",
+                            url=pdf_href,
+                            document_type="solicitation",
+                            mime_type=dl.get("mime_type") or "application/pdf",
+                            download_status="downloaded",
+                            storage_uri=dl["storage_uri"],
+                            sha256=dl["sha256"],
+                        ))
+                    else:
+                        documents.append(DeliveryDocument(
+                            title=f"{title} (View as PDF)",
+                            url=pdf_href,
+                            document_type="solicitation",
+                            mime_type="application/pdf",
+                            download_status="failed",
+                        ))
+                        errors.append(f"document download failed: {pdf_href}")
 
             event_id = bid_number or self._make_event_id(detail_url or title)
             opportunity_url = detail_url or self.base_url
@@ -748,7 +794,6 @@ class SourcingPublicSiteJaggaerScraper(JaggaerScraper):
                 f"{self.portal_name} detail page requires a Jaggaer supplier login; "
                 "description/full detail beyond the listing row is unavailable"
             )
-            errors.append("raw_capture.storage_uri not set; no approved object-storage location configured")
 
             return DeliveryRecord(
                 observed_at=now_str,
@@ -776,7 +821,7 @@ class SourcingPublicSiteJaggaerScraper(JaggaerScraper):
                 documents=documents,
                 raw_capture=RawCapture(
                     content_type="text/html",
-                    storage_uri=None,
+                    storage_uri=raw_storage_uri,
                     sha256=raw_sha256,
                 ),
                 crawl=CrawlInfo(

@@ -1,7 +1,34 @@
+import hashlib
+
 import pytest
+import src.scrapers.alabama as alabama_module
 from src.scrapers.alabama import AlabamaScraper
 from src.storage import DeliveryRecord
 from tests.conftest import local_html_server
+
+
+@pytest.fixture(autouse=True)
+def _mock_object_storage(monkeypatch):
+    """No test in this file should hit the network or write real files for
+    document downloads/raw-capture storage - src/object_storage.py itself is
+    exercised directly in tests/test_object_storage.py."""
+
+    def fake_save_text(content, *, prefix, extension=".html"):
+        sha256 = hashlib.sha256(content.encode("utf-8")).hexdigest()
+        return f"file:///fake/{prefix}/{sha256}{extension}", sha256
+
+    def fake_download_document(url, **kwargs):
+        sha256 = hashlib.sha256(url.encode("utf-8")).hexdigest()
+        return {
+            "download_status": "downloaded",
+            "storage_uri": f"file:///fake/documents/{sha256}.pdf",
+            "sha256": sha256,
+            "byte_size": 123,
+            "mime_type": "application/pdf",
+        }
+
+    monkeypatch.setattr(alabama_module, "save_text", fake_save_text)
+    monkeypatch.setattr(alabama_module, "download_document", fake_download_document)
 
 
 def test_alabama_scraper_initialization():

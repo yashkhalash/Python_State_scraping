@@ -1,0 +1,7 @@
+[INIT].... → Crawl4AI 0.9.4 
+[FETCH]... ↓ https://mmp.delaware.gov/Bids/                                                                       | ✓ | ⏱: 3.88s 
+[SCRAPE].. ◆ https://mmp.delaware.gov/Bids/                                                                       | ✓ | ⏱: 0.04s 
+[EXTRACT]. ■ https://mmp.delaware.gov/Bids/                                                                       | ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://mmp.delaware.gov/Bids/                                                                       | ✓ | ⏱: 3.96s 
+Starting scraper for state: DE
+Successfully scraped and appended 0 spec-compliant records to data/output/de_2026-09-28.jsonl

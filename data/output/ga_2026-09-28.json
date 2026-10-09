@@ -1,0 +1,3098 @@
+[
+  {
+    "event_id": "PE-77892-NONST-2027-000000090",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "27004-1502, FY 27 Vertical Mowing Contract I",
+    "agency": "PAULDING COUNTY GOVERNMENT",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 31, 2026 @ 09:50 AM ET",
+    "close_date": "Sep 28, 2026 @ 10:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-77892-NONST-2027-000000090&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "tgoldin@paulding.gov",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "98888",
+        "description": "Tree Trimming and Pruning Services"
+      },
+      {
+        "code": "98887",
+        "description": "Tree Trimming and Pruning Services, Utility Lines, Energized"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "5_ REVISED Advertisement BONFIRE.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53303278&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:36:19.151383",
+    "updated_at": "2026-09-28T14:36:19.151383"
+  },
+  {
+    "event_id": "PE-33658-NONST-2026-000000004",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "Historic Home Redevelopment RFP Opportunity",
+    "agency": "GRIFFIN-SPALDING COUNTY LAND BANK AUTHORITY",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Jun 23, 2026 @ 04:00 PM ET",
+    "close_date": "Apr 22, 2025 @ 04:22 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-33658-NONST-2026-000000004&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "cblocker@cityofgriffin.com",
+      "phone": "026-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "90648",
+        "description": "Historical Preservation"
+      },
+      {
+        "code": "95883",
+        "description": "Real Estate Management Services, Including Listing, Sales And Broker Services"
+      },
+      {
+        "code": "92544",
+        "description": "General Construction: Management, Scheduling, Cost Estimation Engineering"
+      },
+      {
+        "code": "91889",
+        "description": "Real Estate and Land Consulting, Including Land Survey Consulting and Land Developers"
+      },
+      {
+        "code": "91488",
+        "description": "Wood, Includes Architectural Woodwork"
+      },
+      {
+        "code": "90922",
+        "description": "Building Construction, Non-Residential, Office Bldg., etc."
+      },
+      {
+        "code": "90923",
+        "description": "Building Construction, Residential, Apartments, etc."
+      },
+      {
+        "code": "90924",
+        "description": "Building Construction, Commercial and Institutional"
+      },
+      {
+        "code": "90927",
+        "description": "Building Construction, Educational"
+      },
+      {
+        "code": "90928",
+        "description": "Building Construction, Medical"
+      },
+      {
+        "code": "90954",
+        "description": "Home Construction, Single Family"
+      },
+      {
+        "code": "90961",
+        "description": "Maintenance and Repair, Non-Residential Building"
+      },
+      {
+        "code": "90962",
+        "description": "Maintenance and Repair, Residential Buildings, Including Single Family Homes and Apartments"
+      },
+      {
+        "code": "90963",
+        "description": "Maintenance and Repair, Commercial and Institutional Building"
+      },
+      {
+        "code": "90966",
+        "description": "Maintenance and Repair, Educational Building"
+      },
+      {
+        "code": "90967",
+        "description": "Maintenance and Repair, Medical Building"
+      },
+      {
+        "code": "90968",
+        "description": "Maintenance and Repair, Religious Building"
+      },
+      {
+        "code": "90714",
+        "description": "Architectural Services, Non-Licensed (Not Otherwise Classified)"
+      },
+      {
+        "code": "90735",
+        "description": "Design Services"
+      },
+      {
+        "code": "90610",
+        "description": "Buildings, Architectural Design Services"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "522 Meriwether St_Renderings_1.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=49535946&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "522 Meriwether St_RFP_6_22_26.docx",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=49535947&sourceSystemType=gpr20",
+        "file_type": "docx"
+      },
+      {
+        "file_name": "522 Meriwether St_Current Photos.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=49535948&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "Photo of the Front.jpg",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=49535949&sourceSystemType=gpr20",
+        "file_type": "jpg"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:36:21.508400",
+    "updated_at": "2026-09-28T14:36:21.508400"
+  },
+  {
+    "event_id": "PE-72155-NONST-2027-000000202",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "27-290 Janitorial Services",
+    "agency": "AUGUSTA,  CITY OF",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 16, 2026 @ 10:26 PM ET",
+    "close_date": "Sep 28, 2026 @ 11:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-72155-NONST-2027-000000202&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "nwilliams@augustaga.gov",
+      "phone": "027-0000002"
+    },
+    "commodity_codes": [
+      {
+        "code": "92642",
+        "description": "Environmental Services (Not Otherwise Classified)"
+      },
+      {
+        "code": "91428",
+        "description": "Cleaning, Interior and Exterior, New Construction"
+      },
+      {
+        "code": "91039",
+        "description": "Janitorial and Custodial Services"
+      },
+      {
+        "code": "95863",
+        "description": "Janitorial Management Services"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "27_290_ITB.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=52508789&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "27_290 Addendum 1.docx",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53701353&sourceSystemType=gpr20",
+        "file_type": "docx"
+      },
+      {
+        "file_name": "27_290_ADD2.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54356897&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:36:23.772427",
+    "updated_at": "2026-09-28T14:36:23.772427"
+  },
+  {
+    "event_id": "PE-66780-NONST-2027-000000047",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "Downtown Norcross Parking Improvements",
+    "agency": "NORCROSS, CITY OF",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 17, 2026 @ 04:12 PM ET",
+    "close_date": "Sep 28, 2026 @ 11:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-66780-NONST-2027-000000047&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "procurement@norcrossga.net",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "91394",
+        "description": "Paving and Resurfacing, Alley and Parking Lot"
+      },
+      {
+        "code": "91395",
+        "description": "Paving and Resurfacing, Highway and Road"
+      },
+      {
+        "code": "91396",
+        "description": "Paving and Resurfacing, Streets, Major and Residential"
+      },
+      {
+        "code": "91336",
+        "description": "Construction, Parking Lot and Alley"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "ITB Packet _ Downtown Norcross Parking Improv.docx",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=52576203&sourceSystemType=gpr20",
+        "file_type": "docx"
+      },
+      {
+        "file_name": "05 Norcross Downtown Parking Retaining Walls_.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=52576204&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "01 Norcross Downtown Parking Specifications_2.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=52576205&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "04 Norcross Parking Lighting Plan_20260804.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=52576206&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "Addendum No_ 1 (ITB PW 27_01).pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53452934&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "REVISED Bid Form (Addendum No_ 2 _ 9_23_26).xlsx",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54632606&sourceSystemType=gpr20",
+        "file_type": "xlsx"
+      },
+      {
+        "file_name": "ITB PW 27_01 Addendum No_ 2.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54632607&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "REVISED Appendices (Addendum No_ 2 _ 9_23_26).pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54632608&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "REVISED Stormwater Report for Downtown Norcro.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54633128&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:36:26.118190",
+    "updated_at": "2026-09-28T14:36:26.118190"
+  },
+  {
+    "event_id": "PE-78462-NONST-2026-000000001",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "RFQ for Qualifications for Engineering Services",
+    "agency": "CITY OF WHIGHAM",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 26, 2026 @ 09:30 AM ET",
+    "close_date": "Sep 28, 2026 @ 12:00 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-78462-NONST-2026-000000001&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "rachel.jenson@cityofwhigham.net",
+      "phone": "026-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "91107",
+        "description": "C.I.P., Architectural and Engineering Services"
+      },
+      {
+        "code": "92587",
+        "description": "Sewage Collection, Treatment, and Disposal Engineering"
+      },
+      {
+        "code": "92596",
+        "description": "Waste Water Treatment Engineering"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "Engineering RFQ August 2026_.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53087271&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:36:28.543344",
+    "updated_at": "2026-09-28T14:36:28.543344"
+  },
+  {
+    "event_id": "PE-63610-NONST-2027-000000080",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "CCSD kitchen equipment for LSH",
+    "agency": "COLUMBIA COUNTY BOARD OF EDUCATION",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Sep 04, 2026 @ 01:36 PM ET",
+    "close_date": "Sep 28, 2026 @ 02:00 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-63610-NONST-2027-000000080&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "hudson.chandler@ccboe.net",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "16507",
+        "description": "Cafeteria and Kitchen Equipment (Not Otherwise Classified)"
+      },
+      {
+        "code": "24028",
+        "description": "Cutlery: Knives, Spatulas, Steels, etc."
+      },
+      {
+        "code": "24091",
+        "description": "Stainless Steel Ware: Cooking Utensils, Flatware, Tableware, Trays, Pots and Pans, etc."
+      },
+      {
+        "code": "16547",
+        "description": "Food Carts and Cafeteria Serving Units Including Steam Tables"
+      },
+      {
+        "code": "24007",
+        "description": "Aluminum Ware: Cooking Utensils, Dishes, Trays, Pots and Pans, etc."
+      },
+      {
+        "code": "24042",
+        "description": "Enamelware: Small Cooking Utensils, Pots and Pans, etc."
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "Small Equip 26 rm 2070.xlsx",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53661210&sourceSystemType=gpr20",
+        "file_type": "xlsx"
+      },
+      {
+        "file_name": "CCSD LSH Request small kitchen equip HC_09_28.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53661211&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "Amendment 1 Small Kitchen Equip HC_09_28_26A .pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54614342&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "Small Equip 26 rm 2070 amend 1.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54614343&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:36:30.745676",
+    "updated_at": "2026-09-28T14:36:30.745676"
+  },
+  {
+    "event_id": "PE-55463-NONST-2027-000000025",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "LIGHTNING PROTECTION CONTRACTORS",
+    "agency": "CARTERSVILLE CITY SCHOOLS",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Sep 01, 2026 @ 08:37 AM ET",
+    "close_date": "Sep 28, 2026 @ 02:00 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-55463-NONST-2027-000000025&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "cfreeman@cartersvilleschools.org",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "93633",
+        "description": "Fire Protection Equipment and Systems Including Fire Hydrants, Fire Sprinkler Systems, Smoke Detecto"
+      },
+      {
+        "code": "91082",
+        "description": "Wiring and Other Electrical Maintenance and Repair Services"
+      },
+      {
+        "code": "92531",
+        "description": "Electrical Engineering, Including Cogeneration Design Services"
+      },
+      {
+        "code": "91438",
+        "description": "Electrical"
+      },
+      {
+        "code": "28503",
+        "description": "Arresters, Lightning"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "RFP 0100_901_208.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53347489&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "RRP 0100_0901_208 ADDENDUM.docx",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53732259&sourceSystemType=gpr20",
+        "file_type": "docx"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:36:33.036121",
+    "updated_at": "2026-09-28T14:36:33.036121"
+  },
+  {
+    "event_id": "PE-48401-RFQ-2027-000000622",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "RFQ-484-092826 On-Call Engineering Support Services for Cable Stayed Bridge and Tunnels",
+    "agency": "TRANSPORTATION-2, DEPARTMENT OF",
+    "solicitation_type": "Request for Quote",
+    "status": "Open",
+    "post_date": "Aug 27, 2026 @ 12:17 PM ET",
+    "close_date": "Sep 28, 2026 @ 02:00 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-48401-RFQ-2027-000000622&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "aeverson@dot.ga.gov",
+      "phone": "027-0000006"
+    },
+    "commodity_codes": [
+      {
+        "code": "90740",
+        "description": "Engineering Services, Non-Licensed (Not Otherwise Classified), Including Consulting"
+      },
+      {
+        "code": "91832",
+        "description": "Consulting Services (Not Otherwise Classified)"
+      },
+      {
+        "code": "91366",
+        "description": "Maintenance and Repair, Bridges"
+      },
+      {
+        "code": "92513",
+        "description": "Bridge Engineering"
+      },
+      {
+        "code": "91313",
+        "description": "Construction, Bridge and Drawbridge, Including Reconstruction and Rehabilitation"
+      },
+      {
+        "code": "91896",
+        "description": "Transportation Consulting"
+      },
+      {
+        "code": "92536",
+        "description": "Engineering Services (Not Otherwise Classified)"
+      },
+      {
+        "code": "90735",
+        "description": "Design Services"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "Legacy Form.xlsx",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53184923&sourceSystemType=gpr20",
+        "file_type": "xlsx"
+      },
+      {
+        "file_name": "LAP Evaluation Form.xlsx",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53184924&sourceSystemType=gpr20",
+        "file_type": "xlsx"
+      },
+      {
+        "file_name": "RFQ_484_092826 On_Call Engineering Support Se.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53184925&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "RFQ_484_092826 ADDENDUM 1.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54321329&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:36:35.364240",
+    "updated_at": "2026-09-28T14:36:35.364240"
+  },
+  {
+    "event_id": "PE-55463-NONST-2027-000000026",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "Upgrade Fire Alarm Devices at Cartersville Primary School",
+    "agency": "CARTERSVILLE CITY SCHOOLS",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Sep 01, 2026 @ 08:43 AM ET",
+    "close_date": "Sep 28, 2026 @ 02:00 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-55463-NONST-2027-000000026&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "cfreeman@cartersvilleschools.org",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "34016",
+        "description": "Fire Alarm Systems, Power Sirens, and Controls"
+      },
+      {
+        "code": "99042",
+        "description": "Fire Alarm and Safety Services, Including Installation of Equipment"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "RFP 0100_0901_207.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53352798&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:36:38.309303",
+    "updated_at": "2026-09-28T14:36:38.309303"
+  },
+  {
+    "event_id": "PE-77023-NONST-2027-000000705",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "RP026-26 Provision of SS4A Supplemental Planning and Demonstration Project",
+    "agency": "GWINNETT COUNTY GOVERNMENT",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 19, 2026 @ 04:35 PM ET",
+    "close_date": "Sep 28, 2026 @ 02:50 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-77023-NONST-2027-000000705&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "Michael.Milstein@GwinnettCounty.com",
+      "phone": "027-0000007"
+    },
+    "commodity_codes": [
+      {
+        "code": "92022",
+        "description": "Data Preparation and Processing Services, Including Bates Coding"
+      },
+      {
+        "code": "96862",
+        "description": "Pavement Data Collection Services"
+      },
+      {
+        "code": "84549",
+        "description": "Pavement Testing and Data Collection Equipment"
+      },
+      {
+        "code": "91890",
+        "description": "Strategic Planning and Consulting"
+      },
+      {
+        "code": "91892",
+        "description": "Urban Planning Consulting"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "RP026_26 Inv.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=52760606&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "RP026_26 ad1.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54162288&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:36:42.372325",
+    "updated_at": "2026-09-28T14:36:42.372325"
+  },
+  {
+    "event_id": "PE-77023-NONST-2027-000000735",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "RP031-26, Provision of Examination and Testing for Protective Services on an Annual Contract",
+    "agency": "GWINNETT COUNTY GOVERNMENT",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Sep 09, 2026 @ 11:09 AM ET",
+    "close_date": "Sep 28, 2026 @ 02:50 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-77023-NONST-2027-000000735&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "Diana.Turner@GwinnettCounty.com",
+      "phone": "027-0000007"
+    },
+    "commodity_codes": [
+      {
+        "code": "90783",
+        "description": "Testing Services"
+      },
+      {
+        "code": "92420",
+        "description": "Examination and Testing Services"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "RP031_26 RFP.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53813648&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "RP031_26 Ad1.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54454314&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:36:46.725256",
+    "updated_at": "2026-09-28T14:36:46.725256"
+  },
+  {
+    "event_id": "PE-77023-NONST-2027-000000732",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "RP033-26 Provision of Wrecker Services on an Annual Contract",
+    "agency": "GWINNETT COUNTY GOVERNMENT",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Sep 04, 2026 @ 11:27 AM ET",
+    "close_date": "Sep 28, 2026 @ 02:50 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-77023-NONST-2027-000000732&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "chelsey.ward@gwinnettcounty.com",
+      "phone": "027-0000007"
+    },
+    "commodity_codes": [
+      {
+        "code": "96890",
+        "description": "Vehicle Towing and Storage"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "RP033_26 RFP.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53602790&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "RP033_26 Ad 1.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54433888&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "RP033_26 Ad 2.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54478190&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:36:52.268322",
+    "updated_at": "2026-09-28T14:36:52.268322"
+  },
+  {
+    "event_id": "PE-51200-RFQ-2027-000000041",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "AU ANIMATION LAB",
+    "agency": "AUGUSTA UNIVERSITY",
+    "solicitation_type": "Request for Quote",
+    "status": "Open",
+    "post_date": "Aug 28, 2026 @ 11:44 AM ET",
+    "close_date": "Sep 29, 2026 @ 09:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-51200-RFQ-2027-000000041&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "swilli10@augusta.edu",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "90922",
+        "description": "Building Construction, Non-Residential, Office Bldg., etc."
+      },
+      {
+        "code": "90638",
+        "description": "General Construction, Architectural Services"
+      },
+      {
+        "code": "90930",
+        "description": "Building Construction, (Not Otherwise Classified)"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "DBB_Contract_Bid_Forms_25_117_UH.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53257848&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "DBB_SampleContract_25_117_UH.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53257849&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "AU UH Animation Lab_Dwgs_approved (sm).pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53257850&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "DBB_General_Conditions_Oct_2025.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53257851&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "AU_SC UH Animation Lab 95_ Spec.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53257852&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "Supplier Question and Answer  Round 1.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53344923&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "SPD_SPR013 RFX Addendum_1.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53476634&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "BID REQUIREMENTS PACKET.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53476635&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "UPDATED PACKET 25_11_03 AU_SC UH Animation La.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53476636&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "SIGN IN SHEET AU UH ANIMATION WALK THROUGH.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53537874&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "Supplier Question and Answer Round 2.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54156678&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "Revised Contractor Form.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54156679&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "Addendum 2.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54506685&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:36:58.714246",
+    "updated_at": "2026-09-28T14:36:58.714246"
+  },
+  {
+    "event_id": "PE-55964-NONST-2027-000000045",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "CPA's 2027-006 Office Supplies Bid",
+    "agency": "Flags: Municipal, School, Departmental, Agency, etc.",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 10, 2026 @ 09:49 AM ET",
+    "close_date": "Sep 29, 2026 @ 09:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-55964-NONST-2027-000000045&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "kchristy@cpa4schools.com",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "35020",
+        "description": "Flag Accessories: Belts, Brackets, Covers, Crosses, Eagles, Holders, Sockets, Spears, Staffs, Stands"
+      },
+      {
+        "code": "35035",
+        "description": "Flags, County"
+      },
+      {
+        "code": "35045",
+        "description": "Flags: Municipal, School, Departmental, Agency, etc."
+      },
+      {
+        "code": "35070",
+        "description": "Flags: State and U.S.: Cotton, Nylon, Polyester, and Wool"
+      },
+      {
+        "code": "35072",
+        "description": "Flags: State and U.S., Presentation: Nylon, Rayon, and Taffeta"
+      },
+      {
+        "code": "60555",
+        "description": "Paper Trimmers, Hand, Blade Type"
+      },
+      {
+        "code": "60560",
+        "description": "Pencil Sharpeners, Electric and Battery Operated"
+      },
+      {
+        "code": "60563",
+        "description": "Pencil Sharpeners, Manual; and Parts"
+      },
+      {
+        "code": "60565",
+        "description": "Punches, Paper"
+      },
+      {
+        "code": "60567",
+        "description": "Punches, Paper, Manual"
+      },
+      {
+        "code": "60569",
+        "description": "Scissors and Shears, Office"
+      },
+      {
+        "code": "60582",
+        "description": "Staple Removers"
+      },
+      {
+        "code": "61509",
+        "description": "Binders: Chain, Post, Prong, Ring, etc."
+      },
+      {
+        "code": "61515",
+        "description": "Books, Office: Accounting, Address, Columnar, Composition, Memo, Minute, Receipt, Steno, Time, etc."
+      },
+      {
+        "code": "61525",
+        "description": "Clipboards, Arch Boards, etc."
+      },
+      {
+        "code": "61529",
+        "description": "Correction Fluid, Sheets and Tape, Including Thinners (See 610-96 For Typewriter Correction Tape)"
+      },
+      {
+        "code": "61531",
+        "description": "Covers: Brief, Manuscript, Pressboard, Report, etc."
+      },
+      {
+        "code": "61539",
+        "description": "File Dividers: Labels, Tabs, etc."
+      },
+      {
+        "code": "61541",
+        "description": "File Folders: Expanding Envelopes, Wallets, etc."
+      },
+      {
+        "code": "61543",
+        "description": "File Folders, Hanging Type; and Accessories"
+      },
+      {
+        "code": "61545",
+        "description": "File Folders, Regular, Legal and Letter Sizes"
+      },
+      {
+        "code": "61547",
+        "description": "File Guides"
+      },
+      {
+        "code": "61555",
+        "description": "Letter and Card Trays, All Types"
+      },
+      {
+        "code": "61560",
+        "description": "Office Supplies, General (Not Otherwise Classified)"
+      },
+      {
+        "code": "61562",
+        "description": "Pads and Tablets: Analysis, Columnar, Figure, Memo, Note, Ruled, Post-It Notes, Telephone Message, e"
+      },
+      {
+        "code": "61569",
+        "description": "Paper Clips, Clamps, Fasteners, Round and Flat Head, Dispensers, etc."
+      },
+      {
+        "code": "61571",
+        "description": "Paper Fasteners, Prong Type"
+      },
+      {
+        "code": "61575",
+        "description": "Rubber Bands, All Sizes"
+      },
+      {
+        "code": "62071",
+        "description": "Pencils, Marking, Not Grease or China Types"
+      },
+      {
+        "code": "62080",
+        "description": "Pens, General Writing Types: Ball Point, Nylon Tip, Plastic Tip, Roller Ball, etc."
+      },
+      {
+        "code": "62090",
+        "description": "Pens, Marker Types, Including Highlighter Types"
+      },
+      {
+        "code": "83224",
+        "description": "Tape, Duct, Adhesive Type"
+      },
+      {
+        "code": "83252",
+        "description": "Tape, Masking"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "2027_006 Office Supplies Bid Packet.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=52134393&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:37:09.010481",
+    "updated_at": "2026-09-28T14:37:09.010481"
+  },
+  {
+    "event_id": "PE-77074-NONST-2027-000000038",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "2027-38 2026 LRA/2027 LMIG",
+    "agency": "TATTNALL COUNTY BOARD OF COMMISSIONERS",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 18, 2026 @ 10:05 AM ET",
+    "close_date": "Sep 29, 2026 @ 10:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-77074-NONST-2027-000000038&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "engineer@tattnallcountyga.gov",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "91395",
+        "description": "Paving and Resurfacing, Highway and Road"
+      },
+      {
+        "code": "91276",
+        "description": "Striping: Streets, Parking Facilities, Lane Divisions, Paint, etc."
+      },
+      {
+        "code": "55079",
+        "description": "Traffic Control Devices, Non-Electric. Including Rumble Strips, etc."
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "Tattnall County 2026 LRA_2027 LMIG (38) Bid R.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=52596916&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:37:15.275488",
+    "updated_at": "2026-09-28T14:37:15.275488"
+  },
+  {
+    "event_id": "PE-66325-NONST-2027-000000016",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "66325- Buford Southside WPCP Secondary Clarifier",
+    "agency": "BUFORD, CITY OF",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 19, 2026 @ 09:31 AM ET",
+    "close_date": "Sep 29, 2026 @ 10:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-66325-NONST-2027-000000016&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "procurement@cityofbuford.com",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "91359",
+        "description": "Construction and Upgrades, Wastewater Treatment Plant"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "SS WPCP Secondary Clarifier_Bid Ad.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=52674567&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:37:18.524118",
+    "updated_at": "2026-09-28T14:37:18.524118"
+  },
+  {
+    "event_id": "PE-63250-NONST-2027-000000004",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "City of Homerville Street Resurfacing",
+    "agency": "HOMERVILLE, CITY OF",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 27, 2026 @ 11:29 AM ET",
+    "close_date": "Sep 29, 2026 @ 10:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-63250-NONST-2027-000000004&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "swaadmin@turnipseed.com",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "91395",
+        "description": "Paving and Resurfacing, Highway and Road"
+      },
+      {
+        "code": "91276",
+        "description": "Striping: Streets, Parking Facilities, Lane Divisions, Paint, etc."
+      },
+      {
+        "code": "74568",
+        "description": "Recycled Asphalt and Asphalt Products"
+      }
+    ],
+    "attachments": [],
+    "scraped_at": "2026-09-28T14:37:21.051142",
+    "updated_at": "2026-09-28T14:37:21.051142"
+  },
+  {
+    "event_id": "PE-62853-NONST-2027-000000031",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "RFP 2027 - 01 - Comprehensive Plan 10 Year Update",
+    "agency": "WOODSTOCK, CITY OF",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 27, 2026 @ 05:14 PM ET",
+    "close_date": "Sep 29, 2026 @ 10:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-62853-NONST-2027-000000031&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "mdetz@woodstockga.gov",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "91896",
+        "description": "Transportation Consulting"
+      },
+      {
+        "code": "91892",
+        "description": "Urban Planning Consulting"
+      },
+      {
+        "code": "91863",
+        "description": "Housing Consulting"
+      },
+      {
+        "code": "91827",
+        "description": "Community Development Consulting"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "RFP 2027 _ 01 _ Comprehensive Plan _ 10 Year .pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53231177&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "2027 _ 01 _ Pre Proposal sign in Sheet.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53586930&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:37:23.639382",
+    "updated_at": "2026-09-28T14:37:23.639382"
+  },
+  {
+    "event_id": "PE-62910-NONST-2027-000000093",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "Request for Qualification Statements & Competitive Cost Proposals-Pre-Qualified General Contractors",
+    "agency": "CLARKE COUNTY BOARD OF EDUCATION",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 31, 2026 @ 10:37 PM ET",
+    "close_date": "Sep 29, 2026 @ 10:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-62910-NONST-2027-000000093&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "bassettt@clarke.k12.ga.us",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "90638",
+        "description": "General Construction, Architectural Services"
+      },
+      {
+        "code": "92544",
+        "description": "General Construction: Management, Scheduling, Cost Estimation Engineering"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "Ad for BHH Elementary Addition and Renovation.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53340042&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:37:25.936168",
+    "updated_at": "2026-09-28T14:37:25.936168"
+  },
+  {
+    "event_id": "PE-62853-NONST-2027-000000030",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "RFP 2027 - 02 Economic Development Plan Update",
+    "agency": "WOODSTOCK, CITY OF",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 27, 2026 @ 05:08 PM ET",
+    "close_date": "Sep 29, 2026 @ 10:30 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-62853-NONST-2027-000000030&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "mdetz@woodstockga.gov",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "91849",
+        "description": "Finance and Economics Consulting"
+      },
+      {
+        "code": "91837",
+        "description": "Economy Consulting  (Inactive, please see commodity code 918-49 effective January 1, 2016)"
+      },
+      {
+        "code": "91832",
+        "description": "Consulting Services (Not Otherwise Classified)"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "RFP 2027 _ 02 _ Economic Development Plan Upd.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53228226&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "2027 _ 02 _ Pre Proposal sign in Sheet.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53588213&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "2027 _ 02 _ Submitted Questions w Answers.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54376134&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:37:28.568371",
+    "updated_at": "2026-09-28T14:37:28.568371"
+  },
+  {
+    "event_id": "PE-66096-NONST-2027-000000199",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "26ITBC1650100A-ST Water Meters for Public Works",
+    "agency": "FULTON COUNTY PURCHASING DEPT",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 17, 2026 @ 02:36 PM ET",
+    "close_date": "Sep 29, 2026 @ 11:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-66096-NONST-2027-000000199&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "shondra.turner@fultoncountyga.gov",
+      "phone": "027-0000001"
+    },
+    "commodity_codes": [
+      {
+        "code": "89046",
+        "description": "Meter Reading Devices"
+      },
+      {
+        "code": "89044",
+        "description": "Meters, Water"
+      },
+      {
+        "code": "89040",
+        "description": "Meter Boxes, Meter Vaults, and Valve Boxes (See 210-45 for Concrete Type)"
+      },
+      {
+        "code": "22023",
+        "description": "High Water Detection and Measuring Equipment"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "27ITBC1650100A_ST.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=52571938&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:37:31.041416",
+    "updated_at": "2026-09-28T14:37:31.041416"
+  },
+  {
+    "event_id": "PE-72155-NONST-2027-000000212",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "27-001 Hand Tools - Annual Bid",
+    "agency": "AUGUSTA,  CITY OF",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Sep 10, 2026 @ 07:16 PM ET",
+    "close_date": "Sep 29, 2026 @ 11:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-72155-NONST-2027-000000212&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "nwilliams@augustaga.gov",
+      "phone": "027-0000002"
+    },
+    "commodity_codes": [
+      {
+        "code": "44506",
+        "description": "Bits, Dies, Drivers, Reamers, Taps, etc., Hand Tools, Powered and Non-Powered"
+      },
+      {
+        "code": "44539",
+        "description": "Hand Tools (Not Otherwise Classified)"
+      },
+      {
+        "code": "44595",
+        "description": "Recycled Hand Tools"
+      },
+      {
+        "code": "51524",
+        "description": "Garden Hand Tools, Including Sickles, (Not Otherwise Classified)"
+      },
+      {
+        "code": "52016",
+        "description": "Hand Tools, Leather Working"
+      },
+      {
+        "code": "67015",
+        "description": "Hand Tools, Including Plungers"
+      },
+      {
+        "code": "93640",
+        "description": "Hand Tools, Powered, All Kinds, Including Electrical and Hydraulic Maintenance and Repair"
+      },
+      {
+        "code": "93641",
+        "description": "Hand Tools, Non-Powered, All Kinds, Maintenance and Repair"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "27_001_ITB.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53943676&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:37:33.421183",
+    "updated_at": "2026-09-28T14:37:33.421183"
+  },
+  {
+    "event_id": "PE-72155-NONST-2027-000000213",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "27-058 Erosion & Sedimentation Control",
+    "agency": "AUGUSTA,  CITY OF",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Sep 10, 2026 @ 07:21 PM ET",
+    "close_date": "Sep 29, 2026 @ 11:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-72155-NONST-2027-000000213&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "nwilliams@augustaga.gov",
+      "phone": "027-0000002"
+    },
+    "commodity_codes": [
+      {
+        "code": "46010",
+        "description": "Air Hoses and Fittings"
+      },
+      {
+        "code": "08573",
+        "description": "Recycled Bags and Erosion Control Items"
+      },
+      {
+        "code": "08585",
+        "description": "Soil Erosion Sheeting Material, Including Silt Fencing: Asphalt, Biodegradable Paper, Burlap, Excels"
+      },
+      {
+        "code": "76055",
+        "description": "Mats, Erosion Control Blankets, Rolled"
+      }
+    ],
+    "attachments": [],
+    "scraped_at": "2026-09-28T14:37:35.828169",
+    "updated_at": "2026-09-28T14:37:35.828169"
+  },
+  {
+    "event_id": "PE-72155-NONST-2027-000000214",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "27-116 Various Pipe, Coupling & End Sections",
+    "agency": "AUGUSTA,  CITY OF",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Sep 10, 2026 @ 07:28 PM ET",
+    "close_date": "Sep 29, 2026 @ 11:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-72155-NONST-2027-000000214&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "nwilliams@augustaga.gov",
+      "phone": "027-0000002"
+    },
+    "commodity_codes": [
+      {
+        "code": "03196",
+        "description": "Vent Pipes, Fittings, and Accessories"
+      },
+      {
+        "code": "44577",
+        "description": "Thread Cutters (See 670-15 for Pipe Threader)"
+      },
+      {
+        "code": "65804",
+        "description": "Pipe, Alloy Steel, Chrome, Chrome-Moly, Ferrous and Non Ferrous Alloy, Stainless"
+      },
+      {
+        "code": "65805",
+        "description": "Pipe, Aluminum  (Inactive, please see commodity code 658-09 effective January 1, 2016)"
+      },
+      {
+        "code": "65809",
+        "description": "Pipe, Aluminum, Lead, Magnesium. Metal. Tin. Titanium, Zinc"
+      },
+      {
+        "code": "65818",
+        "description": "Pipe, Bituminized Fiber, Concrete, Clay, Fiberglass, Rubber, Terra Cotta"
+      },
+      {
+        "code": "65819",
+        "description": "Pipe, Bonded, All Types  (Inactive, please see commodity code 658-18 effective January 1, 2016)"
+      },
+      {
+        "code": "65822",
+        "description": "Pipe, Brass, Bronze, Copper"
+      },
+      {
+        "code": "65824",
+        "description": "Pipe, Bronze (Inactive, please see commodity code 658-22 effective January 1, 2016)"
+      },
+      {
+        "code": "65828",
+        "description": "Pipe, Cast Iron  (Inactive, please see commodity code 658-46 effective January 1, 2016)"
+      },
+      {
+        "code": "65830",
+        "description": "Pipe, Chrome  (Inactive, please see commodity code 658-04 effective January 1, 2016)"
+      },
+      {
+        "code": "65831",
+        "description": "Pipe, Clay, Terra Cotta (Inactive, please see commodity code 658-18 effective January 1, 2016)"
+      },
+      {
+        "code": "65834",
+        "description": "Pipe, Concrete  (Inactive, please see commodity code 658-18 effective January 1, 2016)"
+      },
+      {
+        "code": "65835",
+        "description": "Pipe, Copper  (Inactive, please see commodity code 658-22 effective January 1, 2016)"
+      },
+      {
+        "code": "65840",
+        "description": "Pipe, Ferrous Alloy  (Inactive, please see commodity code 658-04 effective January 1, 2016)"
+      },
+      {
+        "code": "65841",
+        "description": "Pipe, Fiberglass  (Inactive, please see commodity code 658-18 effective January 1, 2016)"
+      },
+      {
+        "code": "65846",
+        "description": "Pipe, Iron, Including Ductile Iron Pipe and Cast Iron Pipe"
+      },
+      {
+        "code": "65850",
+        "description": "Pipe, Lead  (Inactive, please see commodity code 658-09 effective January 1, 2016)"
+      },
+      {
+        "code": "65852",
+        "description": "Pipe, Magnesium (Inactive, please see commodity code 658-09 effective January 1, 2016)"
+      },
+      {
+        "code": "65854",
+        "description": "Pipe, Non-Ferrous Alloy (Inactive, please see commodity code 658-04 effective January 1, 2016)"
+      },
+      {
+        "code": "65856",
+        "description": "Pipe, Plastic, Including Fiber Reinforced Plastic Pipe, Polybutylene Pipe, PVC"
+      },
+      {
+        "code": "65858",
+        "description": "Pipe, Polyethylene  (Inactive, please see commodity code 658-56 effective January 1, 2016) (Inactive"
+      },
+      {
+        "code": "65860",
+        "description": "Pipe, PVC (Polyvinyl Chloride) (Inactive, please see commodity code 658-56 effective January 1, 2016"
+      },
+      {
+        "code": "65868",
+        "description": "Pipe, Rubber (Inactive, please see commodity code 658-18 effective January 1, 2016)"
+      },
+      {
+        "code": "65874",
+        "description": "Pipe, Soil  (Inactive, please see commodity code 658-28 effective January 1, 2016)"
+      },
+      {
+        "code": "65877",
+        "description": "Pipe, Stainless Steel  (Inactive, please see commodity code 658-80 effective January 1, 2016)"
+      },
+      {
+        "code": "65880",
+        "description": "Pipe, Steel, Stainless Steel and Wrought Steel"
+      },
+      {
+        "code": "65881",
+        "description": "Pipe, Threaded"
+      },
+      {
+        "code": "65882",
+        "description": "Pipe, Steel, Wrought  (Inactive, please see commodity code 658-80 effective January 1, 2016)"
+      },
+      {
+        "code": "65883",
+        "description": "Pipe, Tin  (Inactive, please see commodity code 658-09 effective January 1, 2016)"
+      },
+      {
+        "code": "65884",
+        "description": "Pipe, Titanium  (Inactive, please see commodity code 658-09 effective January 1, 2016)"
+      },
+      {
+        "code": "65886",
+        "description": "Pipe, Unthreaded (Inactive, please see commodity code 658-81 effective January 1, 2016)"
+      },
+      {
+        "code": "65887",
+        "description": "Pipe, Zinc (Inactive, please see commodity code 658-09 effective January 1, 2016)"
+      },
+      {
+        "code": "65896",
+        "description": "Recycled Pipe and Tubing"
+      },
+      {
+        "code": "65943",
+        "description": "Extensions, Pipe"
+      },
+      {
+        "code": "65951",
+        "description": "Lining, Pipe, Cement, Cure-in-place, Epoxy, Trenchless, etc."
+      },
+      {
+        "code": "65954",
+        "description": "Offsets, Plugs, Pipe Rests"
+      },
+      {
+        "code": "65955",
+        "description": "Pipe Repair Clamps, Couplings, Leak Kits, etc."
+      },
+      {
+        "code": "65996",
+        "description": "Recycled Pipe and Tubing Fittings"
+      },
+      {
+        "code": "65997",
+        "description": "Pipe Fittings, Misc. (Not Otherwise Classified)"
+      },
+      {
+        "code": "67005",
+        "description": "Cement and Cleaners, For Plastic Conduit, Fittings, and Pipe"
+      },
+      {
+        "code": "67006",
+        "description": "Compound, Pipe Joint and Tape"
+      },
+      {
+        "code": "67012",
+        "description": "Grout, Pipe and Sewer"
+      },
+      {
+        "code": "67016",
+        "description": "Hydraulic Fusion Machine for Pipe"
+      },
+      {
+        "code": "67049",
+        "description": "Pipe Hangers, Constant Support Type, for Power Plant Operations"
+      },
+      {
+        "code": "67050",
+        "description": "Pipe Hangers, Concrete Inserts, Joint Restraints, etc."
+      },
+      {
+        "code": "67051",
+        "description": "Pipe and Utility Markers"
+      },
+      {
+        "code": "67052",
+        "description": "Pipe Repair Clamps, Couplings, Leak Kits, etc. (Inactive, please see commodity code 659-55 effective"
+      },
+      {
+        "code": "67053",
+        "description": "Pipeline Equipment and Tools, Construction and Laying of the Pipeline"
+      },
+      {
+        "code": "67061",
+        "description": "Sewer Pipe Cleaning Machines, Power Driven; and Parts"
+      },
+      {
+        "code": "34012",
+        "description": "Couplings, Fire Hose"
+      },
+      {
+        "code": "34056",
+        "description": "Hose, Fire, and Fittings, Coupled and Uncoupled (See 340-12 for Couplings)"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "27_116_ITB.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53946524&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:37:38.533288",
+    "updated_at": "2026-09-28T14:37:38.533288"
+  },
+  {
+    "event_id": "PE-77548-NONST-2027-000000414",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "26-0117-7 PURCHASE OF VEEAM DATA PLATFORM ADVANCED UNIVERSAL SUBSCRIPTION RENEWAL & SUPPORT SERVICES",
+    "agency": "CHATHAM COUNTY",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Sep 17, 2026 @ 11:47 AM ET",
+    "close_date": "Sep 29, 2026 @ 02:00 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-77548-NONST-2027-000000414&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "lalott@chathamcounty.org",
+      "phone": "027-0000004"
+    },
+    "commodity_codes": [
+      {
+        "code": "20987",
+        "description": "Software, Mainframes and Servers (Not Otherwise Classified)"
+      },
+      {
+        "code": "92046",
+        "description": "Software Updating and Upgrading Services"
+      },
+      {
+        "code": "92045",
+        "description": "Software Maintenance and Support Services"
+      },
+      {
+        "code": "20991",
+        "description": "Utilities: Back-up, Batch File, Menus, Network Management, Operating System, Recovery, Screen, Secur"
+      },
+      {
+        "code": "20913",
+        "description": "Application Software, Servers"
+      },
+      {
+        "code": "20890",
+        "description": "Utilities: Back-up, Batch File, Firewall, Menus, Operating System, Network Operating System, Network"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "26_0117_7_Bid .pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54300539&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:37:40.712386",
+    "updated_at": "2026-09-28T14:37:40.712386"
+  },
+  {
+    "event_id": "PE-69000-NONST-2027-000000013",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "Box Culvert Repairs",
+    "agency": "LINCOLN COUNTY BOARD OF COMMISSIONERS",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 18, 2026 @ 08:42 AM ET",
+    "close_date": "Sep 29, 2026 @ 02:00 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-69000-NONST-2027-000000013&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "rseymour@lincolncountyga.gov",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "21028",
+        "description": "Culverts, Concrete"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "2 ADVERTISMENT FOR BIDS_R1.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=52588580&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:37:43.077825",
+    "updated_at": "2026-09-28T14:37:43.077825"
+  },
+  {
+    "event_id": "PE-77070-NONST-2026-000000007",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "Lamar County 2026 LMIG Resurfacing Project",
+    "agency": "LAMAR COUNTY BOARD OF COMMISSIONERS",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 26, 2026 @ 10:13 AM ET",
+    "close_date": "Sep 29, 2026 @ 02:00 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-77070-NONST-2026-000000007&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "stownsend@lamarcountyga.com",
+      "phone": "026-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "91396",
+        "description": "Paving and Resurfacing, Streets, Major and Residential"
+      },
+      {
+        "code": "91395",
+        "description": "Paving and Resurfacing, Highway and Road"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "Bid Document_ Lamar Co_ 2026_LMIG_Midway_Free.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53090796&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "2026 LMIG Addendum _ 1.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53726146&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "RFP _ 2608_02 LMIG Midway_ Freeman_ Shadybroo.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54576390&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:37:45.050983",
+    "updated_at": "2026-09-28T14:37:45.050983"
+  },
+  {
+    "event_id": "PE-77070-NONST-2027-000000008",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "Lamar County 2026 LRA Project- Camp Road",
+    "agency": "LAMAR COUNTY BOARD OF COMMISSIONERS",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 26, 2026 @ 12:10 PM ET",
+    "close_date": "Sep 29, 2026 @ 02:00 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-77070-NONST-2027-000000008&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "stownsend@lamarcountyga.com",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "91396",
+        "description": "Paving and Resurfacing, Streets, Major and Residential"
+      },
+      {
+        "code": "91395",
+        "description": "Paving and Resurfacing, Highway and Road"
+      },
+      {
+        "code": "91371",
+        "description": "Maintenance and Repair, Highway and Roads, Including Removal of Asphalt, Concrete, Bitumens, etc."
+      },
+      {
+        "code": "91350",
+        "description": "Construction, Streets, Major and Residential, Including Reconstruction"
+      },
+      {
+        "code": "91327",
+        "description": "Construction, Highway and Road"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "Bid Document_ Lamar Co_ 2026 LMIG_CAMP RD FDR.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53091446&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "Addendum _1_ Lamar Co_ 2026 LMIG_Camp RD Bid_.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54370047&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "Addendum _2_ Lamar Co_ 2026 LMIG_Camp RD Bid_.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54576669&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:37:47.332377",
+    "updated_at": "2026-09-28T14:37:47.332377"
+  },
+  {
+    "event_id": "PE-71551-NONST-2027-000000016",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "Request for Proposals - Impact Fee Study",
+    "agency": "CEDARTOWN, CITY OF",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 12, 2026 @ 12:56 PM ET",
+    "close_date": "Sep 29, 2026 @ 02:00 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-71551-NONST-2027-000000016&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "eguzman@cedartowngeorgia.gov",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "96194",
+        "description": "Zoning, Land Use Studies"
+      },
+      {
+        "code": "91827",
+        "description": "Community Development Consulting"
+      },
+      {
+        "code": "91832",
+        "description": "Consulting Services (Not Otherwise Classified)"
+      },
+      {
+        "code": "91846",
+        "description": "Feasibility Studies, Consulting"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "8_19_26 Ad _ Impact Fees RFP.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=52339274&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "RFP _ Cedartown _ Impact Fee Study _ FINAL.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=52339275&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "Addendum _1  Impact Fees RFP.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53918002&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:37:49.645985",
+    "updated_at": "2026-09-28T14:37:49.645985"
+  },
+  {
+    "event_id": "48400-eRFQ-002021-2027",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "T32-ROW-Demo&Removal-Cherokee PI 0014133-193250",
+    "agency": "TRANSPORTATION, DEPARTMENT OF",
+    "solicitation_type": "RFQ",
+    "status": "Open",
+    "post_date": "Sep 22, 2026 @ 03:00 PM ET",
+    "close_date": "Sep 29, 2026 @ 02:00 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=48400-eRFQ-002021-2027&sourceSystemType=jag",
+    "contact": {
+      "name": null,
+      "email": "tcrowder@dot.ga.gov",
+      "phone": "014133-1932"
+    },
+    "commodity_codes": [],
+    "attachments": [],
+    "scraped_at": "2026-09-28T14:37:52.099304",
+    "updated_at": "2026-09-28T14:37:52.099304"
+  },
+  {
+    "event_id": "PE-55101-NONST-2027-000000191",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "125-27 Professional and Consulting Services for the Strategy and Technology Division",
+    "agency": "FULTON COUNTY SCHOOL SYSTEM",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 24, 2026 @ 02:04 PM ET",
+    "close_date": "Sep 29, 2026 @ 02:30 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-55101-NONST-2027-000000191&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "cannon@fultonschools.org",
+      "phone": "027-0000001"
+    },
+    "commodity_codes": [
+      {
+        "code": "91830",
+        "description": "Computer Network Consulting"
+      },
+      {
+        "code": "91829",
+        "description": "Computer Software Consulting"
+      },
+      {
+        "code": "91828",
+        "description": "Computer Hardware Consulting"
+      },
+      {
+        "code": "91832",
+        "description": "Consulting Services (Not Otherwise Classified)"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "125_27 Professional and Consulting Services f.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=52972336&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:37:54.813248",
+    "updated_at": "2026-09-28T14:37:54.813248"
+  },
+  {
+    "event_id": "PE-55101-NONST-2027-000000193",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "401-27, Cogburn Woods Elementary School Critical Systems",
+    "agency": "FULTON COUNTY SCHOOL SYSTEM",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 27, 2026 @ 07:12 PM ET",
+    "close_date": "Sep 29, 2026 @ 02:30 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-55101-NONST-2027-000000193&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "powellC1@fultonschools.org",
+      "phone": "027-0000001"
+    },
+    "commodity_codes": [
+      {
+        "code": "90930",
+        "description": "Building Construction, (Not Otherwise Classified)"
+      },
+      {
+        "code": "91223",
+        "description": "Construction, General: Backfill Services, Digging, Ditching, Road Grading, Rock Stabilization, etc."
+      },
+      {
+        "code": "91438",
+        "description": "Electrical"
+      },
+      {
+        "code": "91450",
+        "description": "Heating, Ventilating and Air Conditioning (HVAC)"
+      },
+      {
+        "code": "90927",
+        "description": "Building Construction, Educational"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "401_27 Web Announcement.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53235780&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:37:57.394226",
+    "updated_at": "2026-09-28T14:37:57.394226"
+  },
+  {
+    "event_id": "PE-77023-NONST-2027-000000740",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "IWQ 134617, Gwinnett County Public Library - Collins hill Branch Parking Lot Improvements Project",
+    "agency": "GWINNETT COUNTY GOVERNMENT",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Sep 10, 2026 @ 04:08 PM ET",
+    "close_date": "Sep 29, 2026 @ 02:50 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-77023-NONST-2027-000000740&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "Jake.Scarpone@GwinnettCounty.com",
+      "phone": "027-0000007"
+    },
+    "commodity_codes": [
+      {
+        "code": "96154",
+        "description": "Milling Services: Asphalt, Grain, Cottonseed, Vegetable, Wood, etc."
+      },
+      {
+        "code": "91375",
+        "description": "Maintenance and Repair, Parking Lot and Alley"
+      },
+      {
+        "code": "91394",
+        "description": "Paving and Resurfacing, Alley and Parking Lot"
+      },
+      {
+        "code": "95107",
+        "description": "Facilities and Other Improvements, Drives, Parking Lots, Paths, Trails"
+      },
+      {
+        "code": "91276",
+        "description": "Striping: Streets, Parking Facilities, Lane Divisions, Paint, etc."
+      },
+      {
+        "code": "91336",
+        "description": "Construction, Parking Lot and Alley"
+      },
+      {
+        "code": "91371",
+        "description": "Maintenance and Repair, Highway and Roads, Including Removal of Asphalt, Concrete, Bitumens, etc."
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "IWQ 134617 INV.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53938976&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "IWQ 134617 Ad1.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54474470&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:37:59.907411",
+    "updated_at": "2026-09-28T14:37:59.907411"
+  },
+  {
+    "event_id": "PE-66130-NONST-2027-000000019",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "MCD-CED-RFP-FY27-003 \u00bf Code Revision Services for Chapters 15, 16, and Related Updates to Chapter 17",
+    "agency": "MCDONOUGH, CITY OF",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 28, 2026 @ 04:05 PM ET",
+    "close_date": "Sep 29, 2026 @ 03:00 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-66130-NONST-2027-000000019&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "vendorrelations@mcdonoughga.org",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "91890",
+        "description": "Strategic Planning and Consulting"
+      },
+      {
+        "code": "91892",
+        "description": "Urban Planning Consulting"
+      },
+      {
+        "code": "90664",
+        "description": "Planning, Urban, Community, Regional, Area wide, and State"
+      },
+      {
+        "code": "91827",
+        "description": "Community Development Consulting"
+      },
+      {
+        "code": "91858",
+        "description": "Governmental Consulting"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "MCD_CED_RFP_FY27_003 _ Code Revision Services.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53278967&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "Addendum No_ 1 _ Code Revision Services _ MCD.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54751772&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:38:02.591287",
+    "updated_at": "2026-09-28T14:38:02.591287"
+  },
+  {
+    "event_id": "PE-33699-NONST-2026-000000136",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "RFQ 2026-0035 Two (2) Snowplows",
+    "agency": "SAVANNAH AIRPORT COMMISSION",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 27, 2026 @ 02:30 PM ET",
+    "close_date": "Sep 29, 2026 @ 05:00 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-33699-NONST-2026-000000136&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "cdixon@flysav.com",
+      "phone": "026-0000001"
+    },
+    "commodity_codes": [
+      {
+        "code": "76558",
+        "description": "Snow Blowers, Vehicle or Equipment Mounted"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "(2) Snow Plows (RFQ 2026_0035).pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53211879&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:38:05.239298",
+    "updated_at": "2026-09-28T14:38:05.239298"
+  },
+  {
+    "event_id": "48400-eRFQ-001971-2027",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "T32-D1-PavePres-SR 82-Jackson-192497",
+    "agency": "TRANSPORTATION, DEPARTMENT OF",
+    "solicitation_type": "RFQ",
+    "status": "Open",
+    "post_date": "Sep 03, 2026 @ 02:30 PM ET",
+    "close_date": "Sep 29, 2026 @ 05:00 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=48400-eRFQ-001971-2027&sourceSystemType=jag",
+    "contact": {
+      "name": null,
+      "email": "wloudermilk@dot.ga.gov",
+      "phone": "001971-2027"
+    },
+    "commodity_codes": [],
+    "attachments": [],
+    "scraped_at": "2026-09-28T14:38:07.663909",
+    "updated_at": "2026-09-28T14:38:07.663909"
+  },
+  {
+    "event_id": "48400-eRFQ-001964-2027",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "T32-D7-Soundwall_Repair_Dist_Wide_192196",
+    "agency": "TRANSPORTATION, DEPARTMENT OF",
+    "solicitation_type": "RFQ",
+    "status": "Open",
+    "post_date": "Aug 31, 2026 @ 02:00 PM ET",
+    "close_date": "Sep 29, 2026 @ 05:00 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=48400-eRFQ-001964-2027&sourceSystemType=jag",
+    "contact": {
+      "name": null,
+      "email": "kbandoo@dot.ga.gov",
+      "phone": "001964-2027"
+    },
+    "commodity_codes": [],
+    "attachments": [],
+    "scraped_at": "2026-09-28T14:38:10.541305",
+    "updated_at": "2026-09-28T14:38:10.541305"
+  },
+  {
+    "event_id": "48400-eRFQ-002000-2027",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "Temporary Portable Rumble Strips (T32)",
+    "agency": "TRANSPORTATION, DEPARTMENT OF",
+    "solicitation_type": "RFQ",
+    "status": "Open",
+    "post_date": "Sep 15, 2026 @ 11:00 AM ET",
+    "close_date": "Sep 29, 2026 @ 05:00 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=48400-eRFQ-002000-2027&sourceSystemType=jag",
+    "contact": {
+      "name": null,
+      "email": "hford@dot.ga.gov",
+      "phone": "002000-2027"
+    },
+    "commodity_codes": [
+      {
+        "code": "55079",
+        "description": "Traffic Control Devices, Non-Electric. Including Rumble Strips, etc."
+      },
+      {
+        "code": "93686",
+        "description": "Traffic Control Devices, Maintenance and Repair"
+      }
+    ],
+    "attachments": [],
+    "scraped_at": "2026-09-28T14:38:12.885459",
+    "updated_at": "2026-09-28T14:38:12.885459"
+  },
+  {
+    "event_id": "PE-55683-NONST-2027-000000022",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "26-001",
+    "agency": "BUTTS COUNTY SCHOOL SYSTEM",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 28, 2026 @ 10:17 AM ET",
+    "close_date": "Sep 30, 2026 @ 08:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-55683-NONST-2027-000000022&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "glassb@bcssk12.org",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "42517",
+        "description": "Data Processing Furniture, Metal and Plastic (See 425-87 For Storage Cabinets)"
+      },
+      {
+        "code": "42558",
+        "description": "Plastic, Polypropylene, Fiberglass Office Furniture: Chairs, Desks, Tables, etc."
+      },
+      {
+        "code": "42594",
+        "description": "Work Stations, Modular, Systems Furniture"
+      },
+      {
+        "code": "42548",
+        "description": "Furniture, Office, Custom Made"
+      },
+      {
+        "code": "42059",
+        "description": "Lounge Furniture, Upholstered"
+      },
+      {
+        "code": "42030",
+        "description": "Furniture, General, Custom Made"
+      },
+      {
+        "code": "90948",
+        "description": "Furnishings: Artwork, Cabinets, Furniture, Window Treatments, etc."
+      },
+      {
+        "code": "93145",
+        "description": "Furniture Installation and Reconfiguration Services, Including Systems Furniture"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "RFP_BOE_Furniture_Final26.docx",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53239712&sourceSystemType=gpr20",
+        "file_type": "docx"
+      },
+      {
+        "file_name": "26_001 Addendum.docx",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53806524&sourceSystemType=gpr20",
+        "file_type": "docx"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:38:15.406375",
+    "updated_at": "2026-09-28T14:38:15.406375"
+  },
+  {
+    "event_id": "PE-61110-NONST-2027-000000114",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "27-003 Tennis Court Upgrades - Contractor",
+    "agency": "Heavy Construction Resold to Departments",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Sep 03, 2026 @ 02:52 PM ET",
+    "close_date": "Sep 30, 2026 @ 08:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-61110-NONST-2027-000000114&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "elaine.wilson@bcsdk12.net",
+      "phone": "027-0000001"
+    },
+    "commodity_codes": [
+      {
+        "code": "90638",
+        "description": "General Construction, Architectural Services"
+      },
+      {
+        "code": "90910",
+        "description": "Airport Facility Construction"
+      },
+      {
+        "code": "90916",
+        "description": "Athletic Facility Construction"
+      },
+      {
+        "code": "90921",
+        "description": "Building Construction, Industrial, Warehouse, etc."
+      },
+      {
+        "code": "90922",
+        "description": "Building Construction, Non-Residential, Office Bldg., etc."
+      },
+      {
+        "code": "90923",
+        "description": "Building Construction, Residential, Apartments, etc."
+      },
+      {
+        "code": "90924",
+        "description": "Building Construction, Commercial and Institutional"
+      },
+      {
+        "code": "90925",
+        "description": "Building Construction, Prefabricated, All Types"
+      },
+      {
+        "code": "90926",
+        "description": "Building Construction, Agricultural"
+      },
+      {
+        "code": "90927",
+        "description": "Building Construction, Educational"
+      },
+      {
+        "code": "90928",
+        "description": "Building Construction, Medical"
+      },
+      {
+        "code": "90929",
+        "description": "Building Construction, Religious"
+      },
+      {
+        "code": "90930",
+        "description": "Building Construction, (Not Otherwise Classified)"
+      },
+      {
+        "code": "90931",
+        "description": "Building Construction, Sustainable, Green"
+      },
+      {
+        "code": "90954",
+        "description": "Home Construction, Single Family"
+      },
+      {
+        "code": "90975",
+        "description": "Site Clean-up, Post-Construction"
+      },
+      {
+        "code": "90977",
+        "description": "Special Construction: Observatory, Security, Special Rooms, etc."
+      },
+      {
+        "code": "91068",
+        "description": "Septic Tank Maintenance and Repair Services, Including Absorption and Leach Field Construction"
+      },
+      {
+        "code": "91114",
+        "description": "C.I.P., Construction Contingency"
+      },
+      {
+        "code": "91115",
+        "description": "C.I.P., Construction and Rehabilitation, Other than Buildings"
+      },
+      {
+        "code": "91116",
+        "description": "C.I.P., Construction and Rehabilitation, Buildings"
+      },
+      {
+        "code": "91117",
+        "description": "C.I.P., Construction, Roads"
+      },
+      {
+        "code": "91118",
+        "description": "C.I.P., Construction Testing"
+      },
+      {
+        "code": "91147",
+        "description": "C.I.P., Preconstruction Reimbursable"
+      },
+      {
+        "code": "91148",
+        "description": "C.I.P., Preconstruction Services"
+      },
+      {
+        "code": "91170",
+        "description": "Capitalized Construction Interest"
+      },
+      {
+        "code": "91181",
+        "description": "Heavy Construction Resold to Departments"
+      },
+      {
+        "code": "91185",
+        "description": "Special Trade Construction, Power Plant"
+      },
+      {
+        "code": "91220",
+        "description": "Construction, Fire Protection: Fire Escapes, Fire and Smoke Barriers, Firestops"
+      },
+      {
+        "code": "91221",
+        "description": "Construction, Energy Related, All Types"
+      },
+      {
+        "code": "91222",
+        "description": "Construction, Equestrian Arena"
+      },
+      {
+        "code": "91223",
+        "description": "Construction, General: Backfill Services, Digging, Ditching, Road Grading, Rock Stabilization, etc."
+      },
+      {
+        "code": "91225",
+        "description": "Construction, Golf Course"
+      },
+      {
+        "code": "91226",
+        "description": "Construction, Hike and Bike Trail"
+      },
+      {
+        "code": "91227",
+        "description": "Construction, Irrigation System"
+      },
+      {
+        "code": "91229",
+        "description": "Construction, Oil and Gas Refinery"
+      },
+      {
+        "code": "91230",
+        "description": "Construction, Power Plant"
+      },
+      {
+        "code": "91231",
+        "description": "Construction, Statues and Monuments"
+      },
+      {
+        "code": "91232",
+        "description": "Construction, Street Lighting"
+      },
+      {
+        "code": "91233",
+        "description": "Construction, Swimming Pool"
+      },
+      {
+        "code": "91235",
+        "description": "Construction, Tennis and Sports Court"
+      },
+      {
+        "code": "91238",
+        "description": "Construction Services, Hazardous Waste, Including Site Management"
+      },
+      {
+        "code": "91275",
+        "description": "Quality Control Testing Services for Construction"
+      },
+      {
+        "code": "91310",
+        "description": "Construction: Airport Roadway, Runway and Taxiway"
+      },
+      {
+        "code": "91313",
+        "description": "Construction, Bridge and Drawbridge, Including Reconstruction and Rehabilitation"
+      },
+      {
+        "code": "91315",
+        "description": "Construction, Canal or Aquaduct"
+      },
+      {
+        "code": "91316",
+        "description": "Construction, Communication Equipment, Including Antenna Towers"
+      },
+      {
+        "code": "91319",
+        "description": "Construction, Curb and Gutter, Including Maintenance, Repair, and Removal Services"
+      },
+      {
+        "code": "91323",
+        "description": "Construction, Defense and Military Structure"
+      },
+      {
+        "code": "91327",
+        "description": "Construction, Highway and Road"
+      },
+      {
+        "code": "91330",
+        "description": "Construction, Industrial Pipeline Insulation, Including Maintenance, Repair and Installation"
+      },
+      {
+        "code": "91336",
+        "description": "Construction, Parking Lot and Alley"
+      },
+      {
+        "code": "91338",
+        "description": "Construction, Chilled Water Pipe Installation"
+      },
+      {
+        "code": "91339",
+        "description": "Construction, Pipe Culvert"
+      },
+      {
+        "code": "91340",
+        "description": "Construction, Pipeline, Including Aerial Crossings"
+      },
+      {
+        "code": "91341",
+        "description": "Construction, Power Lines, Including Installation, Maintenance and Repair Services"
+      },
+      {
+        "code": "91344",
+        "description": "Construction, Railroad"
+      },
+      {
+        "code": "91345",
+        "description": "Construction, Sewer and Storm Drain"
+      },
+      {
+        "code": "91347",
+        "description": "Construction, Sidewalk and Driveway, Including Pedestrian and Handicap Ramps"
+      },
+      {
+        "code": "91348",
+        "description": "Construction, Special Foundation"
+      },
+      {
+        "code": "91350",
+        "description": "Construction, Streets, Major and Residential, Including Reconstruction"
+      },
+      {
+        "code": "91355",
+        "description": "Construction, Tunnel"
+      },
+      {
+        "code": "91356",
+        "description": "Construction, Utility and Underground Projects"
+      },
+      {
+        "code": "91357",
+        "description": "Construction, Vaulted Sidewalk"
+      },
+      {
+        "code": "91358",
+        "description": "Construction, Viaduct (Includes Reconstruction)"
+      },
+      {
+        "code": "91359",
+        "description": "Construction and Upgrades, Wastewater Treatment Plant"
+      },
+      {
+        "code": "91360",
+        "description": "Construction, Water System, Plants, Main and Service Line"
+      },
+      {
+        "code": "91361",
+        "description": "Construction, Vertical, Concrete, Pour-In-Place, Form, Place, Finish"
+      },
+      {
+        "code": "91362",
+        "description": "Construction, Concrete, Pour-In-Place, Form, Place, Finish"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "RFP27_003 Tennis Court Upgrades.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53561182&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:38:17.872460",
+    "updated_at": "2026-09-28T14:38:17.872460"
+  },
+  {
+    "event_id": "PE-66062-NONST-2027-000000469",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "Pre-Advertisement Notice for Emergency On-Call Debris Removal Services",
+    "agency": "ATLANTA, CITY OF",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 31, 2026 @ 11:01 AM ET",
+    "close_date": "Sep 30, 2026 @ 08:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-66062-NONST-2027-000000469&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "cfrayall@atlantaga.gov",
+      "phone": "027-0000004"
+    },
+    "commodity_codes": [
+      {
+        "code": "92645",
+        "description": "Hazardous Material and Waste Services, Including Emergency Response and Nuclear Wastes"
+      },
+      {
+        "code": "96875",
+        "description": "Streetscaping Services (Inactive, effective January 1, 2016)"
+      },
+      {
+        "code": "96850",
+        "description": "Leaf, Bush, Tree Limb Collection"
+      },
+      {
+        "code": "91027",
+        "description": "Garbage and Trash Removal, Disposal and or Treatment Services"
+      },
+      {
+        "code": "96240",
+        "description": "Food Distribution Services"
+      },
+      {
+        "code": "96239",
+        "description": "Hauling Services"
+      },
+      {
+        "code": "96872",
+        "description": "Snow and Ice Removal Services"
+      },
+      {
+        "code": "96871",
+        "description": "Solid or Liquid Waste Disposal, Including Management Services. (See 926-45 for Hazardous Waste Dispo"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "IFB_GS_ADOT_XXX_XXXX Emergency On Call Debris.doc",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53307362&sourceSystemType=gpr20",
+        "file_type": "doc"
+      },
+      {
+        "file_name": "Scope of Work.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53307363&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "Appendix A _ Emergency On_Call Debris Removal.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53307364&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:38:19.907812",
+    "updated_at": "2026-09-28T14:38:19.907812"
+  },
+  {
+    "event_id": "PE-55105-NONST-2027-000000031",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "Villa Rica High School Weight Room Floor Replacement",
+    "agency": "CARROLL COUNTY BOARD OF EDUCATION",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Sep 22, 2026 @ 12:46 PM ET",
+    "close_date": "Sep 30, 2026 @ 08:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-55105-NONST-2027-000000031&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "mike.beers@carrollcountyschools.com",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "36060",
+        "description": "Special Flooring, Industrial: Resinous, Elastomeric Liquid, etc."
+      },
+      {
+        "code": "80547",
+        "description": "Flooring, Temporary Portable, Athletic Facility"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "SPD_NI007NOI TO UTILZE VRHS Weight Rm Floorin.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54497906&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:38:22.301344",
+    "updated_at": "2026-09-28T14:38:22.301344"
+  },
+  {
+    "event_id": "PE-77021-NONST-2027-000000210",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "B-2704BM Motor & Transmission Fluid",
+    "agency": "GWINNETT COUNTY PUBLIC SCHOOLS",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Sep 17, 2026 @ 12:14 PM ET",
+    "close_date": "Sep 30, 2026 @ 09:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-77021-NONST-2027-000000210&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "betsy.mccurry@gcpsk12.org",
+      "phone": "027-0000002"
+    },
+    "commodity_codes": [
+      {
+        "code": "06047",
+        "description": "Fuel System: Carburetors and Kits, Fuel Pumps, Tanks and Caps, etc."
+      },
+      {
+        "code": "06064",
+        "description": "Lubricating System and Parts (See 060-42 for Filters and Class 075 for Equipment)"
+      },
+      {
+        "code": "07529",
+        "description": "Flush and Fill Equipment and Tools: Automatic Transmissions, Cooling Systems, Power Steering Systems"
+      },
+      {
+        "code": "07546",
+        "description": "Lubrication Equipment: Guns, Hoses, Fittings, Lubricators, Oil Pumps, etc., Including Oil Filter Pre"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "Bid Invitation _ Requirements.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54306734&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:38:24.370486",
+    "updated_at": "2026-09-28T14:38:24.370486"
+  },
+  {
+    "event_id": "PE-55964-NONST-2027-000000050",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "CPA's 2027-001 Custodial (Stock) Supplies Bid",
+    "agency": "PIONEER REGIONAL EDUCATION SEVICE AGENCY",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 13, 2026 @ 09:33 AM ET",
+    "close_date": "Sep 30, 2026 @ 09:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-55964-NONST-2027-000000050&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "kchristy@cpa4schools.com",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "04518",
+        "description": "Cleaners and Sweepers, Hand-Operated, Household"
+      },
+      {
+        "code": "20725",
+        "description": "Cleaners for Keyboards, Monitors, Tapes, Diskettes, etc."
+      },
+      {
+        "code": "48505",
+        "description": "Bags and Liners, Plastic: Garbage Can Liners, Janitor Cart Liners, Linen Hamper Liners, Litter Bags,"
+      },
+      {
+        "code": "48510",
+        "description": "Brooms, Brushes, and Handles"
+      },
+      {
+        "code": "48532",
+        "description": "Deodorants, Room, All Types"
+      },
+      {
+        "code": "48540",
+        "description": "Disinfectants, Spray and Powdered"
+      },
+      {
+        "code": "48553",
+        "description": "Dusters: Feather, Lambs Wool, Split, etc."
+      },
+      {
+        "code": "48564",
+        "description": "Janitor Carts and Bags"
+      },
+      {
+        "code": "48565",
+        "description": "Janitorial Equipment and Supplies (Not Otherwise Classified)"
+      },
+      {
+        "code": "48572",
+        "description": "Mops, Heads, and Handles, Wet Types"
+      },
+      {
+        "code": "48594",
+        "description": "Waste Receptacles and Dust Pans"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "2027_001 Custodial Supplies Bid Packet.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=52383324&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:38:26.520765",
+    "updated_at": "2026-09-28T14:38:26.520765"
+  },
+  {
+    "event_id": "PE-92200-RFP-2027-000000093",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "Audio Visual and Production Rigging Services",
+    "agency": "GEORGIA WORLD CONGRESS CENTER AUTHORITY",
+    "solicitation_type": "Request for Proposal",
+    "status": "Open",
+    "post_date": "Sep 04, 2026 @ 04:08 PM ET",
+    "close_date": "Sep 30, 2026 @ 10:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-92200-RFP-2027-000000093&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "ecoleman@gwcc.com",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "04091",
+        "description": "Specialty Items for Shows and Entertainment, Perches, Hoods, Hoops, etc."
+      },
+      {
+        "code": "78580",
+        "description": "Plays and Entertainment, Schoolroom"
+      },
+      {
+        "code": "88011",
+        "description": "Audio Visual Equipment and Supplies, (Not Otherwise Classified)"
+      },
+      {
+        "code": "91109",
+        "description": "C.I.P., Audio Visual Equipment, Capital"
+      },
+      {
+        "code": "91110",
+        "description": "C.I.P., Audio Visual Equipment, Expense"
+      },
+      {
+        "code": "91506",
+        "description": "Audio Production Services"
+      },
+      {
+        "code": "91509",
+        "description": "Audio and Video Production Services"
+      },
+      {
+        "code": "91542",
+        "description": "Film, Slide and Tape Production Services"
+      },
+      {
+        "code": "91574",
+        "description": "Radio Commercial Production Services"
+      },
+      {
+        "code": "91578",
+        "description": "Television Commercial Production Services"
+      },
+      {
+        "code": "91582",
+        "description": "Video Production Services"
+      },
+      {
+        "code": "91590",
+        "description": "Video Media Duplicating and Production Service, (Including CD ROMs, Tapes, etc."
+      },
+      {
+        "code": "94781",
+        "description": "Timber Production Services"
+      },
+      {
+        "code": "96157",
+        "description": "Musical Production Services (Inactive, please see commodity code 915-09 effective January 1, 2016)"
+      },
+      {
+        "code": "96205",
+        "description": "Amusement and Entertainment Services, Including Performing Arts Professionals and DJ Services"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "Audio Visual and Rigging RFP.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53501242&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "Update for meeting room location.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54139139&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "Sign in Sheet.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54157915&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "GWCCA Owned Rigging Equipment_092126.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54475293&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "GWCCA Technical System Profiles_092126.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54475294&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "EVENT LIST FY25_FY27.xlsx",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54475295&sourceSystemType=gpr20",
+        "file_type": "xlsx"
+      },
+      {
+        "file_name": "Addendum One Sept 22.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54476118&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "Copy of Historical AV Data.xlsx",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54498062&sourceSystemType=gpr20",
+        "file_type": "xlsx"
+      },
+      {
+        "file_name": "Addendum One Sept 22 revised 1.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54575109&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:38:28.780197",
+    "updated_at": "2026-09-28T14:38:28.780197"
+  },
+  {
+    "event_id": "PE-62960-NONST-2027-000000126",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "BID #27012 Allison Hybrid Battery Pack Replacement Project",
+    "agency": "ATHENS-CLARKE COUNTY GOVERNMENT",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 25, 2026 @ 01:14 PM ET",
+    "close_date": "Sep 30, 2026 @ 10:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-62960-NONST-2027-000000126&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "edward.tulenko@accgov.com",
+      "phone": "027-0000001"
+    },
+    "commodity_codes": [
+      {
+        "code": "92838",
+        "description": "Electrical, Alternator and Generator, Battery, Ignition System, Lights, etc. Maintenance and Repair"
+      },
+      {
+        "code": "92824",
+        "description": "Buses, School and Mass Transit Maintenance and Repair"
+      },
+      {
+        "code": "55753",
+        "description": "Power and Drive Train Components and Parts, Transit Bus"
+      },
+      {
+        "code": "55725",
+        "description": "Electrical Accessories and Parts, Not Lighting"
+      },
+      {
+        "code": "07569",
+        "description": "Starting Equipment, Vehicle, Equipment Battery, Not Battery to Battery"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "BID 27012 ALLISON HYBRID BATTERY PACK REPLACE.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53049596&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:38:30.931247",
+    "updated_at": "2026-09-28T14:38:30.931247"
+  },
+  {
+    "event_id": "PE-67510-NONST-2027-000000035",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "2027-130000-0819-Graduation Ceremonies-2027-2029",
+    "agency": "HENRY COUNTY BOARD OF EDUCATION",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 19, 2026 @ 10:49 AM ET",
+    "close_date": "Sep 30, 2026 @ 11:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-67510-NONST-2027-000000035&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "lynn.lewis@henry.k12.ga.us",
+      "phone": "130000-0819"
+    },
+    "commodity_codes": [
+      {
+        "code": "91506",
+        "description": "Audio Production Services"
+      },
+      {
+        "code": "91509",
+        "description": "Audio and Video Production Services"
+      },
+      {
+        "code": "91582",
+        "description": "Video Production Services"
+      },
+      {
+        "code": "91584",
+        "description": "Video Recording Services"
+      },
+      {
+        "code": "92591",
+        "description": "Video and Audio Design Engineering"
+      },
+      {
+        "code": "85580",
+        "description": "Stage Rigging and Tracks"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "2027_130000_0819_Graduation Ceremonies_2027_2.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=52680120&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:38:32.712344",
+    "updated_at": "2026-09-28T14:38:32.712344"
+  },
+  {
+    "event_id": "PE-66096-NONST-2026-000000207",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "26RFP1482629C-MH Rural Land Re-Appraisal",
+    "agency": "FULTON COUNTY PURCHASING DEPT",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Sep 09, 2026 @ 01:46 PM ET",
+    "close_date": "Sep 30, 2026 @ 11:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-66096-NONST-2026-000000207&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "mark.hawks@fultoncountyga.gov",
+      "phone": "026-0000002"
+    },
+    "commodity_codes": [
+      {
+        "code": "96866",
+        "description": "Right of Way Services, Including Title, Relocation, Condemnation, etc."
+      },
+      {
+        "code": "94616",
+        "description": "Appraisal Services (Not Otherwise Classified)"
+      },
+      {
+        "code": "94615",
+        "description": "Appraisal Services, Real Estate"
+      },
+      {
+        "code": "91814",
+        "description": "Appraisals Consulting"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "26RFP1482629C_MH.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53845095&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:38:34.806263",
+    "updated_at": "2026-09-28T14:38:34.806263"
+  },
+  {
+    "event_id": "PE-66218-NONST-2027-000000052",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "GDOT PI#0015396 Boone St.",
+    "agency": "KINGSLAND, CITY OF",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Aug 13, 2026 @ 10:32 AM ET",
+    "close_date": "Sep 30, 2026 @ 11:00 AM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-66218-NONST-2027-000000052&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "hsmith@kingslandgeorgia.com",
+      "phone": "027-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "91371",
+        "description": "Maintenance and Repair, Highway and Roads, Including Removal of Asphalt, Concrete, Bitumens, etc."
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "Bid Advertisement.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53087891&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:38:36.813247",
+    "updated_at": "2026-09-28T14:38:36.813247"
+  },
+  {
+    "event_id": "PE-63950-NONST-2026-000000030",
+    "state": "GA",
+    "portal_name": "Georgia Procurement Registry",
+    "title": "ARCHITECTURAL AND ENGINEERING SERVICES FOR FIRE STATION",
+    "agency": "LUMPKIN COUNTY BOARD OF COMMISSIONERS",
+    "solicitation_type": "Non-State Agency",
+    "status": "Open",
+    "post_date": "Sep 09, 2026 @ 08:54 AM ET",
+    "close_date": "Sep 30, 2026 @ 12:00 PM ET",
+    "detail_url": "https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=PE-63950-NONST-2026-000000030&sourceSystemType=gpr20",
+    "contact": {
+      "name": null,
+      "email": "ryan.mcduffie@lumpkincounty.gov",
+      "phone": "026-0000000"
+    },
+    "commodity_codes": [
+      {
+        "code": "90638",
+        "description": "General Construction, Architectural Services"
+      },
+      {
+        "code": "92536",
+        "description": "Engineering Services (Not Otherwise Classified)"
+      },
+      {
+        "code": "92537",
+        "description": "Facilities Design Engineering"
+      }
+    ],
+    "attachments": [
+      {
+        "file_name": "RFQ 2026_001 ARCHITECTURAL AND ENGINEERING SE.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=53805226&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      },
+      {
+        "file_name": "RFP 2026_001 ADDENDUM 1.pdf",
+        "download_url": "https://ssl.doas.state.ga.us/gpr/downloadAttachment?attachmentId=54726740&sourceSystemType=gpr20",
+        "file_type": "pdf"
+      }
+    ],
+    "scraped_at": "2026-09-28T14:38:38.625629",
+    "updated_at": "2026-09-28T14:38:38.625629"
+  }
+]

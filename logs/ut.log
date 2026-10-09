@@ -1,0 +1,8 @@
+[INIT].... → Crawl4AI 0.9.4 
+[ERROR]... × Error updating image dimensions: Page.evaluate: Execution context was destroyed, most likely because of a navigation 
+[FETCH]... ↓ https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfUtah                            | ✓ | ⏱: 3.31s 
+[SCRAPE].. ◆ https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfUtah                            | ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfUtah                            | ✓ | ⏱: 3.35s 
+Starting scraper for state: UT
+Successfully scraped and appended 3 spec-compliant records to data/output/ut_2026-09-28.jsonl
+Persisted 3 record(s) to Postgres (crawl_run=571a4b30-b222-43b6-8a5e-4a382e081bf3)

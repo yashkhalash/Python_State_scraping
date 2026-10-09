@@ -1,3 +1,4 @@
+import asyncio
 import hashlib
 import json
 import re
@@ -9,6 +10,7 @@ from bs4 import BeautifulSoup
 from crawl4ai import AsyncWebCrawler
 
 from src.crawler import fetch_page, random_delay
+from src.object_storage import download_document, save_text
 from src.storage import (
     CrawlInfo,
     DeliveryDocument,
@@ -150,6 +152,7 @@ class AlabamaScraper:
             documents: List[DeliveryDocument] = []
             errors: List[str] = []
             seen_doc_urls = set()
+            doc_rows = []
             for row in _parse_extracted(result.extracted_content) or []:
                 href = row.get("href")
                 if not href:
@@ -158,20 +161,35 @@ class AlabamaScraper:
                 if doc_url in seen_doc_urls:
                     continue
                 seen_doc_urls.add(doc_url)
-                doc_title = (row.get("text") or "").strip() or None
-                documents.append(DeliveryDocument(
-                    title=doc_title,
-                    url=doc_url,
-                    document_type="solicitation",
-                    mime_type="application/pdf" if ".pdf" in doc_url.lower() else None,
-                    download_status="link_only",
-                    storage_uri=None,
-                    sha256=None,
-                ))
-            if documents:
-                errors.append("document download/hashing not yet implemented; URLs captured as link_only")
+                doc_rows.append((doc_url, (row.get("text") or "").strip() or None))
 
-            errors.append("raw_capture.storage_uri not set; no approved object-storage location configured")
+            # Downloads unchanged to the approved object-storage location
+            # (scraper-team-minimum-spec.md's "PDF and document handling").
+            # A failed download still keeps the document with its URL, per
+            # the spec's "document URL must still be included" rule.
+            for doc_url, doc_title in doc_rows:
+                dl = await asyncio.to_thread(download_document, doc_url)
+                if dl["download_status"] == "downloaded":
+                    documents.append(DeliveryDocument(
+                        title=doc_title,
+                        url=doc_url,
+                        document_type="solicitation",
+                        mime_type=dl.get("mime_type") or ("application/pdf" if ".pdf" in doc_url.lower() else None),
+                        download_status="downloaded",
+                        storage_uri=dl["storage_uri"],
+                        sha256=dl["sha256"],
+                    ))
+                else:
+                    documents.append(DeliveryDocument(
+                        title=doc_title,
+                        url=doc_url,
+                        document_type="solicitation",
+                        mime_type="application/pdf" if ".pdf" in doc_url.lower() else None,
+                        download_status="failed",
+                    ))
+                    errors.append(f"document download failed: {doc_url}")
+
+            raw_storage_uri, _ = await asyncio.to_thread(save_text, raw_html, prefix="raw_captures")
 
             return DeliveryRecord(
                 observed_at=now_str,
@@ -199,7 +217,7 @@ class AlabamaScraper:
                 documents=documents,
                 raw_capture=RawCapture(
                     content_type="text/html",
-                    storage_uri=None,
+                    storage_uri=raw_storage_uri,
                     sha256=raw_sha256,
                 ),
                 crawl=CrawlInfo(
